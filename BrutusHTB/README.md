@@ -74,3 +74,6 @@ python3 utmp.py wtmp | grep "USER"
 
 Answer: ```2024-03-06 06:32:45```
 
+# Task 4: SSH login sessions are tracked and assigned a session number upon login. What is the session number assigned to the attacker's session for the user account from Question 2?
+
+![sessionnumber.png](/BrutusHTB/screenshots/sessionnumber.png)
