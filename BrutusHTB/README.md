@@ -53,3 +53,14 @@ Answer: ```root```
 > ```utmp```: The ```utmp``` file keeps track of currently logged-in users. It shows active sessions on the system, including the username, terminal, and login time. Commands like ```who``` or ```w``` read this file to display live user activity.
 
 > ```btmp```: The ```btmp``` file logs failed login attempts, making it an important source for detecting brute-force attacks or unauthorized access attempts. Using tools like ```lastb``` or a **parsing script**, we can see which usernames and IPs attempted unsuccessful logins.
+
+In this task, we are searching for the second successful login by the attacker, since the first successful login resulted from a successful brute-force attack. Let's use the two files, ```wtmp``` and ```utmp.py```, that were provided along with the ```auth.log``` file, but before that we need to change the time in the ```utmp.py``` parser to UTC so that it correlates with ```auth.log```.
+
+![toutc.png](/BrutusHTB/screenshots/toutc.png)
+
+
+By modifying the timestamp conversion in utmp.py from time.localtime() to time.gmtime(), all login and logout times are displayed in UTC, providing a consistent reference for correlating events across logs. After parsing the wtmp file and filtering for USER entries corresponding to the attacker’s username and IP address, we can identify the manual login session, which represents when the attacker actually established a terminal session to interact with the system.
+
+This method allows us to accurately determine that the attacker’s manual login occurred at 2024-03-06 01:37:35 UTC, marking the start of their active session on the server.
+
+> UTC (Coordinated Universal Time) is the standard time reference used in many security logs, including ```auth.log```. Correlating events across different logs and systems is much more reliable when all timestamps are in UTC.
