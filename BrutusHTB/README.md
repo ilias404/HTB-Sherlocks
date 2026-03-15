@@ -22,3 +22,9 @@ cat auth.log
 ```
 
 ![catauth.png](/BrutusHTB/screenshots/catauth.png)
+
+Since the attack is a brute-force login attempt, we can filter the ```auth.log``` file using keywords associated with authentication failures and SSH login attempts. Keywords such as ```authentication failure```, ```Failed password```, ```invalid user```, and ```Accepted password``` can be used to identify repeated login attempts and determine whether the attacker eventually gained access to the system. Let's go with on of them and see:
+
+```bash
+grep "authentication failure" auth.log
+```
