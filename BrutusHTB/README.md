@@ -21,4 +21,4 @@ Let's open the auth.log file and take a look at what's inside.
 cat auth.log
 ```
 
-![catauth.png](/screenshots/catauth.png)
+![catauth.png](/BrutusHTB/screenshots/catauth.png)
