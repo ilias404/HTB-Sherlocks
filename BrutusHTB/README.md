@@ -68,7 +68,7 @@ Now, let's use the ```utmp.py``` parser and the ```grep``` command to search for
 ```bash
 python3 utmp.py wtmp | grep "root"
 ```
+![result.png](/BrutusHTB/screenshots/result.png)
 
-This method allows us to accurately determine that the attacker’s manual login occurred at 2024-03-06 01:37:35 UTC, marking the start of their active session on the server.
-
+Answer: ```2024-03-06 06:32:45```
 
