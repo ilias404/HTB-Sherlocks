@@ -66,7 +66,9 @@ By modifying the timestamp conversion in ```utmp.py``` from ```time.localtime()`
 Now, let's use the ```utmp.py``` parser and the ```grep``` command to search for root logins.
 
 ```bash
-python3 utmp.py wtmp | grep "root" OR python3 utmp.py wtmp | grep "USER"
+python3 utmp.py wtmp | grep "root"
+OR
+python3 utmp.py wtmp | grep "USER"
 ```
 ![result.png](/BrutusHTB/screenshots/result.png)
 
