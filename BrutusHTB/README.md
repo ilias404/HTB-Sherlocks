@@ -107,3 +107,10 @@ grep "root" auth.log | grep -i "Disconnect"
 ```
 ![disconnected.png](/BrutusHTB/screenshots/disconnected.png)
 
+> Note: The first successful login by the attacker was the result of an automated brute force attempt, and the session was closed within the same second.
+
+Answer: ```2024-03-06 06:37:24```
+
+# Task 8: The attacker logged into their backdoor account and utilized their higher privileges to download a script. What is the full command executed using sudo?
+
+
