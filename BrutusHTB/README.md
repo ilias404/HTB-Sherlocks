@@ -5,6 +5,11 @@
 
 # Task 1 : Analyze the auth.log. What is the IP address used by the attacker to carry out a brute force attack?
 
+> auth.log is a system log file in Linux that records authentication and authorization events. It tracks activities related to users attempting to access the system and actions that require elevated privileges.
+> The file is typically located at: ```/var/log/auth.log```
+
+
+
 First, let's download and unzip the file:
 ```
 7z x Brutus.htb
