@@ -35,7 +35,7 @@ Too many authentication failures from IP address ```65.2.161.68```, which answer
 
 # Task 2: The bruteforce attempts were successful and attacker gained access to an account on the server. What is the username of the account?
 
-To identify successful login events, the following command can be used:
+Let's use the grep command with the keyword "Accepted password" to find successful login events:
 
 ```bash
 grep "Accepted password" auth.log
