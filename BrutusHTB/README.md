@@ -61,12 +61,12 @@ In this task, we are searching for the second successful login by the attacker, 
 > UTC (Coordinated Universal Time) is the standard time reference used in many security logs, including ```auth.log```. Correlating events across different logs and systems is much more reliable when all timestamps are in UTC.
 
 
-By modifying the timestamp conversion in ```utmp.py``` from ```time.localtime()``` to ```time.gmtime()```, all login and logout times are displayed in UTC, providing a consistent reference for correlating events across logs. After parsing the ```wtmp``` file and filtering for ```USER``` entries corresponding to the attacker’s username and IP address, we can identify the manual login session, which represents when the attacker actually established a terminal session to interact with the system.
+By modifying the timestamp conversion in ```utmp.py``` from ```time.localtime()``` to ```time.gmtime()```, all login and logout times are now displayed in UTC, providing a consistent reference for correlating events across logs. After parsing the ```wtmp``` file and filtering for ```root``` or ```USER``` entries corresponding to the attacker’s username and IP address, we can identify the manual login session, which represents when the attacker actually established a terminal session to interact with the system.
 
 Now, let's use the ```utmp.py``` parser and the ```grep``` command to search for root logins.
 
 ```bash
-python3 utmp.py wtmp | grep "root"
+python3 utmp.py wtmp | grep "root" OR python3 utmp.py wtmp | grep "USER"
 ```
 ![result.png](/BrutusHTB/screenshots/result.png)
 
