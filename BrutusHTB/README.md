@@ -100,7 +100,7 @@ Answer: ```T1136.001```
 
 # Task 7: What time did the attacker's first SSH session end according to auth.log?
 
-Let's go back to the auth.log and run:
+Let's go back to the ```auth.log``` and run:
 
 ```bash
 grep "root" auth.log | grep -i "Disconnect"
@@ -113,4 +113,11 @@ Answer: ```2024-03-06 06:37:24```
 
 # Task 8: The attacker logged into their backdoor account and utilized their higher privileges to download a script. What is the full command executed using sudo?
 
+Let's search the ```auth.log``` for suspicious commands that the attacker might have run to download scripts.
+
+```bash
+grep "cyberjunkie" auth.log | grep "sudo"
+```
+
+![attackercmd.png](/BrutusHTB/screenshots/attackercmd.png)
 
