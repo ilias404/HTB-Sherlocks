@@ -46,4 +46,4 @@ Answer: ```root```
 
 # Task 3: Identify the UTC timestamp when the attacker logged in manually to the server and established a terminal session to carry out their objectives. The login time will be different than the authentication time, and can be found in the wtmp artifact.
 
-> The ```/var/log/wtmp``` file in Linux is a binary log that records all historical login, logout, shutdown, and reboot activity. It is vital for security auditing and tracking user behavior, often analyzed using the last command. 
+> The ```/var/log/wtmp``` file in Linux is a binary log that records all historical login, logout, shutdown, and reboot activity. It is vital for security auditing and tracking user behavior, often analyzed using the ```last``` command. 
