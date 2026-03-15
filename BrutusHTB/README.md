@@ -46,4 +46,10 @@ Answer: ```root```
 
 # Task 3: Identify the UTC timestamp when the attacker logged in manually to the server and established a terminal session to carry out their objectives. The login time will be different than the authentication time, and can be found in the wtmp artifact.
 
-> The ```/var/log/wtmp``` file in Linux is a binary log that records all historical login, logout, shutdown, and reboot activity. It is vital for security auditing and tracking user behavior, often analyzed using the ```last``` command. 
+## wtmp, utmp and btmp Background
+
+wtmp: The wtmp file records all historical login and logout events on a Linux system. It tracks who logged in, from which terminal or IP, at what time, and for how long. This file is useful for reconstructing past user sessions and analyzing system access over time.
+
+utmp: The utmp file keeps track of currently logged-in users. It shows active sessions on the system, including the username, terminal, and login time. Commands like who or w read this file to display live user activity.
+
+btmp: The btmp file logs failed login attempts, making it an important source for detecting brute-force attacks or unauthorized access attempts. Using tools like lastb or a parsing script, you can see which usernames and IPs attempted unsuccessful logins.
