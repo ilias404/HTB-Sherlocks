@@ -11,6 +11,12 @@
 
 
 First, let's download and unzip the file:
-```
+```bash
 7z x Brutus.htb
+```
+
+Let's open the auth.log file and take a look at what's inside.
+
+```bash
+cat auth.log
 ```
