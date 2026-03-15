@@ -100,8 +100,7 @@ Answer: ```T1136.001```
 
 # Task 7: What time did the attacker's first SSH session end according to auth.log?
 
-Let's go back to the ```auth.log``` and run:
-
+Let's go back to the ```auth.log``` and search for keywords related to disconnecting or closing SSH sessions.
 ```bash
 grep "root" auth.log | grep -i "Disconnect"
 ```
