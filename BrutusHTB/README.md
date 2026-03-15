@@ -40,3 +40,4 @@ Let's use the grep command with the keyword "Accepted password" to find successf
 ```bash
 grep "Accepted password" auth.log
 ```
+![accepswd.png](/BrutusHTB/screenshots/accepswd.png)
