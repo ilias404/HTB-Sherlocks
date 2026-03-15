@@ -20,3 +20,5 @@ Let's open the auth.log file and take a look at what's inside.
 ```bash
 cat auth.log
 ```
+
+![catauth.png](/screenshots/catauth.png)
