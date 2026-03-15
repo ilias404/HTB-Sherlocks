@@ -46,7 +46,7 @@ Answer: ```root```
 
 # Task 3: Identify the UTC timestamp when the attacker logged in manually to the server and established a terminal session to carry out their objectives. The login time will be different than the authentication time, and can be found in the wtmp artifact.
 
-## ```wtmp```, ```utmp``` and ```btmp``` Background
+## ```wtmp```, ```utmp``` and ```btmp``` background
 
 ```wtmp```: The ```wtmp``` file records all historical login and logout events on a Linux system. It tracks who logged in, from which terminal or IP, at what time, and for how long. This file is useful for reconstructing past user sessions and analyzing system access over time.
 
