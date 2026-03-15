@@ -79,3 +79,14 @@ Answer: ```2024-03-06 06:32:45```
 Returning to the ```auth.log```, we can find the SSH session number after the attacker's second manual login with an accepted password. 
 
 ![sessionnumber1.png](/BrutusHTB/screenshots/sessionnumber1.png)
+
+Answer: ```37```
+
+# Task 5: The attacker added a new user as part of their persistence strategy on the server and gave this new user account higher privileges. What is the name of this account?
+
+We can answer this question by searching the ```auth.log``` for some ```sudo``` commands:
+```bash
+grep "sudo" auth.log
+```
+![cyberjunkie.png](/BrutusHTB/screenshots/cyberjunkie.png)
+
