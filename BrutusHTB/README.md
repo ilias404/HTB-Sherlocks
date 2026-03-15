@@ -48,8 +48,8 @@ Answer: ```root```
 
 ## ```wtmp```, ```utmp``` and ```btmp``` background
 
-```wtmp```: The ```wtmp``` file records all historical login and logout events on a Linux system. It tracks who logged in, from which terminal or IP, at what time, and for how long. This file is useful for reconstructing past user sessions and analyzing system access over time.
+> ```wtmp```: The ```wtmp``` file records all historical login and logout events on a Linux system. It tracks who logged in, from which terminal or IP, at what time, and for how long. This file is useful for reconstructing past user sessions and analyzing system access over time.
 
-```utmp```: The ```utmp``` file keeps track of currently logged-in users. It shows active sessions on the system, including the username, terminal, and login time. Commands like ```who``` or ```w``` read this file to display live user activity.
+> ```utmp```: The ```utmp``` file keeps track of currently logged-in users. It shows active sessions on the system, including the username, terminal, and login time. Commands like ```who``` or ```w``` read this file to display live user activity.
 
-```btmp```: The ```btmp``` file logs failed login attempts, making it an important source for detecting brute-force attacks or unauthorized access attempts. Using tools like ```lastb``` or a **parsing script**, we can see which usernames and IPs attempted unsuccessful logins.
+> ```btmp```: The ```btmp``` file logs failed login attempts, making it an important source for detecting brute-force attacks or unauthorized access attempts. Using tools like ```lastb``` or a **parsing script**, we can see which usernames and IPs attempted unsuccessful logins.
