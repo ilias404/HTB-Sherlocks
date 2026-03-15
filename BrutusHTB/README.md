@@ -90,3 +90,10 @@ grep "sudo" auth.log
 ```
 ![cyberjunkie.png](/BrutusHTB/screenshots/cyberjunkie.png)
 
+Answer: ```cyberjunkie```
+
+# Task 6: What is the MITRE ATT&CK sub-technique ID used for persistence by creating a new account?
+
+A simple Google search will provide use with the answer.
+
+Answer: ```T1136.001```
