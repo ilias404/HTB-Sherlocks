@@ -63,7 +63,7 @@ In this task, we are searching for the second successful login by the attacker, 
 
 By modifying the timestamp conversion in ```utmp.py``` from ```time.localtime()``` to ```time.gmtime()```, all login and logout times are now displayed in UTC, providing a consistent reference for correlating events across logs. After parsing the ```wtmp``` file and filtering for ```root``` or ```USER``` entries corresponding to the attacker’s username and IP address, we can identify the manual login session, which represents when the attacker actually established a terminal session to interact with the system.
 
-Now, let's use the ```utmp.py``` parser and the ```grep``` command to search for root logins.
+Now, let's use the ```utmp.py``` parser and the ```grep``` command to identify the manual session established by the attacker.
 
 ```bash
 python3 utmp.py wtmp | grep "root"
