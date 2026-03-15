@@ -94,6 +94,16 @@ Answer: ```cyberjunkie```
 
 # Task 6: What is the MITRE ATT&CK sub-technique ID used for persistence by creating a new account?
 
-A simple Google search will provide use with the answer.
+A simple Google search will provide us with the answer.
 
 Answer: ```T1136.001```
+
+# Task 7: What time did the attacker's first SSH session end according to auth.log?
+
+Let's go back to the auth.log and run:
+
+```bash
+grep "root" auth.log | grep -i "Disconnect"
+```
+![disconnected.png](/BrutusHTB/screenshots/disconnected.png)
+
