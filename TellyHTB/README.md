@@ -39,3 +39,5 @@ Right-clicking packet number 25 and selecting ```Follow > TCP Stream``` should a
 We will click ```Save as``` to save this conversation locally for later use.
 
 Answer: ```2026-01-27 10:39:28```
+
+# Task 3: When was the Telnet vulnerability successfully exploited, granting the attacker remote root access on the target machine?
