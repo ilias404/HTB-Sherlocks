@@ -42,6 +42,8 @@ Answer: ```2026-01-27 10:39:28```
 
 # Task 3: What is the hostname of the targeted server?
 
+For some clarity, we'll use the following command:
+
 ```bash
 cat terminal_log.txt | sed 's/root@backup-secondary/\x1b[31m&\x1b[0m/g'
 ```
