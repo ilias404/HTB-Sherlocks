@@ -15,7 +15,7 @@
 
 First, let's download and unzip the file:
 ```bash
-7z x Brutus.htb
+7z x Brutus.zip
 ```
 
 Let's open the auth.log file and take a look at what's inside.
