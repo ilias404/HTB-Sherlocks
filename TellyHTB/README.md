@@ -15,3 +15,10 @@ It looks like we have a ```.pcapng``` file containing some network traffic. Let'
 ```bash
 wireshark monitoringservice_export_202610AM-11AM.pcapng
 ```
+Let's filter for "telnet" and see what we get:
+
+![telnetfilter.png](/TellyHTB/screenshots/telnetfilter.png)
+
+In packet number 52, we can see that the ```USER``` environment variable is set to the value ```-f root```, which seems suspicious. Let's Google this detail. 
+
+![uservariable.png](/TellyHTB/screenshots/uservariable.png)
