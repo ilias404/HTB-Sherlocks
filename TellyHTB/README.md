@@ -29,3 +29,9 @@ After a simple Google search, we found the following:
 At a high level, the Telnet daemon passes an attacker controlled USER value into the system login process without properly sanitizing it, which can lead to argument injection and an authentication bypass that results in root access.
 
 Answer: ```CVE-2026-24061```
+
+# Task 2: When was the Telnet vulnerability successfully exploited, granting the attacker remote root access on the target machine?
+
+Right-clicking packet number 25 and selecting "Follow" > "TCP Stream" should allow us to see the entire conversation between the attacker and the system:
+
+![firstexploit.png](/TellyHTB/screenshots/firstexploit.png)
