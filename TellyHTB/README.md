@@ -4,3 +4,10 @@
 
 # Sherlock Scenario
 > You are a Junior DFIR Analyst at an MSSP that provides continuous monitoring and DFIR services to SMBs. Your supervisor has tasked you with analyzing network telemetry from a compromised backup server. A DLP solution flagged a possible data exfiltration attempt from this server. According to the IT team, this server wasn't very busy and was sometimes used to store backups.
+
+# Task 1: What CVE is associated with the vulnerability exploited in the Telnet protocol?
+
+First, let's download and unzip the file:
+```bash
+unzip Telly.zip
+```
