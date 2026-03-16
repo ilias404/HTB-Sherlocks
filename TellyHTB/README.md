@@ -11,3 +11,7 @@ First, let's download and unzip the file:
 ```bash
 unzip Telly.zip
 ```
+It looks like we have a ```.pcapng``` file containing some network traffic. Let's open it with Wireshark.
+```bash
+wireshark monitoringservice_export_202610AM-11AM.pcapng
+```
