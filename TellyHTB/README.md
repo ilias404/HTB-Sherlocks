@@ -50,5 +50,5 @@ cat terminal_log.txt | sed 's/root@backup-secondary/\x1b[31m&\x1b[0m/g'
 
 ![backupsecondary.png](/TellyHTB/screenshots/backupsecondary.png)
 
-Answer: ```backupsecondary```
+Answer: ```backup-secondary```
 
