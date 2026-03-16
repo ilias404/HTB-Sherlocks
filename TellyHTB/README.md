@@ -35,3 +35,7 @@ Answer: ```CVE-2026-24061```
 Right-clicking packet number 25 and selecting ```Follow > TCP Stream``` should allow us to see the entire conversation between the attacker and the system:
 
 ![firstexploit.png](/TellyHTB/screenshots/firstexploit.png)
+
+We will click ```Save as``` to save this conversation locally for later use.
+
+Answer: ```2026-01-27 10:39:28```
