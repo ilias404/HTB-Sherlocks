@@ -102,4 +102,6 @@ Answer: ```C:\Users\Susan\Appdata\Local\ApbxHelper.exe```
 
 # Task 8: The exploit also drops a file to facilitate the persistence and execution of the backdoor. What is the path and name of this file?
 
+Alongside the suspicious files, we identified another file created around the same timestamp.
 
+![lnk.png](/RomComHTB/screenshots/lnk.png)
