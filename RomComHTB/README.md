@@ -106,4 +106,12 @@ Alongside the suspicious files, we identified another file created around the sa
 
 ![lnk.png](/RomComHTB/screenshots/lnk.png)
 
+> A .lnk file is a Windows shortcut that points to another file or program and runs it when clicked. It does not contain the actual program, only the path to it.
+Attackers can exploit .lnk files by making them point to malicious programs instead of legitimate ones. If the shortcut is placed in a Startup folder, it will automatically run the malicious program every time the user logs in, allowing the attacker to maintain access to the system.
+
 Answer: ```C:\Users\Susan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Display Settings.lnk```
+
+# Task 9: What is the associated MITRE Technique ID discussed in the previous question?
+
+
+
