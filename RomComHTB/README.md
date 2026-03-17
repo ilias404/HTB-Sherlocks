@@ -78,8 +78,13 @@ Answer: ```2025-09-02 08:13:50```
  
 # Task 5: When was the archive file opened?
 
-Since the archive file was created at ```08:13:50``` we can search for events that occurred after that time or filter the ```Update reasons``` field using ```ObjectIdChange```.
+Since the archive file was created at ```08:13:50``` we can logically search for events that occurred after that time or filter the ```Update reasons``` field using ```ObjectIdChange```.
 
 ![objectidchange.png](/RomComHTB/screenshots/objectidchange.png)
 
 Answer: ```2025-09-02 08:14:04```
+
+# Task 6: What is the name of the decoy document extracted from the archive file, meant to appear legitimate and distract the user?
+
+
+
