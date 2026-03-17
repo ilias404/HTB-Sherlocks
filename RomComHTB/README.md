@@ -70,10 +70,15 @@ Answer: ```Pathology-Department-Research-Records.rar```
 
 We will start by analyzing the ```$J``` file, as it records detailed file activity events (such as creation, modification, and deletion), making it more useful for identifying precise timestamps than the ```$MFT```.
 
+Let's filter the ```Update Reasons``` to ```FileCreate```, since it's the event we are searching for.
+
 ![filecreatetimestamp.png](/RomComHTB/screenshots/filecreatetimestamp.png)
 
 Answer: ```2025-09-02 08:13:50```
  
 # Task 5: When was the archive file opened?
 
+Since 
+
+![objectidchange.png](/RomComHTB/screenshots/objectidchange.png)
 
