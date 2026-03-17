@@ -38,4 +38,10 @@ We end up with two important files: ```$MFT``` and ```$J```.
 
 To read these two files, we will use ```MFTECmd``` and ```Timeline Explorer```, which can be downloaded from this [link](https://ericzimmerman.github.io/#!index.md).
 
+Now, let's open a terminal in the directory of our ```MFTECmd``` tool and run the following command to parse our ```$MFT``` file:
+
+```bash
+.\MFTECmd.exe -f "C:\Users\lenovo\Desktop\RomComHTB\C\`$MFT" --csv "C:\Users\lenovo\Desktop\RomComHTB" --csvf MFToutput.csv
+```
+
 
