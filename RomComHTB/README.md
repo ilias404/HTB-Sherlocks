@@ -92,4 +92,7 @@ Let's search the ```$J``` file for other files that might have been extracted al
 
 Answer: ```Genotyping_Results_B57_Positive.pdf```
 
+# Task 7: What is the name and path of the actual backdoor executable dropped by the archive file?
+
+
 
