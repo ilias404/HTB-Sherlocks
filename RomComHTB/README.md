@@ -7,4 +7,13 @@
 
 # Task 1: What is the CVE assigned to the WinRAR vulnerability exploited by the RomCom threat group in 2025?
 
+A Google search leads us to the following: 
+
+![cve.png](/RomComHTB/screenshots/cve.png)
+
+Answer: ```CVE-2025-8088```
+
+# Task 2: What is the nature of this vulnerability?
+
+Answer: ```Path Traversal```
 
