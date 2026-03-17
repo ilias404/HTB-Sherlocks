@@ -98,4 +98,4 @@ For this task, let's search for potential executable files created or modified a
 
 ![backdoor.png](/RomComHTB/screenshots/backdoor.png)
 
-
+Answer: ```C:\Users\Susan\Appdata\Local\ApbxHelper.exe```
