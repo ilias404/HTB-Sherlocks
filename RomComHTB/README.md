@@ -17,3 +17,6 @@ Answer: ```CVE-2025-8088```
 
 Answer: ```Path Traversal```
 
+# Task 3: What is the name of the archive file under Susan's documents folder that exploits the vulnerability upon opening the archive file?
+
+
