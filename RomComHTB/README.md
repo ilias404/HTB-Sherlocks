@@ -78,7 +78,7 @@ Answer: ```2025-09-02 08:13:50```
  
 # Task 5: When was the archive file opened?
 
-Since 
+Since the file was created at ```08:13:50``` we can search for events that occurred after that time or filter the ```Update reasons``` by ObjectIdChange."
 
 ![objectidchange.png](/RomComHTB/screenshots/objectidchange.png)
 
