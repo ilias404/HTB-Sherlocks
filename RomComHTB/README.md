@@ -118,3 +118,12 @@ A Google search leads us to the following:
 ![techniquesearch.png](/RomComHTB/screenshots/techniquesearch.png)
 
 Answer: ```T1547.009```
+
+# Task 10: When was the decoy document opened by the end user, thinking it to be a legitimate document?
+
+The decoy document is Genotyping_Results_B57_Positive.pdf, we can filter using the ObjectIdChange just like in the task 
+
+![genotypingtimestamp.png](/RomComHTB/screenshots/genotypingtimestamp.png)
+
+
+
