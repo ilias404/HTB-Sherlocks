@@ -23,7 +23,7 @@ In packet number 52, we can see that the ```USER``` environment variable is set 
 
 ![uservariable.png](/TellyHTB/screenshots/uservariable.png)
 
-After a simple Google search, we found the following:
+A Google search leads us to the following:
 
 > CVE-2026-24061 is a critical authentication bypass in GNU InetUtils telnetd. It affects versions 1.9.3 through 2.7 and carries a CVSS 9.8 severity rating.
 At a high level, the Telnet daemon passes an attacker controlled USER value into the system login process without properly sanitizing it, which can lead to argument injection and an authentication bypass that results in root access.
