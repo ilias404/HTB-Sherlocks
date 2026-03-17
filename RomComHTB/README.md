@@ -60,6 +60,8 @@ Now, we will read the two output files using the second tool, ```Timeline Explor
 
 ![timelineexplorer.png](/RomComHTB/screenshots/timelineexplorer.png)
 
-Since the scenario tells us that Susan received an error while extracting a document, it's probably a ```.rar``` file. Let's try some filtering:
+Since the scenario tells us that Susan received an error while extracting a document, it's probably a ```.rar``` file. Let's try some filtering.
 
 ![archivename.png](/RomComHTB/screenshots/archivename.png)
+
+Answer: ```Pathology-Department-Research-Records.rar```
