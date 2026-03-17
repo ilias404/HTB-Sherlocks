@@ -95,5 +95,14 @@ sqlite3 credit-cards-25-blackfriday.db
 
 Answer: ```5312269047781209```
 
+# Conclusion:
+
+The analysis showed that the backup server was compromised through a vulnerability in the Telnet service (CVE-2026-24061). By abusing the ```USER=-f``` root parameter, the attacker was able to bypass authentication and gain root access to the machine.
+
+Once inside, the attacker created a backdoor account to keep access to the system and downloaded a persistence script to maintain remote control through a C2 server at ```91.99.25.54```. After establishing persistence, the attacker proceeded to exfiltrate a database containing sensitive customer information, including credit card data.
+
+Overall, this investigation shows how an outdated and insecure service like Telnet can lead to a full system compromise and data breach if it is not properly secured or replaced with safer alternatives.
+
+![tellypwned.png](/TellyHTB/screenshots/tellypwned.png)
 
 
