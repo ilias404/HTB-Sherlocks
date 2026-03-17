@@ -69,3 +69,5 @@ Answer: ```Pathology-Department-Research-Records.rar```
 # Task 4: When was the archive file created on the disk?
 
 We will start by analyzing the ```$J``` file, as it records detailed file activity events (such as creation, modification, and deletion), making it more useful for identifying precise timestamps than the ```$MFT```.
+![filecreatetimestamp.png](/RomComHTB/screenshots/filecreatetimestamp.png)
+
