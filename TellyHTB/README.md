@@ -52,3 +52,10 @@ cat terminal_log.txt | sed 's/root@backup-secondary/\x1b[31m&\x1b[0m/g'
 
 Answer: ```backup-secondary```
 
+# Task 4: The attacker created a backdoor account to maintain future access. What username and password were set for that account?
+
+For the next few tasks, we just need to read through the entire conversation to answer them.
+
+![backdooracc.png](/TellyHTB/screenshots/backdooracc.png)
+
+Answer: ```cleanupsvc:YouKnowWhoiam69```
