@@ -94,5 +94,8 @@ Answer: ```Genotyping_Results_B57_Positive.pdf```
 
 # Task 7: What is the name and path of the actual backdoor executable dropped by the archive file?
 
+For this task, let's search for potential executable files created or modified around the same timestamp.
+
+![backdoor.png](/RomComHTB/screenshots/backdoor.png)
 
 
