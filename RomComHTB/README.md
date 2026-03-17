@@ -121,9 +121,9 @@ Answer: ```T1547.009```
 
 # Task 10: When was the decoy document opened by the end user, thinking it to be a legitimate document?
 
-The decoy document is Genotyping_Results_B57_Positive.pdf, we can filter using the ObjectIdChange just like in the task 
+The decoy document is ```Genotyping_Results_B57_Positive.pdf```. We can filter using the ```ObjectIdChange``` field, just as we did in Task #5.
 
 ![genotypingtimestamp.png](/RomComHTB/screenshots/genotypingtimestamp.png)
 
-
+Answer: ```2025-09-02 08:15:05```
 
