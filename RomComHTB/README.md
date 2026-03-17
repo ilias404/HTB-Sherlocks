@@ -127,3 +127,8 @@ The decoy document is ```Genotyping_Results_B57_Positive.pdf```. We can filter u
 
 Answer: ```2025-09-02 08:15:05```
 
+# Conclusion
+
+In this investigation, we worked with a virtual hard disk ```(.vhdx)``` to dig into the system and see what happened. By looking at ```NTFS``` artifacts like the ```$MFT``` and the ```$J (USN Journal)``` using ```MFTECmd``` and ```Timeline Explorer```, we were able to trace when files were created, modified, or accessed. We also saw how ```.lnk``` shortcuts in the Startup folder can be used to make programs run automatically and how decoy files can distract the user. Overall, this exercise shows how important timeline reconstruction and system file analysis are in understanding what happened on a computer.
+
+![romcompwned.png](/RomComHTB/screenshots/romcompwned.png)
