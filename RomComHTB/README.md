@@ -113,5 +113,8 @@ Answer: ```C:\Users\Susan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
 
 # Task 9: What is the associated MITRE Technique ID discussed in the previous question?
 
+A Google search leads us to the following:
 
+![techniquesearch.png](/RomComHTB/screenshots/techniquesearch.png)
 
+Answer: ```T1547.009```
