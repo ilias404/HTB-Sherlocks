@@ -56,5 +56,7 @@ Let's use the same tool to parse the ```$J``` file:
 ```
 ![mftecmdJ.png](/RomComHTB/screenshots/mftecmdJ.png)
 
+Now, we will read the two output files using the second tool, ```Timeline Explorer```.
 
+![timelineexplorer.png](/RomComHTB/screenshots/timelineexplorer.png)
 
