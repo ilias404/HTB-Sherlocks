@@ -32,7 +32,7 @@ On our Windows machine, let's ```Right-click > Mount``` to see what's inside.
 ![mount.png](/RomComHTB/screenshots/mount.png)
 
 We end up with two important files: ```$MFT``` and ```$J```.
-> ```$MFT``` (Master File Table): The main database of an NTFS disk. It stores metadata for every file and folder, like names, sizes, and timestamps, letting us see what exists or existed on the system.
+> ```$MFT (Master File Table)```: The main database of an NTFS disk. It stores metadata for every file and folder, like names, sizes, and timestamps, letting us see what exists or existed on the system.
 
 > ```$J``` (USN Journal): A log of all file changes on the disk, including creation, modification, deletion, and renaming. Even deleted files can appear here, making it useful for tracking activity over time.
 
