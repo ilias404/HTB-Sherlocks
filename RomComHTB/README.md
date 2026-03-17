@@ -105,3 +105,5 @@ Answer: ```C:\Users\Susan\Appdata\Local\ApbxHelper.exe```
 Alongside the suspicious files, we identified another file created around the same timestamp.
 
 ![lnk.png](/RomComHTB/screenshots/lnk.png)
+
+Answer: ```C:\Users\Susan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Display Settings.lnk```
