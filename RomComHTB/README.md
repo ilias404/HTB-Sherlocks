@@ -49,5 +49,12 @@ Now, let's open a terminal in the directory of our ```MFTECmd``` tool and run th
 ```
 ![mftecmd.png](/RomComHTB/screenshots/mftecmd.png)
 
+Let's use the same tool to parse the ```$J``` file:
+
+```bash
+.\MFTECmd.exe -f "C:\Users\lenovo\Desktop\RomComHTB\C\`$Extend\`$J" -m "C:\Users\lenovo\Desktop\RomComHTB\C\`$MFT" --csv "C:\Users\lenovo\Desktop\RomComHTB"
+```
+![mftecmd1.png](/RomComHTB/screenshots/mftecmd1.png)
+
 
 
