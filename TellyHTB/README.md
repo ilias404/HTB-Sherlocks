@@ -80,3 +80,16 @@ Answer: ```91.99.25.54```
 
 Answer: ```2026-01-27 10:49:54```
 
+# Task 8: Analyze the exfiltrated database. To follow compliance requirements, the breached organization needs to notify its customers. For data validation purposes, find the credit card number for a customer named Quinn Harris.
+
+Let's export the database from Wireshark:
+
+![exportobjects.png](/TellyHTB/screenshots/exportobjects.png)
+![savedb.png](/TellyHTB/screenshots/savedb.png)
+
+Now, let's access our downloaded database using ```sqlite3```.
+
+```bash
+sqlite3 credit-cards-25-blackfriday.db
+```
+
