@@ -36,4 +36,6 @@ We end up with two important files: ```$MFT``` and ```$J```.
 
 > ```$J``` (USN Journal): A log of all file changes on the disk, including creation, modification, deletion, and renaming. Even deleted files can appear here, making it useful for tracking activity over time.
 
-To read these two files, we will use MFTECmd and Timeline Explorer, which can be downloaded from this [link](https://ericzimmerman.github.io/#!index.md).
+To read these two files, we will use ```MFTECmd``` and ```Timeline Explorer```, which can be downloaded from this [link](https://ericzimmerman.github.io/#!index.md).
+
+
