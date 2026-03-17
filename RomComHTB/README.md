@@ -54,7 +54,7 @@ Let's use the same tool to parse the ```$J``` file:
 ```bash
 .\MFTECmd.exe -f "C:\Users\lenovo\Desktop\RomComHTB\C\`$Extend\`$J" -m "C:\Users\lenovo\Desktop\RomComHTB\C\`$MFT" --csv "C:\Users\lenovo\Desktop\RomComHTB"
 ```
-![mftecmd1.png](/RomComHTB/screenshots/mftecmd1.png)
+![mftecmdJ.png](/RomComHTB/screenshots/mftecmdJ.png)
 
 
 
