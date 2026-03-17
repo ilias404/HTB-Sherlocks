@@ -72,3 +72,8 @@ We will start by analyzing the ```$J``` file, as it records detailed file activi
 
 ![filecreatetimestamp.png](/RomComHTB/screenshots/filecreatetimestamp.png)
 
+Answer: ```2025-09-02 08:13:50```
+ 
+# Task 5: When was the archive file opened?
+
+
