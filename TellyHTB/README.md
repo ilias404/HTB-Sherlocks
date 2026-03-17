@@ -92,4 +92,9 @@ Now, let's access our downloaded database using ```sqlite3```.
 ```bash
 sqlite3 credit-cards-25-blackfriday.db
 ```
+![quinn.png](/TellyHTB/screenshots/quinn.png)
+
+Answer: ```5312269047781209```
+
+
 
