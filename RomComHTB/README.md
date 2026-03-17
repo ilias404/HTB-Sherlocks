@@ -47,7 +47,7 @@ Now, let's open a terminal in the directory of our ```MFTECmd``` tool and run th
 ```bash
 .\MFTECmd.exe -f "C:\Users\lenovo\Desktop\RomComHTB\C\`$MFT" --csv "C:\Users\lenovo\Desktop\RomComHTB" --csvf MFToutput.csv
 ```
-![mftcmd.png](/RomComHTB/screenshots/mftcmd.png)
+![mftecmd.png](/RomComHTB/screenshots/mftecmd.png)
 
 
 
