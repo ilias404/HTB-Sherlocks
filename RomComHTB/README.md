@@ -86,5 +86,8 @@ Answer: ```2025-09-02 08:14:04```
 
 # Task 6: What is the name of the decoy document extracted from the archive file, meant to appear legitimate and distract the user?
 
+In the ```$J``` file:
+
+![genotyping.png](/RomComHTB/screenshots/genotyping.png)
 
 
