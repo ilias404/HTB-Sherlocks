@@ -19,4 +19,14 @@ Answer: ```Path Traversal```
 
 # Task 3: What is the name of the archive file under Susan's documents folder that exploits the vulnerability upon opening the archive file?
 
+Let's start by extracting the ```RomCom.zip``` file.
 
+> Note: We will be using a Windows machine to solve this Sherlock.
+
+After extraction, we end up with a ```.vhdx``` file.
+
+> A ```.vhdx``` file is a virtual hard drive. It’s a file that holds an entire computer’s disk, including system files, programs, and documents. We can open or mount it to look at the files without changing the original.
+
+On our Windows machine, let's ```Right-click > Mount``` to see what's inside.
+
+![mount.png](/RomComHTB/screenshots/mount.png)
