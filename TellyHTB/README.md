@@ -74,3 +74,9 @@ Answer: ```wget https://raw.githubusercontent.com/montysecurity/linper/refs/head
 
 Answer: ```91.99.25.54```
 
+# Task 7: The attacker exfiltrated a sensitive database file. At what time was this file exfiltrated?
+
+![db.png](/TellyHTB/screenshots/db.png)
+
+Answer: ```2026-01-27 10:49:54```
+
