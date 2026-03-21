@@ -10,7 +10,7 @@
 Unzipping the files reveals a ton of ```.evtx``` files.
 > ```.evtx``` files are Windows Event Logs that record system, security, and application events, like logins, service starts, or errors. They help admins and analysts troubleshoot issues and investigate suspicious activity, and can be read in Event Viewer, PowerShell, or with tools like ```EvtxECmd```.
 
-We will use ```Timeline Explorer``` and ```EvtxECmd```.
+We will use [```Timeline Explorer```](https://ericzimmerman.github.io/#!index.md) and ```EvtxECmd```.
 
 We navigate to the directory where ```Evtxecmd``` is installed and run the following: 
 
@@ -18,3 +18,5 @@ We navigate to the directory where ```Evtxecmd``` is installed and run the follo
 .\EvtxECmd.exe -d "C:\Users\lenovo\Downloads\SmartyPants\Logs" --csv output.csv
 ```
 ![evtxecmd.png](/SmartyPantsHTB/screenshots/evtxecmd.png)
+
+Lets open the output using the second tool
