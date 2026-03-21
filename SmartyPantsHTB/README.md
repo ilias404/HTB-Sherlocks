@@ -48,3 +48,18 @@ Answer: ```C:\Users\Dutch\Downloads\Everything.exe```
 
 
 Answer: ```2025-01-24 10:17:33```
+
+# Task 5: The utility was used to search for critical and confidential documents stored on the host, which the attacker could steal and extort the victim. What was the first document that the attacker got their hands on and breached the confidentiality of that document?
+
+The answer can be found in the screenshot from Task 2.
+
+Answer: ```C:\Users\Dutch\Documents\2025- Board of directors Documents\Ministry Of Defense Audit.pdf```
+
+# Task 6: Find the name and path of second stolen document as well.
+
+The answer can be found in the screenshot from Task 2.
+
+Answer: ```C:\Users\Dutch\Documents\2025- Board of directors Documents\2025-BUDGET-ALLOCATION-CONFIDENTIAL.pdf```
+
+# Task 7: The attacker installed a Cloud utility as well to steal and exfiltrate the documents. What is name of the cloud utility?
+
