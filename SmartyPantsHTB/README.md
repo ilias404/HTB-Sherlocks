@@ -63,3 +63,12 @@ Answer: ```C:\Users\Dutch\Documents\2025- Board of directors Documents\2025-BUDG
 
 # Task 7: The attacker installed a Cloud utility as well to steal and exfiltrate the documents. What is name of the cloud utility?
 
+![second1.png](/SmartyPantsHTB/screenshots/second1.png)
+
+Answer: ```MEGAsync```
+
+# Task 8: When was this utility executed?
+
+The answer can be found in the screenshot from Task 7.
+
+Answer: ```2025-01-24 10:22:19```
