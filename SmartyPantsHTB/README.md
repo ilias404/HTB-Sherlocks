@@ -33,3 +33,11 @@ Answer: ```2025-01-24 10:22:19```
 Filtering for Smartscreen debug logs:
 
 ![exes.png](/SmartyPantsHTB/screenshots/exes.png)
+
+Answer: ```WinRAR```
+
+# Task 3: They then proceeded to download and then execute the portable version of a tool that could be used to search for files on the machine quickly and efficiently. What was the full path of the executable?
+
+The answer can be found in the screenshot from Task 2.
+
+Answer: ```C:\Users\Dutch\Downloads\Everything.exe```
