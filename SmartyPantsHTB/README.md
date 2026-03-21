@@ -12,14 +12,14 @@ Unzipping the files reveals a ton of ```.evtx``` files.
 
 We will use [```Timeline Explorer```](https://ericzimmerman.github.io/#!index.md) and [```EvtxECmd```](https://ericzimmerman.github.io/#!index.md).
 
-We navigate to the directory where ```Evtxecmd``` is installed and run the following: 
+We navigate to the directory where ```EvtxECmd``` is installed and run the following: 
 
 ```bash
 .\EvtxECmd.exe -d "C:\Users\lenovo\Downloads\SmartyPants\Logs" --csv output.csv
 ```
 ![evtxecmd.png](/SmartyPantsHTB/screenshots/evtxecmd.png)
 
-We can now open the output using the second tool, ```Timeline Explorer```.
+Open the output in ```Timeline Explorer```.
 
 When we filter for event log number 1149, we find the following:
 > Event ID 1149 logs RDP authentication attempts in Windows. It shows which user and IP tried to connect, but does not confirm a successful login. Analysts use it to detect RDP access attempts or brute-force activity, often correlating it with Event ID 4624 for actual logins.
@@ -88,3 +88,9 @@ Since **Event ID 1102** indicates a cleared security log, we can filter for it i
 ![log.png](/SmartyPantsHTB/screenshots/log.png)
 
 Answer: ```2025-01-24 10:28:41```
+
+# Conclusion
+
+In this scenario, the attacker gained access via RDP, downloaded and executed multiple tools to locate and exfiltrate sensitive documents, and then destroyed evidence and cleared security logs. By analyzing the ```.evtx``` files with ```EvtxECmd``` and ```Timeline Explorer```, along with SmartScreen Debug Logs, we were able to reconstruct the attack timeline, identify the stolen files, and determine the utilities used. This exercise highlights the importance of event log monitoring, endpoint logging, and proactive visibility controls in detecting and investigating breaches.
+
+![smartypantspwned.png](/SmartyPantsHTB/screenshots/smartypantspwned.png)
