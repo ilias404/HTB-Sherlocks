@@ -81,4 +81,8 @@ Answer: ```File Shredder```
 
 # Task 10: The attacker cleared 2 important logs, thinking they covered all their tracks. When was the security log cleared?
 
+Since **Event ID 1102** indicates a cleared security log, we can filter for it in the ```Event ID``` field in Timeline Explorer.
 
+![log.png](/SmartyPantsHTB/screenshots/log.png)
+
+Answer: ```2025-01-24 10:28:41```
