@@ -83,6 +83,8 @@ Answer: ```File Shredder```
 
 Since **Event ID 1102** indicates a cleared security log, we can filter for it in the ```Event ID``` field in Timeline Explorer.
 
+> Windows Event ID 1102 indicates that the Security Audit Log was cleared. This is a critical, high-severity event usually requiring investigation, as it often suggests an attempt to hide malicious activity or cover tracks following a security breach. It shows who cleared the log and when.
+
 ![log.png](/SmartyPantsHTB/screenshots/log.png)
 
 Answer: ```2025-01-24 10:28:41```
