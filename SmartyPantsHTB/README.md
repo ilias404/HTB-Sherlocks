@@ -12,7 +12,8 @@ Unzipping the files reveals a ton of ```.evtx``` files.
 
 We will use ```Timeline Explorer``` and ```EvtxECmd```.
 
-On a terminal after downloading EvtxECmd : 
+We navigate to the directory where ```Evtxecmd``` is installed and run the following: 
+
 ```bash
 .\EvtxECmd.exe -d "C:\Users\lenovo\Downloads\SmartyPants\Logs" --csv output.csv
 ```
