@@ -10,7 +10,7 @@
 Unzipping the files reveals a ton of ```.evtx``` files.
 > ```.evtx``` files are Windows Event Logs that record system, security, and application events, like logins, service starts, or errors. They help admins and analysts troubleshoot issues and investigate suspicious activity, and can be read in Event Viewer, PowerShell, or with tools like ```EvtxECmd```.
 
-We will use [```Timeline Explorer```](https://ericzimmerman.github.io/#!index.md) and ```EvtxECmd```.
+We will use [```Timeline Explorer```](https://ericzimmerman.github.io/#!index.md) and [```EvtxECmd```](https://ericzimmerman.github.io/#!index.md).
 
 We navigate to the directory where ```Evtxecmd``` is installed and run the following: 
 
@@ -19,4 +19,12 @@ We navigate to the directory where ```Evtxecmd``` is installed and run the follo
 ```
 ![evtxecmd.png](/SmartyPantsHTB/screenshots/evtxecmd.png)
 
-Lets open the output using the second tool
+We can now open the output using the second tool, ```Timeline Explorer```.
+
+When we filter for event log number 1149, we find the following:
+> Event ID 1149 logs RDP authentication attempts in Windows. It shows which user and IP tried to connect, but does not confirm a successful login. Analysts use it to detect RDP access attempts or brute-force activity, often correlating it with Event ID 4624 for actual logins.
+
+![1149.png](/SmartyPantsHTB/screenshots/1149.png)
+
+Answer: ```2025-01-24 10:22:19```
+
