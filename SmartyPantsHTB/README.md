@@ -72,3 +72,13 @@ Answer: ```MEGAsync```
 The answer can be found in the screenshot from Task 7.
 
 Answer: ```2025-01-24 10:22:19```
+
+# Task 9: The Attacker also proceeded to destroy the data on the host so it is unrecoverable. What utility was used to achieve this?
+
+The answer can be found in the screenshot from Task 7.
+
+Answer: ```File Shredder```
+
+# Task 10: The attacker cleared 2 important logs, thinking they covered all their tracks. When was the security log cleared?
+
+
