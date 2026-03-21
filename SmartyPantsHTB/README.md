@@ -41,3 +41,10 @@ Answer: ```WinRAR```
 The answer can be found in the screenshot from Task 2.
 
 Answer: ```C:\Users\Dutch\Downloads\Everything.exe```
+
+# Task 4: What is the execution time of the tool from task 3?
+
+![everything.png](/SmartyPantsHTB/screenshots/everything.png)
+
+
+Answer: ```2025-01-24 10:17:33```
