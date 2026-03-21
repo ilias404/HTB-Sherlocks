@@ -28,3 +28,8 @@ When we filter for event log number 1149, we find the following:
 
 Answer: ```2025-01-24 10:22:19```
 
+# Task 2: The attacker downloaded a few utilities that aided them for their sabotage and extortion operation. What was the first tool they downloaded and installed?
+
+Filtering for Smartscreen debug logs:
+
+![exes.png](/SmartyPantsHTB/screenshots/exes.png)
