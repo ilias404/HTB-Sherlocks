@@ -6,4 +6,6 @@
 
 # Task 1: Its suspected by the security team that there was a rogue device in Forela's internal network running responder tool to perform an LLMNR Poisoning attack. Please find the malicious IP Address of the machine.
 
+> LLMNR (Link-Local Multicast Name Resolution) is a Windows protocol used to resolve hostnames on a local network when DNS fails. When a device cannot determine the IP address of a hostname through DNS, it sends a multicast request asking other devices on the network if they know the address. Any device can respond to this request.
 
+> LLMNR poisoning is an attack that exploits this behavior. An attacker on the same network listens for LLMNR requests and responds to them by pretending to be the requested host. When the victim device connects to the attacker, it attempts to authenticate, sending an NTLMv2 response. The attacker can capture this response and use it for password cracking or relay attacks.
