@@ -2,5 +2,5 @@
 |:-------------:|:-------------:|
 | [Brutus](https://github.com/ilias404/HTB-Sherlocks/blob/main/BrutusHTB/README.md)       | `Log Analysis`, `auth.log`, `wtmp`, `btmp`, `utmp`, `utmp.py Parsing`, `SSH Brute Force`, `UTC Correlation`, `Persistence Detection`, `T1136.001`, `grep`                                                                               |
 | [Telly](https://github.com/ilias404/HTB-Sherlocks/blob/main/TellyHTB/README.md)        | `DFIR`, `Wireshark`, `telnet`, `CVE-2026-24061`, `Telnet environment variable abuse`, `PCAP network traffic analysis`, `sed`, `Backdoor Detection`, `Persistence Detection`, `C2`, `Export Objects Wireshark`, `SQLite Database`, `sqlite3` , `Database Exfiltration`, `TCP stream analysis` |
-| [SmartyPants](https://github.com/ilias404/HTB-Sherlocks/blob/main/SmartyPantsHTB/README.md)      | 
+| [SmartyPants](https://github.com/ilias404/HTB-Sherlocks/blob/main/SmartyPantsHTB/README.md)      | `SmartScreen Debug Logs`, `RDP`, `.evtx`, `Timeline Explorer`, `EvtxECmd`, `Event ID 1149 (RDP auth attempts)`, `Log Analysis using Timeline Explorer`, `Event ID 1102 (Security Audit Log cleared)` 
 | [RomCom](https://github.com/ilias404/HTB-Sherlocks/blob/main/RomComHTB/README.md) |
