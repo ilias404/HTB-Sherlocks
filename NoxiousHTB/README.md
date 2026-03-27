@@ -65,7 +65,7 @@ Ans: `DCC01`
 
 # Task 6: To get the actual credentials of the victim user we need to stitch together multiple values from the ntlm negotiation packets. What is the NTLM server challenge value?
 
-The NTLM server challenge value can be found under SMB2 (Server Message Block Protocol version 2) > Session Setup Response (0x01) > Security Blob -> GSS-API Generic... -> Simple Protected Negotiation > negTokenTarg > NTLM Secure Service Provider > NTLM Server Challenge.
+The NTLM server challenge value can be found under `SMB2 (Server Message Block Protocol version 2) > Session Setup Response (0x01) > Security Blob -> GSS-API Generic... -> Simple Protected Negotiation > negTokenTarg > NTLM Secure Service Provider > NTLM Server Challenge`.
 
 ![ntlmchall.png](/NoxiousHTB/screenshots/ntlmchall.png)
 
