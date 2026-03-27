@@ -38,5 +38,9 @@ Ans: `kali`
 
 # Task 3: Now we need to confirm whether the attacker captured the user's hash and it is crackable!! What is the username whose hash was captured?
 
+Filtering for SMB2 or NTLMSSP reveals the following:
 
+![johndeacon.png](/NoxiousHTB/screenshots/johndeacon.png)
+
+Ans: `john.deacon`
 
