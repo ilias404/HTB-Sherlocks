@@ -35,3 +35,8 @@ Now that we have the IP address, we can search for DHCP traffic related to it, w
 ![kali.png](/NoxiousHTB/screenshots/kali.png)
 
 Ans: `kali`
+
+# Task 3: Now we need to confirm whether the attacker captured the user's hash and it is crackable!! What is the username whose hash was captured?
+
+
+
