@@ -44,3 +44,11 @@ Filtering for SMB2 or NTLMSSP reveals the following:
 
 Ans: `john.deacon`
 
+# Task 4: In NTLM traffic we can see that the victim credentials were relayed multiple times to the attacker's machine. When were the hashes captured the First time?
+
+Selecting `View > Time Display Format > UTC Date and Time of Day` allows us to find the exact time and date when the hashes were first captured.
+
+![timestamp.png](/NoxiousHTB/screenshots/timestamp.png)
+
+Ans: `2024-06-24 11:18:30`
+
