@@ -13,4 +13,4 @@
 We know the rogue device is inside the Active Directory network. To identify its IP, we first determine the Domain Controller’s IP. Legitimate LLMNR responses from the DC are normal, but any other machine responding to LLMNR requests from clients, especially by impersonating the DC or other servers, is suspicious.
 Let's open the provided PCAP file using Wireshark and filter for DNS.
 
-![dns.jpg](/NoxiousHTB/screenshots/dns.jpg)
+![dns.png](/NoxiousHTB/screenshots/dns.png)
