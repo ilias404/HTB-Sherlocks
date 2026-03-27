@@ -23,3 +23,7 @@ The DC IP address is `172.17.79.4`.
 Let's filter for LLMNR now and see what we can find.
 
 ![llmnr.png](/NoxiousHTB/screenshots/llmnr.png)
+
+In legitimate cases, the DC IP address that we found earlier should respond to requests from `172.17.79.136` (Forela-WKstn002). However, it appears that another IP address is responding instead, which is rogue.
+
+Ans: `172.17.79.135`
