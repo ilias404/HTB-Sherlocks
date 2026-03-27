@@ -84,3 +84,11 @@ Ans: `c0cc803a6d9fb5a9082253a04dbd4cd4`
 > The `username` and `domain` are important because they are used in the generation of the NTLM hash and influence the final computed response. The `server challenge` is a random value sent by the server to ensure that each authentication attempt is unique. The `NTProofStr` represents the actual proof of knowledge of the password, while the `blob` contains additional data such as a timestamp and client-specific information.
 > 
 > During the cracking process, a tool like `Hashcat` takes a password guess and uses all these fields to recompute the NTLMv2 response. If the recomputed `NTProofStr` matches the captured one, the password is correct. Without any of these fields, the computation cannot be reproduced, making it impossible to verify password guesses.
+
+The fields are combined into the following format:
+
+`username::domain:server_challenge:NTProofStr:blob`
+
+If we combine everything correctly, we should end up with something like this:
+
+`john.deacon::FORELA:601019d191f054f1:c0cc803a6d9fb5a9082253a04dbd4cd4:010100000000000080e4d59406c6da01cc3dcfc0de9b5f2600000000020008004e0042004600590001001e00570049004e002d00360036004100530035004c003100470052005700540004003400570049004e002d00360036004100530035004c00310047005200570054002e004e004200460059002e004c004f00430041004c00030014004e004200460059002e004c004f00430041004c00050014004e004200460059002e004c004f00430041004c000700080080e4d59406c6da0106000400020000000800300030000000000000000000000000200000eb2ecbc5200a40b89ad5831abf821f4f20a2c7f352283a35600377e1f294f1c90a001000000000000000000000000000000000000900140063006900660073002f00440043004300300031000000000000000000`
