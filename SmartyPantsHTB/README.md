@@ -1,4 +1,4 @@
-# SmartyPants
+# SmartyPants HTB
 
 ![smartypants.png](/SmartyPantsHTB/screenshots/smartypants.png)
 
