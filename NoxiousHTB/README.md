@@ -12,19 +12,19 @@
 
 We know the rogue device is inside the Active Directory network. To identify its IP, we first determine the Domain Controller’s IP. Legitimate LLMNR responses from the DC are normal, but any other machine responding to LLMNR requests from clients, especially by impersonating the DC or other servers, is suspicious.
 
-Let's open the provided PCAP file using Wireshark and filter for DNS. 
+We begin by analyzing the PCAP file in Wireshark and filtering for DNS traffic to identify key infrastructure components such as the Domain Controller.
 
 > We can also filter for other protocols like LDAP and Kerberos, since the Domain Controller uses these protocols to provide its services.
 
 ![dns.png](/NoxiousHTB/screenshots/dns.png)
 
-The DC IP address is `172.17.79.4`.
+filter for is `172.17.79.4`.
 
-Let's filter for LLMNR now and see what we can find.
+Next, we filter for LLMNR traffic to identify abnormal name resolution behavior.
 
 ![llmnr.png](/NoxiousHTB/screenshots/llmnr.png)
 
-In legitimate cases, the DC IP address that we found earlier should be the one to respond to requests from `172.17.79.136` (Forela-WKstn002). However, it appears that another IP address is responding instead, which is suspicious.
+In legitimate scenarios, LLMNR responses may come from any host that believes it owns the requested name. However, in this case, a single machine consistently responds to multiple LLMNR queries, which is indicative of a rogue device performing LLMNR poisoning.
 
 Ans: `172.17.79.135`
 
