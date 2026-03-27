@@ -62,3 +62,11 @@ Ans: `2024-06-24 11:18:30`
 In the LLMNR traffic, we observed that the victim attempted to access `DCC01` instead of `DC01`, causing the DNS resolution to fail. As a result, the system fell back to LLMNR for name resolution. The attacker exploited this behavior by responding to the LLMNR request, impersonating the requested host (`DCC01`), and successfully capturing the victim’s authentication attempt through an LLMNR poisoning attack.
 
 Ans: `DCC01`
+
+# Task 6: To get the actual credentials of the victim user we need to stitch together multiple values from the ntlm negotiation packets. What is the NTLM server challenge value?
+
+The NTLM server challenge value can be found under SMB2 (Server Message Block Protocol version 2) > Session Setup Response (0x01) > Security Blob -> GSS-API Generic... -> Simple Protected Negotiation > negTokenTarg > NTLM Secure Service Provider > NTLM Server Challenge.
+
+![ntlmchall.png](/NoxiousHTB/screenshots/ntlmchall.png)
+
+Ans: `601019d191f054f1`
