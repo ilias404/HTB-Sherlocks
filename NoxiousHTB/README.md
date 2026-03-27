@@ -19,3 +19,7 @@ Let's open the provided PCAP file using Wireshark and filter for DNS.
 ![dns.png](/NoxiousHTB/screenshots/dns.png)
 
 The DC IP address is `172.17.79.4`.
+
+Let's filter for LLMNR now and see what we can find.
+
+![llmnr.png](/NoxiousHTB/screenshots/llmnr.png)
