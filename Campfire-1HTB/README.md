@@ -12,3 +12,5 @@
 >2- PowerShell-Operational Logs from the affected workstation
 >
 >3- Prefetch Files from the affected workstation
+
+# Task 1: Analyzing Domain Controller Security Logs, can you confirm the UTC date & time when the kerberoasting activity occurred?
