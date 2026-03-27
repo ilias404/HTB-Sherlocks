@@ -24,6 +24,14 @@ Let's filter for LLMNR now and see what we can find.
 
 ![llmnr.png](/NoxiousHTB/screenshots/llmnr.png)
 
-In legitimate cases, the DC IP address that we found earlier should respond to requests from `172.17.79.136` (Forela-WKstn002). However, it appears that another IP address is responding instead, which is rogue.
+In legitimate cases, the DC IP address that we found earlier should be the one to respond to requests from `172.17.79.136` (Forela-WKstn002). However, it appears that another IP address is responding instead, which is suspicious.
 
 Ans: `172.17.79.135`
+
+# Task 2: What is the hostname of the rogue machine?
+
+Now that we have the IP address, we can search for DHCP traffic related to it, which will reveal its hostname.
+
+![kali.png](/NoxiousHTB/screenshots/kali.png)
+
+Ans: `kali`
