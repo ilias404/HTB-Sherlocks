@@ -105,3 +105,15 @@ hashcat -a 0 -m 5600 hash /home/worldline/Desktop/rockyou.txt
 ```
 
 ![cracked.png](/NoxiousHTB/screenshots/cracked.png)
+
+Ans: `NotMyPassword0K?`
+
+# Task 9: Just to get more context surrounding the incident, what is the actual file share that the victim was trying to navigate to?
+
+By filtering for `smb2` and scrolling down a bit, we can find a some Tree Connect Requests and Responses.
+
+> In SMB2 (Server Message Block v2), a Tree Connect refers to the process where a client connects to a specific shared resource on a server, such as a shared folder or printer. A Tree Disconnect is the opposite operation, where the client terminates that connection.
+
+![confidential.png](/NoxiousHTB/screenshots/confidential.png)
+
+Ans: `\\DC01\DC-Confidential`
