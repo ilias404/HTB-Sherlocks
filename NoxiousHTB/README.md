@@ -80,7 +80,7 @@ Ans: `c0cc803a6d9fb5a9082253a04dbd4cd4`
 # Task 8: To test the password complexity, try recovering the password from the information found from packet capture. This is a crucial step as this way we can find whether the attacker was able to crack this and how quickly.
 
 > To crack an NTLMv2 hash, several fields must be extracted because the authentication response is not a simple hash but the result of a computation that depends on multiple inputs. These required fields are the username, domain, server challenge, and the NTLMv2 response, which itself is composed of the NTProofStr and the blob.
-
+>
 > The username and domain are important because they are used in the generation of the NTLM hash and influence the final computed response. The server challenge is a random value sent by the server to ensure that each authentication attempt is unique. The NTProofStr represents the actual proof of knowledge of the password, while the blob contains additional data such as a timestamp and client-specific information.
 > 
 > During the cracking process, a tool like Hashcat takes a password guess and uses all these fields to recompute the NTLMv2 response. If the recomputed NTProofStr matches the captured one, the password is correct. Without any of these fields, the computation cannot be reproduced, making it impossible to verify password guesses.
