@@ -70,3 +70,11 @@ The NTLM server challenge value can be found under `SMB2 (Server Message Block P
 ![ntlmchall.png](/NoxiousHTB/screenshots/ntlmchall.png)
 
 Ans: `601019d191f054f1`
+
+# Task 7: Now doing something similar find the NTProofStr value.
+
+![ntproof.png](/NoxiousHTB/screenshots/ntproof.png)
+
+Ans: `c0cc803a6d9fb5a9082253a04dbd4cd4`
+
+# Task 8: To test the password complexity, try recovering the password from the information found from packet capture. This is a crucial step as this way we can find whether the attacker was able to crack this and how quickly.
