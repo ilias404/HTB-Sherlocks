@@ -50,5 +50,7 @@ Selecting `View > Time Display Format > UTC Date and Time of Day` allows us to f
 
 ![timestamp.png](/NoxiousHTB/screenshots/timestamp.png)
 
+> NTLMSSP authentication, as seen in network analysis tools like Wireshark, consists of three main messages exchanged between a client and a server. The process starts with the client sending an NTLMSSP_NEGOTIATE message, where it indicates that it wants to authenticate using NTLM and lists its supported security options. The server then responds with an NTLMSSP_CHALLENGE message, which contains a random value known as the server challenge. This value is used to ensure that the authentication process is unique and cannot be reused. Finally, the client sends an NTLMSSP_AUTH message, which includes the username, domain, and an NTLMv2 response computed using the user’s password hash and the server challenge. The server verifies this response, and if it matches the expected value, the authentication is successful; otherwise, it is rejected.
+
 Ans: `2024-06-24 11:18:30`
 
