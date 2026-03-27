@@ -126,3 +126,4 @@ The captured credentials were successfully reconstructed and cracked, revealing 
 
 To mitigate such attacks, it is recommended to disable LLMNR in the network, enforce strong password policies, and implement network monitoring to detect abnormal authentication patterns.
 
+![noxioussolved.png](/NoxiousHTB/screenshots/noxioussolved.png)
