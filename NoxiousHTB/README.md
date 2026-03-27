@@ -17,3 +17,5 @@ Let's open the provided PCAP file using Wireshark and filter for DNS.
 > We can also filter for other protocols like LDAP and Kerberos, since the Domain Controller uses these protocols to provide its services.
 
 ![dns.png](/NoxiousHTB/screenshots/dns.png)
+
+The DC IP address is `172.17.79.4`.
