@@ -117,3 +117,12 @@ By filtering for `smb2` and scrolling down a bit, we can find a some `Tree Conne
 ![confidential.png](/NoxiousHTB/screenshots/confidential.png)
 
 Ans: `\\DC01\DC-Confidential`
+
+# Conclusion
+
+The investigation confirmed the presence of a rogue device within the Active Directory network performing an LLMNR poisoning attack. By responding to LLMNR queries, the attacker successfully impersonated a requested host and captured NTLMv2 authentication data from the victim machine.
+
+The captured credentials were successfully reconstructed and cracked, revealing that the password was weak and susceptible to dictionary attacks. This demonstrates the risk of relying on fallback name resolution protocols such as LLMNR, which can be abused by attackers to intercept authentication attempts.
+
+To mitigate such attacks, it is recommended to disable LLMNR in the network, enforce strong password policies, and implement network monitoring to detect abnormal authentication patterns.
+
