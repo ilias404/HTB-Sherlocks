@@ -108,6 +108,8 @@ hashcat -a 0 -m 5600 hash /home/worldline/Desktop/rockyou.txt
 
 Ans: `NotMyPassword0K?`
 
+> Note: In some cases, attackers may not need to crack the captured NTLMv2 hash at all. Instead, they can perform an **NTLM relay attack**, where the captured authentication is forwarded in real time to another internal service, such as a file server. Since NTLM doesn’t require the plaintext password, the server accepts the relayed credentials, giving the attacker access. This shows that even strong passwords can be vulnerable, so it’s important to take measures such as enabling SMB signing, limiting NTLM, disabling LLMNR, and monitoring for unusual authentication activity.
+
 # Task 9: Just to get more context surrounding the incident, what is the actual file share that the victim was trying to navigate to?
 
 By filtering for `smb2` and scrolling down a bit, we can find some `Tree Connect` Requests and Responses.
