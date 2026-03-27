@@ -11,6 +11,7 @@
 > LLMNR poisoning is an attack that exploits this behavior. An attacker on the same network listens for LLMNR requests and responds to them by pretending to be the requested host. When the victim device connects to the attacker, it attempts to authenticate, sending an NTLMv2 response. The attacker can capture this response and use it for password cracking or relay attacks.
 
 We know the rogue device is inside the Active Directory network. To identify its IP, we first determine the Domain Controller’s IP. Legitimate LLMNR responses from the DC are normal, but any other machine responding to LLMNR requests from clients, especially by impersonating the DC or other servers, is suspicious.
+
 Let's open the provided PCAP file using Wireshark and filter for DNS.
 
 ![dns.png](/NoxiousHTB/screenshots/dns.png)
