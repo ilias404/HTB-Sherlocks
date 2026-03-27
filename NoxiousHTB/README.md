@@ -54,3 +54,11 @@ Selecting `View > Time Display Format > UTC Date and Time of Day` allows us to f
 
 Ans: `2024-06-24 11:18:30`
 
+# Task 5: What was the typo made by the victim when navigating to the file share that caused his credentials to be leaked?
+
+![dcc01.png](/NoxiousHTB/screenshots/dcc01.png)
+
+
+In the LLMNR traffic, we observed that the victim attempted to access `DCC01` instead of `DC01`, causing the DNS resolution to fail. As a result, the system fell back to LLMNR for name resolution. The attacker exploited this behavior by responding to the LLMNR request, impersonating the requested host (`DCC01`), and successfully capturing the victim’s authentication attempt through an LLMNR poisoning attack.
+
+Ans: `DCC01`
