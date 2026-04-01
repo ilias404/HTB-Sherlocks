@@ -63,3 +63,5 @@ We navigate to the directory where `PEcmd` is installed and run the following:
 ```bash
 .\PECmd.exe -d "C:\Users\lenovo\Desktop\Campfire-1HTB\Triage\Workstation\2024-05-21T033012_triage_asset\C\Windows\prefetch" --csv "C:\Users\lenovo\Desktop\Campfire-1HTB"
 ```
+
+> Note: Replace the directories with your own.
