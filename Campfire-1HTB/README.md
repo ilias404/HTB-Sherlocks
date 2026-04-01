@@ -57,3 +57,9 @@ Ans: `2024-05-21 03:16:32`
 # Task 6: What is the full path of the tool used to perform the actual kerberoasting attack?
 
 Let's parse the prefetch files located under `Triage > Workstation > 2024-05-21T033012_triage_asset > C > Windows > prefetch` using the [`PEcmd`](https://ericzimmerman.github.io/#!index.md) tool by Eric Zimmerman.
+
+We navigate to the directory where `PEcmd` is installed and run the following: 
+
+`bash
+.\PECmd.exe -d "C:\Users\lenovo\Desktop\Campfire-1HTB\Triage\Workstation\2024-05-21T033012_triage_asset\C\Windows\prefetch" --csv "C:\Users\lenovo\Desktop\Campfire-1HTB"
+`
