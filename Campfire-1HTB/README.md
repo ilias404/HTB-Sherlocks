@@ -21,4 +21,10 @@ To identify the UTC date and time of the Kerberoasting activity, let’s analyze
 ![0x17.png](/Campfire-1HTB/screenshots/0x17.png)
 ![ts.png](/Campfire-1HTB/screenshots/ts.png)
 
+Ans: `2024-05-21 03:18:09`
+
+# Task 2: What is the Service Name that was targeted?
+
+
+
 
