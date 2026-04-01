@@ -25,11 +25,12 @@ Ans: `2024-05-21 03:18:09`
 
 # Task 2: What is the Service Name that was targeted?
 
-In Task 1, we can find the service targeted in the first screenshot.
+In the first screenshot of Task 1, we can see the targeted service name.
 
 Ans: `MSSQLService`
 
 # Task 3: It is really important to identify the Workstation from which this activity occurred. What is the IP Address of the workstation?
 
+In the first screenshot of Task 1, we can find the IP address.
 
-
+Ans: `172.17.79.129`
