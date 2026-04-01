@@ -18,4 +18,7 @@
 To identify the UTC date and time of the Kerberoasting activity, let’s analyze the Domain Controller security logs provided by focusing on Event ID 4769.
 > Event ID 4769 in Microsoft Windows records Kerberos service ticket requests. The Ticket Encryption Type indicates the encryption used: 0x17 (RC4) is weak and often associated with Kerberoasting, while 0x12 / 0x14 (AES) are secure and typically reflect normal activity.
 
+![0x17.jpg](/Campfire-1HTB/screenshots/0x17.jpg)
+![ts.jpg](/Campfire-1HTB/screenshots/ts.jpg)
+
 
