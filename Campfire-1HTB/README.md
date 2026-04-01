@@ -54,3 +54,6 @@ Ans: `powerview.ps1`
 
 Ans: `2024-05-21 03:16:32`
 
+# Task 6: What is the full path of the tool used to perform the actual kerberoasting attack?
+
+
