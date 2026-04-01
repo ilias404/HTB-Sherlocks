@@ -50,4 +50,7 @@ Ans: `powerview.ps1`
 
 # Task 5: When was this script executed? (UTC)
 
+![ts2.png](/Campfire-1HTB/screenshots/ts2.png)
+
+Ans: `2024-05-21 03:16:32`
 
