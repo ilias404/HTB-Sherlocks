@@ -78,4 +78,4 @@ We can search around the timestamp (`2024-05-21 03:18:09`) of Task 1 to spot the
 
 Ans: `C:\Users\Alonzo.spire\Downloads\Rubeus.exe`
 
-
+# Task 7: When was the tool executed to dump credentials? (UTC)
