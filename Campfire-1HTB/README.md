@@ -34,3 +34,5 @@ Ans: `MSSQLService`
 In the first screenshot of Task 1, we can find the IP address.
 
 Ans: `172.17.79.129`
+
+# Task 4: Now that we have identified the workstation, a triage including PowerShell logs and Prefetch files are provided to you for some deeper insights so we can understand how this activity occurred on the endpoint. What is the name of the file used to Enumerate Active directory objects and possibly find Kerberoastable accounts in the network?
