@@ -82,4 +82,4 @@ Ans: `C:\Users\Alonzo.spire\Downloads\Rubeus.exe`
 
 The exact timestamp can be found in the "Last Run" column of the last task.
 
-Ans: '2024-05-21 03:18:08'
+Ans: `2024-05-21 03:18:08`
