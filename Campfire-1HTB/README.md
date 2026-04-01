@@ -40,7 +40,7 @@ Ans: `172.17.79.129`
 
 Let's analyze the PowerShell logs located under `Triage > Workstation` by focusing on Event ID 4104.
 
-> Event ID 4104 is a Windows PowerShell Operational log event indicating Script Block Logging, which records the content of PowerShell commands and scripts as they execute. It is crucial for security monitoring, as it captures de-obfuscated code, even if run from memory, to detect malicious activity.
+> Event ID 4104 is a Windows PowerShell Operational log event for Script Block Logging. It records the content of PowerShell commands and scripts as they execute, even from memory, helping detect malicious activity.
 
 ![powerview.png](/Campfire-1HTB/screenshots/powerview.png)
 
@@ -80,6 +80,14 @@ Ans: `C:\Users\Alonzo.spire\Downloads\Rubeus.exe`
 
 # Task 7: When was the tool executed to dump credentials? (UTC)
 
-The exact timestamp can be found in the "Last Run" column of the last task.
+The exact timestamp can be found in the "Last Run" column of the last screenshot.
 
 Ans: `2024-05-21 03:18:08`
+
+# Conclusion
+
+After going through the Domain Controller logs, PowerShell logs, and Prefetch files from the workstation, it’s clear that a Kerberoasting attack took place. The attacker first used PowerView to look for service accounts in Active Directory, then ran `Rubeus.exe` to request and extract Kerberos tickets. All of this activity came from the workstation `172.17.79.129` on `2024-05-21`.
+
+This case shows how important it is to keep an eye on 4769 and 4104 events, use strong passwords for service accounts, and monitor unusual ticket requests to catch these attacks early.
+
+![campfire-1solved.png](/Campfire-1HTB/screenshots/campfire-1solved.png)
