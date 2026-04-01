@@ -38,4 +38,16 @@ Ans: `172.17.79.129`
 
 # Task 4: Now that we have identified the workstation, a triage including PowerShell logs and Prefetch files are provided to you for some deeper insights so we can understand how this activity occurred on the endpoint. What is the name of the file used to Enumerate Active directory objects and possibly find Kerberoastable accounts in the network?
 
-Let's analyze the PowerShell logs located under `Triage > Workstation`.
+Let's analyze the PowerShell logs located under `Triage > Workstation` by focusing on Event ID 4104.
+
+> Event ID 4104 is a Windows PowerShell Operational log event indicating Script Block Logging, which records the content of PowerShell commands and scripts as they execute. It is crucial for security monitoring, as it captures de-obfuscated code, even if run from memory, to detect malicious activity.
+
+![powerview.png](/Campfire-1HTB/screenshots/powerview.png)
+
+> PowerView is a PowerShell-based tool used to enumerate Active Directory objects, often leveraged to identify targets for attacks such as Kerberoasting.
+
+Ans: `powerview.ps1`
+
+# Task 5: When was this script executed? (UTC)
+
+
