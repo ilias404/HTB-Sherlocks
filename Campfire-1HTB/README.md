@@ -74,4 +74,8 @@ We can search around the timestamp (`2024-05-21 03:18:09`) of Task 1 to spot the
 
 ![rubeus.png](/Campfire-1HTB/screenshots/rubeus.png)
 
+> Rubeus.exe is a Windows tool used to request and extract Kerberos tickets, often leveraged in attacks like Kerberoasting and ticket-based privilege escalation.
+
 Ans: `C:\Users\Alonzo.spire\Downloads\Rubeus.exe`
+
+
