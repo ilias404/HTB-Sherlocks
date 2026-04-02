@@ -9,7 +9,7 @@
 
 Filtering for event ID 11 reveals:
 
-![eventid11.png](/Unit42HTB/screenshots/eventid11.pmg)
+![eventid11.png](/Unit42HTB/screenshots/eventid11.png)
 
 > Sysmon Event ID 11: File Create
 > 
