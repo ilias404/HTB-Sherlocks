@@ -14,3 +14,15 @@ Filtering for event ID 11 reveals:
 > Sysmon Event ID 11: File Create
 > 
 > This event is generated when a file is created or overwritten on the system. It records details such as the process responsible for the action and the full path of the created file. Event ID 11 is especially useful for detecting malware drops, as attackers often write payloads into directories like AppData, Temp, or Downloads. By analyzing this event, analysts can identify suspicious file creation activity and understand what artifacts a process has introduced onto the system.
+
+Ans: `56`
+
+# Task 2: Whenever a process is created in memory, an event with Event ID 1 is recorded with details such as command line, hashes, process path, parent process path, etc. This information is very useful for an analyst because it allows us to see all programs executed on a system, which means we can spot any malicious processes being executed. What is the malicious process that infected the victim's system?
+
+![preventivo.png](/Unit42HTB/screenshots/preventivo.png)
+
+> Sysmon Event ID 1: Process Creation
+> 
+> This event is generated whenever a new process is started on the system. It provides detailed information such as the process name, full executable path, command line arguments, parent process, user context, and process hash values. Event ID 1 is one of the most important logs for detecting malicious activity, as it allows analysts to identify suspicious executions, unusual parent-child process relationships, and the use of scripts or tools commonly associated with attacks.
+
+Ans: `C:\Users\CyberJunkie\Downloads\Preventivo24.02.14.exe.exe`
