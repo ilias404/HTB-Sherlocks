@@ -57,3 +57,5 @@ Let's filter for Event ID 2, since this records the time that any files on the s
 > This event logs whenever a file’s creation timestamp is modified. It is commonly used by attackers for timestomping, a defense evasion technique that alters file metadata to make malicious files appear older or legitimate. Monitoring this event helps detect attempts to hide malicious activity.
 
 Ans: `2024-01-14 08:10:06`
+
+# Task 5: The malicious file dropped a few files on disk. Where was "once.cmd" created on disk? Please answer with the full path along with the filename.
