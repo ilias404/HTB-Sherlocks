@@ -48,4 +48,12 @@ Ans: `dropbox`
 
 # Task 4: For many of the files it wrote to disk, the initial malicious file used a defense evasion technique called Time Stomping, where the file creation date is changed to make it appear older and blend in with other files. What was the timestamp changed to for the PDF file?
 
+Let's filter for Event ID 2, since this records the time that any files on the system are created or modified.
+
 ![timestomp.png](/Unit42HTB/screenshots/timestomp.png)
+
+> Sysmon Event ID 2: File Creation Time Changed
+>
+> This event logs whenever a file’s creation timestamp is modified. It is commonly used by attackers for timestomping, a defense evasion technique that alters file metadata to make malicious files appear older or legitimate. Monitoring this event helps detect attempts to hide malicious activity.
+
+Ans: `2024-01-14 08:10:06`
