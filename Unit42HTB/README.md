@@ -33,7 +33,9 @@ Ans: `C:\Users\CyberJunkie\Downloads\Preventivo24.02.14.exe.exe`
 
 Since the malware is distributed via a cloud drive, analyzing DNS activity is important. **Sysmon Event ID 22 (DNS Query)** logs all domain requests made by processes, helping identify suspicious or malicious domains used to download the malware.
 
-![dropbox.png](/Unit42HTB/screenshots/dropbox.png)
+![dropbox1.png](/Unit42HTB/screenshots/dropbox1.png)
+![dropbox2.png](/Unit42HTB/screenshots/dropbox2.png)
+
 
 > Sysmon Event ID 22: DNS Query
 > 
