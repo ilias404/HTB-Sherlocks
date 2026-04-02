@@ -19,6 +19,8 @@ Ans: `56`
 
 # Task 2: Whenever a process is created in memory, an event with Event ID 1 is recorded with details such as command line, hashes, process path, parent process path, etc. This information is very useful for an analyst because it allows us to see all programs executed on a system, which means we can spot any malicious processes being executed. What is the malicious process that infected the victim's system?
 
+Filtering for event ID 1 reveals the following:
+
 ![preventivo.png](/Unit42HTB/screenshots/preventivo.png)
 
 > Sysmon Event ID 1: Process Creation
