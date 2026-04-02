@@ -31,10 +31,12 @@ Ans: `C:\Users\CyberJunkie\Downloads\Preventivo24.02.14.exe.exe`
 
 # Task 3: Which Cloud drive was used to distribute the malware?
 
-Since the malware is distributed via a cloud drive, analyzing DNS activity is important. Sysmon Event ID 22 (DNS Query) logs all domain requests made by processes, helping identify suspicious or malicious domains used to download the malware.
+Since the malware is distributed via a cloud drive, analyzing DNS activity is important. **Sysmon Event ID 22 (DNS Query)** logs all domain requests made by processes, helping identify suspicious or malicious domains used to download the malware.
 
-![example.png](/Unit42HTB/screenshots/example.png)
+![dropbox.png](/Unit42HTB/screenshots/dropbox.png)
 
 > Sysmon Event ID 22: DNS Query
 > 
 > This event logs all DNS requests made by processes on the system, including information about the querying process and the requested domain. This information is useful for identifying suspicious or malicious domains that malware may contact to download additional payloads or communicate with command-and-control servers. It can help to trace network activity relating to an attack.
+
+Ans: `dropbox`
