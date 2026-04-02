@@ -48,3 +48,4 @@ Ans: `dropbox`
 
 # Task 4: For many of the files it wrote to disk, the initial malicious file used a defense evasion technique called Time Stomping, where the file creation date is changed to make it appear older and blend in with other files. What was the timestamp changed to for the PDF file?
 
+![timestomp.png](/Unit42HTB/screenshots/timestomp.png)
