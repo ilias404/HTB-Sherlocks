@@ -42,6 +42,9 @@ Since the malware is distributed via a cloud drive, analyzing DNS activity is im
 > 
 > This event logs all DNS requests made by processes on the system, including information about the querying process and the requested domain. This information is useful for identifying suspicious or malicious domains that malware may contact to download additional payloads or communicate with command-and-control servers. It can help to trace network activity relating to an attack.
 
-After the first Dropbox-related DNS query, the next three logs show file creation events with the `.part` extension. This indicates that the malware was being downloaded or installed, as .part files are typically temporary files created during the download or installation process.
+After the first Dropbox-related DNS query, the following three logs show file creation events with the `.part` extension. This indicates that the malware was being downloaded or installed, as `.part` files are typically temporary files used during downloads or installations. This strongly suggests that Dropbox was the mechanism used to distribute the malware.
 
 Ans: `dropbox`
+
+# Task 4: For many of the files it wrote to disk, the initial malicious file used a defense evasion technique called Time Stomping, where the file creation date is changed to make it appear older and blend in with other files. What was the timestamp changed to for the PDF file?
+
