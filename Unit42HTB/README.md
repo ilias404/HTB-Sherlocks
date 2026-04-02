@@ -7,3 +7,9 @@
 
 # Task 1: How many Event logs are there with Event ID 11?
 
+Filtering for event ID 11 reveals:
+
+![eventid11.png](/Unit42HTB/screenshots/eventid11.pmg)
+
+> Sysmon Event ID 11: File Create
+> This event is generated when a file is created or overwritten on the system. It records details such as the process responsible for the action and the full path of the created file. Event ID 11 is especially useful for detecting malware drops, as attackers often write payloads into directories like AppData, Temp, or Downloads. By analyzing this event, analysts can identify suspicious file creation activity and understand what artifacts a process has introduced onto the system.
