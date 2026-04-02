@@ -28,3 +28,8 @@ Filtering for event ID 1 reveals the following:
 > This event is generated whenever a new process is started on the system. It provides detailed information such as the process name, full executable path, command line arguments, parent process, user context, and process hash values. Event ID 1 is one of the most important logs for detecting malicious activity, as it allows analysts to identify suspicious executions, unusual parent-child process relationships, and the use of scripts or tools commonly associated with attacks.
 
 Ans: `C:\Users\CyberJunkie\Downloads\Preventivo24.02.14.exe.exe`
+
+# Task 3: Which Cloud drive was used to distribute the malware?
+
+Since the malware is distributed via a cloud drive, analyzing DNS activity is important. Sysmon Event ID 22 (DNS Query) logs all domain requests made by processes, helping identify suspicious or malicious domains used to download the malware.
+
