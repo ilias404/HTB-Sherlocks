@@ -59,3 +59,9 @@ Let's filter for Event ID 2, since this records the time that any files on the s
 Ans: `2024-01-14 08:10:06`
 
 # Task 5: The malicious file dropped a few files on disk. Where was "once.cmd" created on disk? Please answer with the full path along with the filename.
+
+Filtering for Event ID 11 and `once.cmd` using CTRL+F, we find:
+
+![and.png](/Unit42HTB/screenshots/and.png)
+
+Ans: `C:\Users\CyberJunkie\AppData\Roaming\Photo and Fax Vn\Photo and vn 1.1.2\install\F97891C\WindowsVolume\Games\once.cmd`
