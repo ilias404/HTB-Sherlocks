@@ -48,7 +48,7 @@ Ans: `dropbox`
 
 # Task 4: For many of the files it wrote to disk, the initial malicious file used a defense evasion technique called Time Stomping, where the file creation date is changed to make it appear older and blend in with other files. What was the timestamp changed to for the PDF file?
 
-Let's filter for Event ID 2, since this records the time that any files on the system are created or modified.
+Let's filter for Event ID 2, which records changes to file creation timestamps.
 
 ![timestomp.png](/Unit42HTB/screenshots/timestomp.png)
 
@@ -60,7 +60,7 @@ Ans: `2024-01-14 08:10:06`
 
 # Task 5: The malicious file dropped a few files on disk. Where was "once.cmd" created on disk? Please answer with the full path along with the filename.
 
-Filtering for Event ID 11 and `once.cmd` using CTRL+F, we find:
+Filtering for Event ID 11 and searching for once.cmd, we identify the file path:
 
 ![and.png](/Unit42HTB/screenshots/and.png)
 
@@ -68,7 +68,7 @@ Ans: `C:\Users\CyberJunkie\AppData\Roaming\Photo and Fax Vn\Photo and vn 1.1.2\i
 
 # Task 6: The malicious file attempted to reach a dummy domain, most likely to check the internet connection status. What domain name did it try to connect to?
 
-Filtering for Event ID 22:
+Filtering for Event ID 22 (DNS Query):
 
 ![www.png](/Unit42HTB/screenshots/www.png)
 
@@ -76,7 +76,7 @@ Ans: `www.example.com`
 
 # Task 7: Which IP address did the malicious process try to reach out to?
 
-Filtering for Event ID 3:
+Filtering for Event ID 3 (Network Connection):
 
 ![dest.png](/Unit42HTB/screenshots/dest.png)
 
@@ -88,7 +88,7 @@ Ans: `93.184.216.34`
 
 # Task 8: The malicious process terminated itself after infecting the PC with a backdoored variant of UltraVNC. When did the process terminate itself?
 
-Filtering for Event ID 5:
+Filtering for Event ID 5 (Process Terminated):
 
 ![time.png](/Unit42HTB/screenshots/time.png)
 
@@ -98,4 +98,6 @@ Filtering for Event ID 5:
 
 Ans: `2024-02-14 03:41:58`
 
+# Conclusion:
 
+This investigation demonstrates how Sysmon logs can be leveraged to trace the full attack chain of a malware infection. By analyzing key events, we identified the initial execution of a malicious file, its retrieval via Dropbox, and the subsequent file creation activity indicating payload installation. The use of timestomping `(Event ID 2)` highlights an attempt at defense evasion by altering file timestamps to blend in with legitimate files. Further analysis of network connections `(Event ID 3)` and DNS queries `(Event ID 22)` revealed external communication, while process termination logs `(Event ID 5)` confirmed the end of the malicious activity. Overall, correlating multiple Sysmon Event IDs allowed for a clear reconstruction of the attack lifecycle, from initial access to persistence and cleanup.
