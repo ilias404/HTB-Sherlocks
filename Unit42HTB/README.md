@@ -85,3 +85,17 @@ Filtering for Event ID 3:
 > This event logs network connections initiated by processes on the system, including source and destination IP addresses, ports, and protocol. It is useful for identifying suspicious outbound connections, such as malware communicating with command-and-control servers or downloading additional payloads.
 
 Ans: `93.184.216.34`
+
+# Task 8: The malicious process terminated itself after infecting the PC with a backdoored variant of UltraVNC. When did the process terminate itself?
+
+Filtering for Event ID 5:
+
+![time.png](/Unit42HTB/screenshots/time.png)
+
+> Sysmon Event ID 5: Process Terminated
+>
+> This event logs when a process stops running on the system. It helps track the lifecycle of processes and can be useful for identifying short-lived or suspicious processes that may indicate malicious activity.
+
+Ans: `2024-02-14 03:41:58`
+
+
