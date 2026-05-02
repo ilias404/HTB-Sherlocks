@@ -76,5 +76,12 @@ Ans: `www.example.com`
 
 # Task 7: Which IP address did the malicious process try to reach out to?
 
+Filtering for Event ID 3:
 
+![dest.png](/Unit42HTB/screenshots/dest.png)
 
+> Sysmon Event ID 3: Network Connection
+>
+> This event logs network connections initiated by processes on the system, including source and destination IP addresses, ports, and protocol. It is useful for identifying suspicious outbound connections, such as malware communicating with command-and-control servers or downloading additional payloads.
+
+Ans: `93.184.216.34`
