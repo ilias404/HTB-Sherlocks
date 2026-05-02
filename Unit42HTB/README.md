@@ -101,3 +101,5 @@ Ans: `2024-02-14 03:41:58`
 # Conclusion:
 
 This investigation demonstrates how Sysmon logs can be leveraged to trace the full attack chain of a malware infection. By analyzing key events, we identified the initial execution of a malicious file, its retrieval via Dropbox, and the subsequent file creation activity indicating payload installation. The use of timestomping `(Event ID 2)` highlights an attempt at defense evasion by altering file timestamps to blend in with legitimate files. Further analysis of network connections `(Event ID 3)` and DNS queries `(Event ID 22)` revealed external communication, while process termination logs `(Event ID 5)` confirmed the end of the malicious activity. Overall, correlating multiple Sysmon Event IDs allowed for a clear reconstruction of the attack lifecycle, from initial access to persistence and cleanup.
+
+![unit42solved.png](/Unit42HTB/screenshots/unit42solved.png)
