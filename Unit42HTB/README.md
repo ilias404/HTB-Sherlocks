@@ -65,3 +65,16 @@ Filtering for Event ID 11 and `once.cmd` using CTRL+F, we find:
 ![and.png](/Unit42HTB/screenshots/and.png)
 
 Ans: `C:\Users\CyberJunkie\AppData\Roaming\Photo and Fax Vn\Photo and vn 1.1.2\install\F97891C\WindowsVolume\Games\once.cmd`
+
+# Task 6: The malicious file attempted to reach a dummy domain, most likely to check the internet connection status. What domain name did it try to connect to?
+
+Filtering for Event ID 22:
+
+![www.png](/Unit42HTB/screenshots/www.png)
+
+Ans: `www.example.com`
+
+# Task 7: Which IP address did the malicious process try to reach out to?
+
+
+
