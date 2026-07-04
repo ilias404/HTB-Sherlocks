@@ -49,7 +49,7 @@ Ans: `i18ntranslation`
 Ans: `56`
 # Task 6: Which username and password combination was successful?
 
-![cveb.png](/MeerkatHTB/screenshots/cveb.png)
+![seb.png](/MeerkatHTB/screenshots/seb.png)
 
 > The HTTP status code 204 No Content indicates that the server has successfully processed the request, but there is no payload body or content to send back to the client.
 
