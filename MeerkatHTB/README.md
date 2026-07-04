@@ -7,6 +7,8 @@
 
 # Task 1: We believe our Business Management Platform server has been compromised. Please can you confirm the name of the application running?
 
+Upon extraction, we have two files: a PCAP file and a JSON file. Let's start with the JSON file using the `jq` command tool.
+
 > `jq` is a command-line tool used to process and analyze JSON data.
 
 ```bash
@@ -19,15 +21,18 @@ Ans: `Bonitasoft`
 
 # Task 2: We believe the attacker may have used a subset of the brute forcing attack category - what is the name of the attack carried out?
 
+Let's open the PCAP file and search for POST requests using the command `http.request.method == "POST"`.
+
 ![credstuff.png](/MeerkatHTB/screenshots/credstuff.png)
 
-> Credential stuffing is a cyberattack where criminals use automated bots to test massive lists of stolen usernames and passwords against unrelated websites.
+By navigating through each request, we can find a set of usernames and passwords that appear to have been stolen in a data breach. 
 
+> Credential stuffing is a cyberattack where criminals use automated bots to test massive lists of stolen usernames and passwords against unrelated websites.
 
 Ans: `Credential Stuffing`
 # Task 3: Does the vulnerability exploited have a CVE assigned - and if so, which one?
 
-
+![jq.png](/MeerkatHTB/screenshots/jq.png)
 
 Ans: `CVE-2022-25237`
 # Task 4: Which string was appended to the API URL path to bypass the authorization filter by the attacker's exploit?
