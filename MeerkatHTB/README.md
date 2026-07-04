@@ -7,3 +7,8 @@
 
 # Task 1: We believe our Business Management Platform server has been compromised. Please can you confirm the name of the application running?
 
+```bash
+jq .[].alert.signature meerkat-alerts.json
+```
+
+![jq.png](/MeerkatHTB/screenshots/jq.png)
