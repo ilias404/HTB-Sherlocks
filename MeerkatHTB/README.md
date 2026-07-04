@@ -56,7 +56,7 @@ Ans: `56`
 Ans: `seb.broom@forela.co.uk:g0vernm3nt`
 # Task 7: If any, which text sharing site did the attacker utilise?
 
-
+![pastes.png](/MeerkatHTB/screenshots/pastes.png)
 
 Ans: `pastes.io`
 # Task 8: Please provide the filename of the public key used by the attacker to gain persistence on our host.
