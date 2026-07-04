@@ -85,9 +85,7 @@ Ans: `/home/ubuntu/.ssh/authorized_keys`
 
 Ans: `T1098.004`
 
-# Timeline:
-
-## Attack Timeline
+# Attack Timeline
 
 ```text
 Credential Stuffing (56 credential pairs)
@@ -115,3 +113,5 @@ Persistent SSH Access
 
 # Conclusion: 
 The attacker performed a credential stuffing attack against the Bonitasoft application, successfully authenticating with stolen credentials. They then exploited `CVE-2022-25237` to bypass authorization controls and execute privileged actions. Finally, they established persistence by downloading an SSH public key from `pastes.io` and appending it to `/home/ubuntu/.ssh/authorized_keys`, enabling future passwordless access.
+
+![meerkatpwned.png](/MeerkatHTB/screenshots/meerkatpwned.png)
