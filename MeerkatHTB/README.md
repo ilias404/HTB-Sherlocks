@@ -7,8 +7,59 @@
 
 # Task 1: We believe our Business Management Platform server has been compromised. Please can you confirm the name of the application running?
 
+> `jq` is a command-line tool used to process and analyze JSON data.
+
 ```bash
 jq .[].alert.signature meerkat-alerts.json
 ```
 
 ![jq.png](/MeerkatHTB/screenshots/jq.png)
+
+Ans: `Bonitasoft`
+
+# Task 2: We believe the attacker may have used a subset of the brute forcing attack category - what is the name of the attack carried out?
+
+
+
+Ans: `Credential Stuffing`
+# Task 3: Does the vulnerability exploited have a CVE assigned - and if so, which one?
+
+
+
+Ans: `CVE-2022-25237`
+# Task 4: Which string was appended to the API URL path to bypass the authorization filter by the attacker's exploit?
+
+
+
+Ans: `i18ntranslation`
+# Task 5:How many combinations of usernames and passwords were used in the credential stuffing attack?
+
+
+
+Ans: `56`
+# Task 6: Which username and password combination was successful?
+
+
+
+Ans: `seb.broom@forela.co.uk:g0vernm3nt`
+# Task 7: If any, which text sharing site did the attacker utilise?
+
+
+
+Ans: `pastes.io`
+# Task 8: Please provide the filename of the public key used by the attacker to gain persistence on our host.
+
+
+
+Ans: `hffgra4unv`
+# Task 9: Can you confirm the file modified by the attacker to gain persistence?
+
+
+
+Ans: `/home/ubuntu/.ssh/authorized_keys`
+# Task 10: Can you confirm the MITRE technique ID of this type of persistence mechanism?
+
+
+
+Ans: `T1098.004`
+
