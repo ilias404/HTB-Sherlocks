@@ -36,7 +36,9 @@ Ans: `Credential Stuffing`
 
 Ans: `CVE-2022-25237`
 # Task 4: Which string was appended to the API URL path to bypass the authorization filter by the attacker's exploit?
+Searching for the CVE online will provide more information on this detail.
 
+![cveb.png](/MeerkatHTB/screenshots/cveb.png)
 
 
 Ans: `i18ntranslation`
