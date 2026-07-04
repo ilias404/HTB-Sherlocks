@@ -87,17 +87,31 @@ Ans: `T1098.004`
 
 # Timeline:
 
-Credential stuffing
-        ↓
-Successful login
-        ↓
+## Attack Timeline
+
+```text
+Credential Stuffing (56 credential pairs)
+                │
+                ▼
+Successful Login
+(seb.broom@forela.co.uk:g0vernm3nt)
+                │
+                ▼
 Exploit CVE-2022-25237
-        ↓
-Download SSH public key
-        ↓
-Append key to authorized_keys
-        ↓
-Persistent SSH access
+(/i18ntranslation authorization bypass)
+                │
+                ▼
+Download SSH Public Key
+(from pastes.io)
+                │
+                ▼
+Append Key to
+/home/ubuntu/.ssh/authorized_keys
+                │
+                ▼
+Persistent SSH Access
+(MITRE ATT&CK T1098.004)
+```
 
 # Conclusion: 
 The attacker performed a credential stuffing attack against the Bonitasoft application, successfully authenticating with stolen credentials. They then exploited `CVE-2022-25237` to bypass authorization controls and execute privileged actions. Finally, they established persistence by downloading an SSH public key from `pastes.io` and appending it to `/home/ubuntu/.ssh/authorized_keys`, enabling future passwordless access.
