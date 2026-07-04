@@ -61,16 +61,18 @@ Ans: `seb.broom@forela.co.uk:g0vernm3nt`
 Ans: `pastes.io`
 # Task 8: Please provide the filename of the public key used by the attacker to gain persistence on our host.
 
+![pubkey.png](/MeerkatHTB/screenshots/pubkey.png)
 
 
 Ans: `hffgra4unv`
 # Task 9: Can you confirm the file modified by the attacker to gain persistence?
 
-
+We can find the modified file from the screenshot of the previous task.
 
 Ans: `/home/ubuntu/.ssh/authorized_keys`
 # Task 10: Can you confirm the MITRE technique ID of this type of persistence mechanism?
 
+![t1098.png](/MeerkatHTB/screenshots/t1098.png)
 
 
 Ans: `T1098.004`
