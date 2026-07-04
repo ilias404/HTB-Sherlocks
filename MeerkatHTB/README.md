@@ -9,6 +9,8 @@
 
 Upon extraction, we have two files: a PCAP file and a JSON file. Let's start with the JSON file using the `jq` command tool.
 
+To identify the targeted application, all alert signatures contained in the Suricata alert log were enumerated. One of the signatures referenced a known vulnerability affecting Bonitasoft.
+
 > `jq` is a command-line tool used to process and analyze JSON data.
 
 ```bash
@@ -21,7 +23,7 @@ Ans: `Bonitasoft`
 
 # Task 2: We believe the attacker may have used a subset of the brute forcing attack category - what is the name of the attack carried out?
 
-Let's open the PCAP file and search for POST requests using the command `http.request.method == "POST"`.
+Let's open the PCAP file and search for POST requests using the filter `http.request.method == "POST"`.
 
 ![credstuff.png](/MeerkatHTB/screenshots/credstuff.png)
 
@@ -44,10 +46,12 @@ Searching for the CVE online will provide more information on this detail.
 Ans: `i18ntranslation`
 # Task 5:How many combinations of usernames and passwords were used in the credential stuffing attack?
 
-
+By reviewing all HTTP POST authentication requests, 56 unique username/password combinations were submitted during the credential stuffing attack.
 
 Ans: `56`
 # Task 6: Which username and password combination was successful?
+
+Most authentication attempts returned HTTP 401 (Unauthorized). Only one request returned HTTP 204 (No Content), indicating the credentials were accepted successfully.
 
 ![seb.png](/MeerkatHTB/screenshots/seb.png)
 
@@ -56,10 +60,14 @@ Ans: `56`
 Ans: `seb.broom@forela.co.uk:g0vernm3nt`
 # Task 7: If any, which text sharing site did the attacker utilise?
 
+Reviewing the HTTP traffic revealed outbound requests to pastes.io, indicating the attacker retrieved or uploaded data using the paste-sharing service.
+
 ![pastes.png](/MeerkatHTB/screenshots/pastes.png)
 
 Ans: `pastes.io`
 # Task 8: Please provide the filename of the public key used by the attacker to gain persistence on our host.
+
+The attacker downloaded an SSH public key from `pastes.io` and saved it locally as `hffgra4unv`, which was later appended to the victim's `authorized_keys` file to establish SSH persistence.
 
 ![pubkey.png](/MeerkatHTB/screenshots/pubkey.png)
 
@@ -77,3 +85,19 @@ Ans: `/home/ubuntu/.ssh/authorized_keys`
 
 Ans: `T1098.004`
 
+# Timeline:
+
+Credential stuffing
+        ↓
+Successful login
+        ↓
+Exploit CVE-2022-25237
+        ↓
+Download SSH public key
+        ↓
+Append key to authorized_keys
+        ↓
+Persistent SSH access
+
+# Conclusion: 
+The attacker performed a credential stuffing attack against the Bonitasoft application, successfully authenticating with stolen credentials. They then exploited `CVE-2022-25237` to bypass authorization controls and execute privileged actions. Finally, they established persistence by downloading an SSH public key from `pastes.io` and appending it to `/home/ubuntu/.ssh/authorized_keys`, enabling future passwordless access.
