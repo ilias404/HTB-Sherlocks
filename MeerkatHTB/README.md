@@ -19,6 +19,9 @@ Ans: `Bonitasoft`
 
 # Task 2: We believe the attacker may have used a subset of the brute forcing attack category - what is the name of the attack carried out?
 
+![credstuff.png](/MeerkatHTB/screenshots/credstuff.png)
+
+> Credential stuffing is a cyberattack where criminals use automated bots to test massive lists of stolen usernames and passwords against unrelated websites.
 
 
 Ans: `Credential Stuffing`
