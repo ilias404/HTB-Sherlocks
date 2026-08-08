@@ -24,4 +24,19 @@ Ans: `172.17.79.136`
 
 # Task 3: What is the username of the account whose hash was stolen by attacker?
 
+By filtering the traffic for SMB2 and searching for NTLMSSP authentication messages, we can identify that the suspicious IP address `172.17.79.135` (hostname: `D`) is attempting NTLMSSP authentication using the account `arthur.kyle`.
+
+![stolenhashuser.png](/Reaper/screenshots/stolenhashuser.png)
+
+Ans: `arthur.kyle`
+
+# Task 4: What is the IP Address of Unknown Device used by the attacker to intercept credentials?
+
+We answered this in the last task.
+
+Ans: `172.17.79.135`
+
+# Task 5: What was the fileshare navigated by the victim user account?
+
+
 
