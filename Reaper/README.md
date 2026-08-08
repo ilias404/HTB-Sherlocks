@@ -62,9 +62,20 @@ Ans: `0x64a799`
 
 # Task 8: The detection was based on the mismatch of hostname and the assigned IP Address.What is the workstation name and the source IP Address from which the malicious logon occur?
 
-<img width="399" height="143" alt="image" src="https://github.com/user-attachments/assets/69d76064-fb4b-4836-af36-5d11e7889d5e" />
+This information can be obtained from the Network Information section of the event. (Right Click the event)
 
+<img width="399" height="143" alt="image" src="https://github.com/user-attachments/assets/69d76064-fb4b-4836-af36-5d11e7889d5e" />
 
 Ans: `FORELA-WKSTN002, 172.17.79.135`
 
+# Task 9: At what UTC time did the the malicious logon happen?
 
+<img width="513" height="228" alt="image" src="https://github.com/user-attachments/assets/23f16eb8-c2a4-4216-8767-f7f58432d12c" />
+
+Ans: `2024-07-31 04:55:16`
+
+# Task 10: What is the share Name accessed as part of the authentication process by the malicious tool used by the attacker?
+
+<img width="628" height="464" alt="image" src="https://github.com/user-attachments/assets/7b9f3186-ed64-41c8-870b-86db113f8036" />
+
+Ans: `\\*\IPC$`
