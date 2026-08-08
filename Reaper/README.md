@@ -33,13 +33,13 @@ Ans: `arthur.kyle`
 
 # Task 4: What is the IP Address of Unknown Device used by the attacker to intercept credentials?
 
-We answered this in the last task.
+The IP address of the unknown device was identified in the previous task.
 
 Ans: `172.17.79.135`
 
 # Task 5: What was the fileshare navigated by the victim user account?
 
-By analyzing the `SMB2 Tree Connect Request` packets, we can identify that the victim user accessed the fileshare `\\DC01\Trip`.
+By analyzing the `SMB2 Tree Connect Request` packets, we can identify that the victim user accessed the file share `\\DC01\Trip`.
 
 ![atriphuh.png](/Reaper/screenshots/atriphuh.png)
 
@@ -61,9 +61,9 @@ In the same event, we can find the `Logon ID`
 
 Ans: `0x64a799`
 
-# Task 8: The detection was based on the mismatch of hostname and the assigned IP Address.What is the workstation name and the source IP Address from which the malicious logon occur?
+# Task 8: The detection was based on the mismatch of hostname and the assigned IP Address. What is the workstation name and the source IP Address from which the malicious logon occur?
 
-This information can be obtained from the Network Information section of the event. (Right Click the event)
+This information can be obtained from the Network Information section of the relevant event by viewing its details.
 
 <img width="399" height="143" alt="image" src="https://github.com/user-attachments/assets/69d76064-fb4b-4836-af36-5d11e7889d5e" />
 
