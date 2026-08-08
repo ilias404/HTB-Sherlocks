@@ -47,8 +47,6 @@ Ans: `vboxservice.exe, vboxtray.exe`
 # Task 6: The VM detection script prints any detection with the prefix 'This is a'. Which two virtualization platforms did the script detect?
 To identify the virtualization platforms detected by the script, we search the PowerShell logs for the string `This is a`, which is used as the prefix for each detection. Reviewing the matching events reveals the two virtualization platforms identified by the VM detection script.
 
-<img width="424" height="121" alt="image" src="https://github.com/user-attachments/assets/45aa651e-7a7c-4012-ae21-d64310c21652" />
-
 <img width="1314" height="313" alt="image" src="https://github.com/user-attachments/assets/08074c2a-1926-4634-9ad0-e33a06f4260a" />
 
 
