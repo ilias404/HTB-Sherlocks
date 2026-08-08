@@ -44,3 +44,13 @@ By reviewing the end of the logs, we identified a total of 37,630 connections in
 Ans: `75260`
 
 # Task 6: The attacker gained remote access after a series of brute‑force attempts. The attack likely exposed sensitive information, which enabled them to gain remote access. Based on the logs, when did the attacker successfully gain interactive hands-on remote access?
+
+Reviewing the `auth.log` file located under `/var/log/`, we identified the following events:
+
+![brutefdate.png](/MangoBleedHTB/screenshots/brutefdate.png)
+
+Ans: `2025-12-29 05:40:03`
+
+# Task 7: Identify the exact command line the attacker used to execute an in‑memory script as part of their privilege‑escalation attempt.
+
+
