@@ -1,5 +1,7 @@
 # Operation Blackout 2025: Phantom Check
 
+<img width="879" height="269" alt="image" src="https://github.com/user-attachments/assets/a5897d02-770e-4d3d-a4c2-8fcad11188a8" />
+
 # Sherlock Scenario
 > Talion suspects that the threat actor carried out anti-virtualization checks to avoid detection in sandboxed environments. Your task is to analyze the event logs and identify the specific techniques used for virtualization detection. Byte Doctor requires evidence of the registry checks or processes the attacker executed to perform these checks.
 
@@ -54,16 +56,11 @@ Ans: `Hyper-V, Vmware`
 
 # Conclusion
 
-The investigation of the PowerShell operational logs revealed that the threat actor used multiple techniques to identify whether the system was running in a virtualized environment. The activity included querying the `Win32_ComputerSystem` WMI class for manufacturer and model information, retrieving thermal-zone information through `MSAcpi_ThermalZoneTemperature`, and executing the `Check-VM` PowerShell function.
-
+The investigation of the PowerShell operational logs revealed that the threat actor used multiple techniques to determine whether the system was running in a virtualized environment. The activity included querying the `Win32_ComputerSystem` WMI class for manufacturer and model information, retrieving thermal-zone information through `MSAcpi_ThermalZoneTemperature`, and executing the `Check-VM` PowerShell function.
 
 Overall, the evidence demonstrates that the threat actor implemented several **anti-virtualization techniques** to fingerprint the environment and potentially avoid execution in sandboxed or analysis environments.
 
-
-
-
-
-
+<img width="879" height="446" alt="image" src="https://github.com/user-attachments/assets/28586e5b-b42e-4031-8a07-f0792bec43bb" />
 
 
 
