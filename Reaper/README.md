@@ -46,4 +46,19 @@ Ans: `\\DC01\Trip`
 
 # Task 6: What is the source port used to logon to target workstation using the compromised account?
 
+By analyzing the provided **Security.evtx** file, we can obtain additional details about the logon activity, including the source port used to authenticate to the target workstation with the compromised account.
+
+![port.png](/Reaper/screenshots/port.png)
+
+Ans: `40252`
+
+# Task 7: What is the Logon ID for the malicious session?
+
+![logonid.png](/Reaper/screenshots/logonid.png)
+
+Ans: `0x64a799`
+
+# Task 8: The detection was based on the mismatch of hostname and the assigned IP Address.What is the workstation name and the source IP Address from which the malicious logon occur?
+
+
 
