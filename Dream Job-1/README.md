@@ -54,6 +54,8 @@ Ans: `T1534`
 
 # Task 7: What Remote Access Trojan did the Lazarus Group use in Operation Dream Job?
 
+Under Software:
+
 <img width="1390" height="188" alt="image" src="https://github.com/user-attachments/assets/4f2c37d3-c026-4fda-8cbf-56dc8ec3bb60" />
 
 Ans: `DRATzarus`
@@ -69,27 +71,44 @@ Ans: `Native API`
 
 
 # Task 9: What technique did the malware use to avoid detection in a sandbox?
+
+Under Discovery
+
+<img width="413" height="354" alt="image" src="https://github.com/user-attachments/assets/59cf7fcb-a0ce-4a28-81f7-a703a04f6ecd" />
+
 Ans: `Time Based Checks`
 
 
 # Task 10: To answer the remaining questions, utilize VirusTotal and refer to the IOCs.txt file. What is the name associated with the first hash provided in the IOC file?
-Ans: `T1534`
 
+<img width="743" height="274" alt="image" src="https://github.com/user-attachments/assets/66b04c05-43fa-4279-86e3-ee007408103c" />
+
+Ans: `IEXPLORE.exe`
 
 # Task 11: When was the file associated with the second hash in the IOC first created?
-Ans: `T1534`
+
+<img width="624" height="262" alt="image" src="https://github.com/user-attachments/assets/643391ca-7abe-42f7-a991-9a48e7753165" />
+
+Ans: `2020-05-12 19:26:17`
 
 
 # Task 12: What is the name of the parent execution file associated with the second hash in the IOC?
-Ans: `T1534`
+
+<img width="619" height="246" alt="image" src="https://github.com/user-attachments/assets/4ccfd5df-6842-4e8f-abd4-79d499cf3380" />
+
+Ans: `BAE_HPC_SE.iso`
 
 
 # Task 13: Examine the third hash provided. What is the file name likely used in the campaign that aligns with the adversary's known tactics?
-Ans: `T1534`
 
+<img width="736" height="267" alt="image" src="https://github.com/user-attachments/assets/ed194435-63f4-4845-b155-a83f82077b4c" />
 
+Ans: `Salary_Lockheed_Martin_job_opportunities_confidential.doc`
 
 # Task 14: Which malicious URL in the contacted URLs is used to fetch a secondary .docx file?
-Ans: `T1534`
+
+<img width="873" height="307" alt="image" src="https://github.com/user-attachments/assets/4755a8ab-72ae-4417-b98b-0b37c5dba158" />
+
+Ans: `https://markettrendingcenter.com/lk_job_oppor.docx`
 
 
