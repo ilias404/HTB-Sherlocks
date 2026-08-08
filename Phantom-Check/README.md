@@ -22,4 +22,8 @@ Ans: `SELECT * FROM MSAcpi_ThermalZoneTemperature`
 
 # Task 3: The attacker loaded a PowerShell script to detect virtualization. What is the function name of the script?
 
+After filtering the logs to display only **Event ID 4104** events and reviewing the resulting PowerShell Scripts, we came across the following:
 
+<img width="1323" height="616" alt="image" src="https://github.com/user-attachments/assets/a77c2fe3-df7c-4e4e-b253-33ed131f8013" />
+
+Ans: `Check-VM`
