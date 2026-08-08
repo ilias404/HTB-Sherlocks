@@ -29,5 +29,8 @@ Ans: `65.0.76.43`
 
 # Task 4: Based on the MongoDB logs, determine the exact date and time the attacker’s exploitation activity began (the earliest confirmed malicious event)
 
+![date.png](/MangoBleedHTB/screenshots/date.png)
+
+
 Ans: `2025-12-29 05:25:52`
 
