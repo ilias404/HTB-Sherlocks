@@ -70,12 +70,16 @@ Ans: `FORELA-WKSTN002, 172.17.79.135`
 
 # Task 9: At what UTC time did the the malicious logon happen?
 
+We can find the exact UTC time under `System` details.
+
 <img width="513" height="228" alt="image" src="https://github.com/user-attachments/assets/23f16eb8-c2a4-4216-8767-f7f58432d12c" />
 
 Ans: `2024-07-31 04:55:16`
 
 # Task 10: What is the share Name accessed as part of the authentication process by the malicious tool used by the attacker?
 
-<img width="628" height="464" alt="image" src="https://github.com/user-attachments/assets/7b9f3186-ed64-41c8-870b-86db113f8036" />
+By examining Event ID 5140, we can identify the share name accessed by the malicious tool.
+
+<img width="1105" height="500" alt="image" src="https://github.com/user-attachments/assets/0b95b48d-c902-4bea-9dec-67a8e2e030b8" />
 
 Ans: `\\*\IPC$`
