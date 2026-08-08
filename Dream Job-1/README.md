@@ -54,17 +54,16 @@ Ans: `T1534`
 
 # Task 7: What Remote Access Trojan did the Lazarus Group use in Operation Dream Job?
 
-<img width="1410" height="283" alt="image" src="https://github.com/user-attachments/assets/7c7d159c-6fa8-4479-af83-403798a8a821" />
+<img width="1390" height="188" alt="image" src="https://github.com/user-attachments/assets/4f2c37d3-c026-4fda-8cbf-56dc8ec3bb60" />
 
 Ans: `DRATzarus`
 
 
 # Task 8: What technique did the malware use for execution?
 
-Under the Execution section of the MITRE ATT&CK Navigator layer, we can identify the technique used by the malware.
+Under the Execution section of the MITRE ATT&CK Navigator layer for [DRATzarus](https://attack.mitre.org/software/S0694/), we can identify the technique used by the malware to execute its malicious payload.
 
-
-<img width="183" height="485" alt="image" src="https://github.com/user-attachments/assets/e982299a-e8e2-4de4-83d3-35f0a727f46d" />
+<img width="159" height="714" alt="image" src="https://github.com/user-attachments/assets/0d05051d-001c-4f87-9077-ca2b7e40cca2" />
 
 Ans: `Native API`
 
