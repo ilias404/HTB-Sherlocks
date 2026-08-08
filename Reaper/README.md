@@ -1,5 +1,6 @@
 # Reaper
-![rp.png](/Reaper/screenshots/rp.png)
+
+<img width="1200" height="675" alt="image" src="https://github.com/user-attachments/assets/f8eb5772-241e-4ad8-aff8-598fb7e61ae7" />
 
 # Sherlock Scenario
 > Our SIEM alerted us to a suspicious logon event which needs to be looked at immediately . The alert details were that the IP Address and the Source Workstation name were a mismatch .You are provided a network capture and event logs from the surrounding time around the incident timeframe. Corelate the given evidence and report back to your SOC Manager.
