@@ -29,8 +29,18 @@ Ans: `65.0.76.43`
 
 # Task 4: Based on the MongoDB logs, determine the exact date and time the attacker’s exploitation activity began (the earliest confirmed malicious event)
 
-![date.png](/MangoBleedHTB/screenshots/date.png)
+A manual review of the log entries was conducted to identify the first occurrence of the suspicious IP address. The following event was identified:
 
+![date.png](/MangoBleedHTB/screenshots/date.png)
 
 Ans: `2025-12-29 05:25:52`
 
+# Task 5: Using the MongoDB logs, calculate the total number of malicious connections initiated by the attacker.
+
+By reviewing the end of the logs, we identified a total of 37,630 connections initiated by the attacker. Since each connection generates both a connection and a disconnection event, the total number of related log entries is calculated by multiplying this value by two, resulting in 75,260 events.
+
+![conn.png](/MangoBleedHTB/screenshots/conn.png)
+
+Ans: `75260`
+
+# Task 6: The attacker gained remote access after a series of brute‑force attempts. The attack likely exposed sensitive information, which enabled them to gain remote access. Based on the logs, when did the attacker successfully gain interactive hands-on remote access?
