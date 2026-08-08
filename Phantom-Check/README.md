@@ -1,6 +1,6 @@
 # Operation Blackout 2025: Phantom Check
 
-<img width="879" height="269" alt="image" src="https://github.com/user-attachments/assets/a5897d02-770e-4d3d-a4c2-8fcad11188a8" />
+<img width="872" height="256" alt="image" src="https://github.com/user-attachments/assets/21034f0a-b563-4440-a437-d6a600956757" />
 
 # Sherlock Scenario
 > Talion suspects that the threat actor carried out anti-virtualization checks to avoid detection in sandboxed environments. Your task is to analyze the event logs and identify the specific techniques used for virtualization detection. Byte Doctor requires evidence of the registry checks or processes the attacker executed to perform these checks.
