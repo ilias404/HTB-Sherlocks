@@ -62,5 +62,9 @@ Ans: `0x64a799`
 
 # Task 8: The detection was based on the mismatch of hostname and the assigned IP Address.What is the workstation name and the source IP Address from which the malicious logon occur?
 
+<img width="399" height="143" alt="image" src="https://github.com/user-attachments/assets/69d76064-fb4b-4836-af36-5d11e7889d5e" />
+
+
+Ans: `FORELA-WKSTN002, 172.17.79.135`
 
 
