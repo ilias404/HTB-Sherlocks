@@ -38,5 +38,12 @@ Ans: `172.17.79.135`
 
 # Task 5: What was the fileshare navigated by the victim user account?
 
+By analyzing the `SMB2 Tree Connect Request` packets, we can identify that the victim user accessed the fileshare `\\DC01\Trip`.
+
+![atriphuh.png](/Reaper/screenshots/atriphuh.png)
+
+Ans: `\\DC01\Trip`
+
+# Task 6: What is the source port used to logon to target workstation using the compromised account?
 
 
