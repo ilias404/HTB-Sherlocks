@@ -35,3 +35,13 @@ Reading through the PowerShell script, we find that the registry key `HKLM:\SYST
 <img width="1299" height="660" alt="image" src="https://github.com/user-attachments/assets/55650c52-ab05-4345-b28a-06b4f0bec6a4" />
 
 Ans: `HKLM:\SYSTEM\ControlSet001\Services`
+
+# Task 5: The VM detection script can also identify VirtualBox. Which processes is it comparing to determine if the system is running VirtualBox?
+
+As part of the VM detection script, we can identify another check specifically targeting VirtualBox. By reviewing the PowerShell script, we find that it compares the names of running processes against known VirtualBox-related processes. These process names are used as indicators to determine whether the system is running within a VirtualBox virtual machine.
+
+<img width="431" height="290" alt="image" src="https://github.com/user-attachments/assets/994881d2-0ec9-465a-bca8-d86e15846100" />
+
+
+Ans: `vboxservice.exe, vboxtray.exe
+`
