@@ -52,6 +52,13 @@ To identify the virtualization platforms detected by the script, we search the P
 
 Ans: `Hyper-V, Vmware`
 
+# Conclusion
+
+The investigation of the PowerShell operational logs revealed that the threat actor used multiple techniques to identify whether the system was running in a virtualized environment. The activity included querying the `Win32_ComputerSystem` WMI class for manufacturer and model information, retrieving thermal-zone information through `MSAcpi_ThermalZoneTemperature`, and executing the `Check-VM` PowerShell function.
+
+The script also queried `HKLM:\SYSTEM\ControlSet001\Services` to identify virtualization-related services and checked for VirtualBox-specific processes such as `vboxservice.exe` and `vboxtray.exe`. Finally, the script identified **Hyper-V** and **VMware** as virtualization platforms.
+
+Overall, the evidence demonstrates that the threat actor implemented several **anti-virtualization techniques** to fingerprint the environment and potentially avoid execution in sandboxed or analysis environments.
 
 
 
