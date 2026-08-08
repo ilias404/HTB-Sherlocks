@@ -120,4 +120,4 @@ This investigation provided an overview of the Operation Dream Job cyber-espiona
 
 The analysis demonstrates how threat intelligence platforms and frameworks such as MITRE ATT&CK and VirusTotal can be combined to attribute adversary activity, map TTPs, correlate IOCs, and reconstruct elements of a cyber-espionage campaign.
 
-<img width="616" height="306" alt="image" src="https://github.com/user-attachments/assets/6602a3f4-ac44-4b34-9348-8f69a3f7beae" />
+<img width="636" height="433" alt="image" src="https://github.com/user-attachments/assets/2dbeb4a2-87c8-47f3-a2f4-cb6304566cb6" />
