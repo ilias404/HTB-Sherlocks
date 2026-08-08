@@ -1,5 +1,5 @@
 # MangoBleed
-![mangobleed.png](/MangoBleedHTB/screenshots/mangobleed.png)
+![mb.png](/MangoBleedHTB/screenshots/mb.png)
 
 # Sherlock Scenario
 > You were contacted early this morning to handle a high‑priority incident involving a suspected compromised server. The host, mongodbsync, is a secondary MongoDB server. According to the administrator, it's maintained once a month, and they recently became aware of a vulnerability referred to as MongoBleed. As a precaution, the administrator has provided you with root-level access to facilitate your investigation.
