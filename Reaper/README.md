@@ -84,3 +84,14 @@ By examining Event ID 5140, we can identify the share name accessed by the malic
 <img width="1105" height="500" alt="image" src="https://github.com/user-attachments/assets/0b95b48d-c902-4bea-9dec-67a8e2e030b8" />
 
 Ans: `\\*\IPC$`
+
+# Conclusion
+
+The investigation revealed that the suspicious logon originated from the unknown device `172.17.79.135`, identified by the hostname `D`, rather than the legitimate workstation associated with the compromised account. The attacker used `NTLMSSP authentication` with the compromised account `arthur.kyle` indicating that the account's authentication credentials had been intercepted.
+
+Further analysis of the network capture and Windows event logs showed that the malicious session originated from `172.17.79.135` while identifying itself as `FORELA-WKSTN002` which explains the hostname and IP address mismatch that triggered the SIEM alert.
+
+The investigation also identified the victim's access to the `\\DC01\Trip` file share and the malicious authentication activity involving the `\\*\IPC$` share. By correlating the network traffic with the Security event logs, we were able to reconstruct the malicious logon activity and identify the source of the suspicious authentication.
+
+<img width="668" height="448" alt="image" src="https://github.com/user-attachments/assets/ed8a15f8-91c9-4317-8c35-b8a9028d6980" />
+
