@@ -10,14 +10,29 @@ For the next nine tasks, we will refer to [this](https://attack.mitre.org/campai
 Ans: `Lazarus Group`
 
 # Task 2: When was this operation first observed?
+
+<img width="392" height="266" alt="image" src="https://github.com/user-attachments/assets/1e063bfb-d020-4257-96b5-f3e3934d02eb" />
+
+
 Ans: `September 2019`
 
 
 # Task 3: There are 2 campaigns associated with Operation Dream Job. One is Operation North Star, what is the other?
+
+The answer to this task can be identified from the screenshot provided in Task 1.
+
 Ans: `Operation Interception`
 
 
 # Task 4: During Operation Dream Job, there were the two system binaries used for proxy execution. One was Regsvr32, what was the other?
+
+To identify the second system binary used for proxy execution, we can use the MITRE ATT&CK Navigator layer associated with Operation Dream Job.
+
+<img width="404" height="152" alt="image" src="https://github.com/user-attachments/assets/1bf4ef5d-16f4-466a-99ae-867a6e3c2e78" />
+
+<img width="513" height="568" alt="image" src="https://github.com/user-attachments/assets/af79f1e7-bcd0-46c5-a6e0-70409e2f3f98" />
+
+
 Ans: `Rundll32`
 
 
