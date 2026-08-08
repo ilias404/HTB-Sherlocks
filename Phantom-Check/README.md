@@ -30,5 +30,8 @@ After filtering the logs to display only **Event ID 4104** events and reviewing 
 Ans: `Check-VM`
 
 # Task 4: Which registry key did the above script query to retrieve service details for virtualization detection?
+Reading through the PowerShell script, we find that the registry key `HKLM:\SYSTEM\ControlSet001\Services` is queried to retrieve service information.
 
+<img width="1299" height="660" alt="image" src="https://github.com/user-attachments/assets/55650c52-ab05-4345-b28a-06b4f0bec6a4" />
 
+Ans: `HKLM:\SYSTEM\ControlSet001\Services`
