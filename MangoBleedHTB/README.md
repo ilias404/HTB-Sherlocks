@@ -13,3 +13,13 @@ Ans: `CVE-2025-14847`
 
 # Task 2: What is the version of MongoDB installed on the server that the CVE exploited?
 
+Upon extracting the artifacts provided lets go to `\[root]\var\log\mongodb` and read the `mongod.log` file : 
+
+![mongover.png](/MangoBleedHTB/screenshots/mongover.png)
+
+Ans: `8.0.16`
+
+# Task 3: Analyze the MongoDB logs to identify the attacker's remote IP address used to exploit the CVE.
+
+
+
