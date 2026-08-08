@@ -1,4 +1,7 @@
 # Dream Job-1
+
+<img width="629" height="250" alt="image" src="https://github.com/user-attachments/assets/d972f188-c0e0-4eb4-9689-9de5df5f2f67" />
+
 # Sherlock Scenario
 > You are a junior threat intelligence analyst at a Cybersecurity firm. You have been tasked with investigating a Cyber espionage campaign known as Operation Dream Job. The goal is to gather crucial information about this operation.
 
@@ -116,3 +119,5 @@ Ans: `https://markettrendingcenter.com/lk_job_oppor.docx`
 This investigation provided an overview of the Operation Dream Job cyber-espionage campaign and the techniques and infrastructure associated with it. Using MITRE ATT&CK, we identified the responsible threat actor, associated campaigns, execution and lateral movement techniques, and the malware used by the Lazarus Group. The investigation was then extended using VirusTotal and the provided IOCs to correlate file hashes, filenames, execution artifacts, and malicious URLs.
 
 The analysis demonstrates how threat intelligence platforms and frameworks such as MITRE ATT&CK and VirusTotal can be combined to attribute adversary activity, map TTPs, correlate IOCs, and reconstruct elements of a cyber-espionage campaign.
+
+<img width="616" height="306" alt="image" src="https://github.com/user-attachments/assets/6602a3f4-ac44-4b34-9348-8f69a3f7beae" />
