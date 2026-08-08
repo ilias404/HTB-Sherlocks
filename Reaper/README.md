@@ -54,6 +54,7 @@ Ans: `40252`
 
 # Task 7: What is the Logon ID for the malicious session?
 
+In the same event, we can find the `Logon ID`
 ![logonid.png](/Reaper/screenshots/logonid.png)
 
 Ans: `0x64a799`
