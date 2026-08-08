@@ -38,7 +38,7 @@ Ans: `Rundll32`
 
 # Task 5: What lateral movement technique did the adversary use?
 
-Under the Lateral Movement section of the MITRE ATT&CK Navigator layer, we can identify the technique used by the adversary during Operation Dream Job.
+Under the Lateral Movement section of the MITRE ATT&CK Navigator layer:
 
 <img width="163" height="626" alt="image" src="https://github.com/user-attachments/assets/cccf1ac9-ad39-416d-8907-30f6f6e824e8" />
 
@@ -54,7 +54,7 @@ Ans: `T1534`
 
 # Task 7: What Remote Access Trojan did the Lazarus Group use in Operation Dream Job?
 
-Under Software:
+Under the Software section of the MITRE ATT&CK page:
 
 <img width="1390" height="188" alt="image" src="https://github.com/user-attachments/assets/4f2c37d3-c026-4fda-8cbf-56dc8ec3bb60" />
 
@@ -63,7 +63,7 @@ Ans: `DRATzarus`
 
 # Task 8: What technique did the malware use for execution?
 
-Under the Execution section of the MITRE ATT&CK Navigator layer for [DRATzarus](https://attack.mitre.org/software/S0694/), we can identify the technique used by the malware to execute its malicious payload.
+Under the Execution section:
 
 <img width="159" height="714" alt="image" src="https://github.com/user-attachments/assets/0d05051d-001c-4f87-9077-ca2b7e40cca2" />
 
@@ -72,7 +72,7 @@ Ans: `Native API`
 
 # Task 9: What technique did the malware use to avoid detection in a sandbox?
 
-Under Discovery
+Under the Discovery section:
 
 <img width="413" height="354" alt="image" src="https://github.com/user-attachments/assets/59cf7fcb-a0ce-4a28-81f7-a703a04f6ecd" />
 
@@ -111,4 +111,8 @@ Ans: `Salary_Lockheed_Martin_job_opportunities_confidential.doc`
 
 Ans: `https://markettrendingcenter.com/lk_job_oppor.docx`
 
+# Conclusion
 
+This investigation provided an overview of the Operation Dream Job cyber-espionage campaign and the techniques and infrastructure associated with it. Using MITRE ATT&CK, we identified the responsible threat actor, associated campaigns, execution and lateral movement techniques, and the malware used by the Lazarus Group. The investigation was then extended using VirusTotal and the provided IOCs to correlate file hashes, filenames, execution artifacts, and malicious URLs.
+
+The analysis demonstrates how threat intelligence platforms and frameworks such as MITRE ATT&CK and VirusTotal can be combined to attribute adversary activity, map TTPs, correlate IOCs, and reconstruct elements of a cyber-espionage campaign.
