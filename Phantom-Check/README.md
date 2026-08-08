@@ -11,3 +11,15 @@ One commonly used PowerShell cmdlet for retrieving information from WMI classes 
 <img width="1310" height="270" alt="image" src="https://github.com/user-attachments/assets/0764d86a-d8ae-41ee-999f-fa231eb3b19c" />
 
 Ans: `Win32_ComputerSystem`
+
+# Task 2: Which WMI query did the attacker execute to retrieve the current temperature value of the machine?
+
+Using the same approach, we identify the WMI query used by the attacker to retrieve the current temperature value of the machine
+
+<img width="1337" height="206" alt="image" src="https://github.com/user-attachments/assets/0452bc6e-00ce-487f-b9b3-67aa07735f3d" />
+
+Ans: `SELECT * FROM MSAcpi_ThermalZoneTemperature`
+
+# Task 3: The attacker loaded a PowerShell script to detect virtualization. What is the function name of the script?
+
+
