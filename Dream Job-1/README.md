@@ -37,18 +37,35 @@ Ans: `Rundll32`
 
 
 # Task 5: What lateral movement technique did the adversary use?
+
+Under the Lateral Movement section of the MITRE ATT&CK Navigator layer, we can identify the technique used by the adversary during Operation Dream Job.
+
+<img width="163" height="626" alt="image" src="https://github.com/user-attachments/assets/cccf1ac9-ad39-416d-8907-30f6f6e824e8" />
+
 Ans: `Internal Spearphishing`
 
 
 # Task 6: What is the technique ID for the previous answer?
+
+<img width="431" height="189" alt="image" src="https://github.com/user-attachments/assets/29f84920-1a11-402b-b666-b31f5799be8e" />
+
 Ans: `T1534`
 
 
 # Task 7: What Remote Access Trojan did the Lazarus Group use in Operation Dream Job?
+
+<img width="1410" height="283" alt="image" src="https://github.com/user-attachments/assets/7c7d159c-6fa8-4479-af83-403798a8a821" />
+
 Ans: `DRATzarus`
 
 
 # Task 8: What technique did the malware use for execution?
+
+Under the Execution section of the MITRE ATT&CK Navigator layer, we can identify the technique used by the malware.
+
+
+<img width="183" height="485" alt="image" src="https://github.com/user-attachments/assets/e982299a-e8e2-4de4-83d3-35f0a727f46d" />
+
 Ans: `Native API`
 
 
