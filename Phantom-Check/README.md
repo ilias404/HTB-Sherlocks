@@ -24,6 +24,11 @@ Ans: `SELECT * FROM MSAcpi_ThermalZoneTemperature`
 
 After filtering the logs to display only **Event ID 4104** events and reviewing the resulting PowerShell Scripts, we came across the following:
 
+<img width="549" height="516" alt="image" src="https://github.com/user-attachments/assets/521ff860-0882-4798-b622-e26108a3e1a8" />
 <img width="1323" height="616" alt="image" src="https://github.com/user-attachments/assets/a77c2fe3-df7c-4e4e-b253-33ed131f8013" />
 
 Ans: `Check-VM`
+
+# Task 4: Which registry key did the above script query to retrieve service details for virtualization detection?
+
+
