@@ -100,7 +100,12 @@ Ans: `MS17-010`
 
 # Task 12: What is the name of the malware/tool used by the group to target modems?
 
- 
+<img width="682" height="66" alt="image" src="https://github.com/user-attachments/assets/70c0fb1a-033e-447f-a324-39a0e8071e4e" />
+
+Ans: `AcidRain`
+
+# Task 13: Threat Actors also use non-standard ports across their infrastructure for Operational-Security purposes. On which port did the Sandworm team reportedly establish their SSH server for listening?
+
 
 
 
