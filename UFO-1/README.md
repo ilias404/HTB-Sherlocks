@@ -31,7 +31,7 @@ Ans: `T1110`
 
 # Task 3: During the 2016 campaign, the adversary was observed using a VBS script during their operations. What is the name of the VBS file?
 
-> `VBScript (Visual Basic Scripting Edition)` is a lightweight scripting language developed by Microsoft to automate tasks on Windows operating systems
+> `VBScript (Visual Basic Scripting Edition)` is a lightweight scripting language developed by Microsoft to automate tasks on Windows operating systems.
 
 By filtering the MITRE ATT&CK Sandworm page for "VBS" and reviewing the relevant activity, we can identify the name of the VBS file used by the adversary.
 
@@ -50,7 +50,7 @@ Ans: `T1505.003`
 
 # Task 5: What is the name of the malware / tool used in question 4?
 
-We can find the answer from the last screenshot.
+We can find the answer from the previous screenshot.
 
 Ans: `Neo-REGEORG`
 
@@ -62,7 +62,7 @@ Ans: `scilc.exe`
 
 # Task 7: Identify the full command line associated with the execution of the tool from question 6 to perform actions against substations in the SCADA environment.
 
-We can find the answer from the last screenshot.
+We can find the answer from the previous screenshot.
 
 Ans: `C:\sc\prog\exec\scilc.exe -do pack\scil\s1.txt`
 
@@ -82,7 +82,7 @@ Ans: `T1106`
 
 # Task 10: The Sandworm Team is known to use different tools in their campaigns. They are associated with an auto-spreading malware that acted as a ransomware while having worm-like features. What is the name of this malware?
 
-If we read the description of Sandworm group description, we can actually find the answer.
+If we read the Sandworm group description, we can find the answer:
 
 <img width="925" height="332" alt="image" src="https://github.com/user-attachments/assets/3685689d-b1c2-43f9-8422-792d64d935e4" />
 
@@ -92,7 +92,7 @@ Ans: `NotPetya`
 
 # Task 11: What was the Microsoft security bulletin ID for the vulnerability that the malware from question 10 used to spread around the world?
 
-NotPetya is associated with the famous exploits known as **EternalBlue** and **EternalRomance**. By searching for their corresponding **Microsoft Security Bulletin IDs**, we can find the following:
+NotPetya is associated with the exploits EternalBlue and EternalRomance. By searching for their corresponding Microsoft Security Bulletin ID, we can find the following:
 
 <img width="685" height="695" alt="image" src="https://github.com/user-attachments/assets/6feae89b-e12d-4f23-ad73-1c9d7f95b2fc" />
 
@@ -116,7 +116,7 @@ Ans: `6789`
 
 # Task 14: The Sandworm Team has been assisted by another APT group on various operations. Which specific group is known to have collaborated with them?
 
-In the Sandworm group description:
+The answer can be found in the Sandworm group description:
 
 <img width="922" height="334" alt="image" src="https://github.com/user-attachments/assets/8ba993dc-2512-4204-ae8c-35d7def5633c" />
 
