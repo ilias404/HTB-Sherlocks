@@ -1,5 +1,7 @@
 # Smoke-&-Mirrors
 
+<img width="872" height="266" alt="image" src="https://github.com/user-attachments/assets/21768f80-061f-4ead-82ad-ba31887483f8" />
+
 # Sherlock Scenario
 > Byte Doctor Reyes is investigating a stealthy post-breach attack where several expected security logs and Windows Defender alerts appear to be missing. He suspects the attacker employed defense evasion techniques to disable or manipulate security controls, significantly complicating detection efforts.
 > Using the exported event logs, your objective is to uncover how the attacker compromised the system's defenses to remain undetected.
@@ -71,6 +73,17 @@ This prevents PowerShell command history from being saved to disk, reducing the 
 
 Ans: `Set-PSReadlineOption -HistorySaveStyle SaveNothing`
 
+# Conclusion
+
+The investigation revealed a series of defense-evasion techniques used by the attacker to weaken security controls and reduce forensic visibility.
+
+The attacker first disabled **LSA Protection** by modifying the `RunAsPPL` registry value, then weakened multiple **Microsoft Defender** protections using `Set-MpPreference`. They subsequently patched **AMSI's `AmsiScanBuffer`** function in memory to interfere with antimalware scanning.
+
+The attacker also configured the system to boot into **Safe Mode with Networking** and disabled the saving of **PowerShell command history**, further reducing the evidence available to investigators.
+
+Overall, the activity demonstrates a deliberate attempt to **disable security controls, evade detection, and minimize forensic traces** after gaining access to the system. Correlating PowerShell **Event ID 4104**, Sysmon events, registry modifications, and process execution data was essential to reconstructing the attacker's actions.
+
+<img width="876" height="457" alt="image" src="https://github.com/user-attachments/assets/bf37cc4c-2fe5-490c-b3c3-d3c3b77fe998" />
 
 
 
