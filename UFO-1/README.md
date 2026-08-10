@@ -38,4 +38,5 @@ Ans: `ufn.vbs`
 
 # Task 4: The APT conducted a major campaign in 2022. The server application was abused to maintain persistence. What is the Mitre Att&ck ID for the persistence technique was used by the group to allow them remote access?
 
+<img width="366" height="782" alt="image" src="https://github.com/user-attachments/assets/8567f3fe-afe3-461f-86f6-0e9428dbfc97" />
 
