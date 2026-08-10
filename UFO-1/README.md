@@ -52,6 +52,18 @@ Ans: `T1505.003`
 
 Ans: `Neo-REGEORG`
 
-# Task 5: Which SCADA application binary was abused by the group to achieve code execution on SCADA Systems in the same campaign in 2022?
+# Task 6: Which SCADA application binary was abused by the group to achieve code execution on SCADA Systems in the same campaign in 2022?
+
+<img width="1389" height="145" alt="image" src="https://github.com/user-attachments/assets/27010d4f-4ab7-42b1-a230-8a0226f43127" />
+
+Ans: `scilc.exe`
+
+# Task 7: Identify the full command line associated with the execution of the tool from question 6 to perform actions against substations in the SCADA environment.
+
+Ans: `C:\sc\prog\exec\scilc.exe -do pack\scil\s1.txt`
+
+# Task 8: What malware/tool was used to carry out data destruction in a compromised environment during the same campaign?
+
+
 
 
