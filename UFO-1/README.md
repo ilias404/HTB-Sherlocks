@@ -28,5 +28,14 @@ Ans: `T1110`
 
 # Task 3: During the 2016 campaign, the adversary was observed using a VBS script during their operations. What is the name of the VBS file?
 
+> `VBScript (Visual Basic Scripting Edition)` is a lightweight scripting language developed by Microsoft to automate tasks on Windows operating systems
+
+By filtering the MITRE ATT&CK Sandworm page for "VBS" and reviewing the relevant activity, we can identify the name of the VBS file used by the adversary.
+
+<img width="1415" height="142" alt="image" src="https://github.com/user-attachments/assets/7dc181db-c117-4714-bb10-246ea1ec23de" />
+
+Ans: `ufn.vbs`
+
+# Task 4: The APT conducted a major campaign in 2022. The server application was abused to maintain persistence. What is the Mitre Att&ck ID for the persistence technique was used by the group to allow them remote access?
 
 
