@@ -48,3 +48,23 @@ The concatenated string resolves to: AmsiScanBuffer
 This function is then modified in memory to interfere with AMSI scanning.
 
 Ans: `AmsiScanBuffer`
+
+# Task 4: Which command did the attacker use to restart the machine in Safe Mode?
+
+By filtering PowerShell Event ID 4104, we identified the command used to configure the system for Safe Mode.
+
+<img width="1297" height="254" alt="image" src="https://github.com/user-attachments/assets/5a42e280-5bb2-4671-aeea-0ce618ad481d" />
+
+To determine the exact command used to restart the machine, we searched the provided `Microsoft-Windows-Sysmon/Operational` logs around the same timestamp, `07:38:35`.
+
+<img width="1303" height="501" alt="image" src="https://github.com/user-attachments/assets/856ac733-b28d-4d0b-a158-bc09ce331432" />
+
+Ans: `bcdedit.exe /set safeboot network`
+
+# Task 5: Which PowerShell command did the attacker use to disable PowerShell command history logging?
+
+
+
+
+
+
