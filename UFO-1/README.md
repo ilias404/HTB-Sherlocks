@@ -50,6 +50,8 @@ Ans: `T1505.003`
 
 # Task 5: What is the name of the malware / tool used in question 4?
 
+We can find the answer from the last screenshot.
+
 Ans: `Neo-REGEORG`
 
 # Task 6: Which SCADA application binary was abused by the group to achieve code execution on SCADA Systems in the same campaign in 2022?
@@ -60,18 +62,33 @@ Ans: `scilc.exe`
 
 # Task 7: Identify the full command line associated with the execution of the tool from question 6 to perform actions against substations in the SCADA environment.
 
+We can find the answer from the last screenshot.
+
 Ans: `C:\sc\prog\exec\scilc.exe -do pack\scil\s1.txt`
 
 # Task 8: What malware/tool was used to carry out data destruction in a compromised environment during the same campaign?
 
 <img width="1045" height="167" alt="image" src="https://github.com/user-attachments/assets/31cc3326-9218-4595-9f11-0a37ef2c727f" />
 
-
 <img width="909" height="190" alt="image" src="https://github.com/user-attachments/assets/d4bfbb07-1adf-4410-b8c1-6e68c2a5dd8d" />
 
 Ans: `CaddyWiper`
 
 # Task 9: The malware/tool identified in question 8 also had additional capabilities. What is the Mitre Att&ck ID of the specific technique it could perform in Execution tactic?
+
+<img width="265" height="477" alt="image" src="https://github.com/user-attachments/assets/490a2df8-af81-4f7a-918c-f8a3a8dafcbd" />
+
+Ans: `T1106`
+
+# Task 10: The Sandworm Team is known to use different tools in their campaigns. They are associated with an auto-spreading malware that acted as a ransomware while having worm-like features. What is the name of this malware?
+
+
+
+
+
+
+
+
 
 
 
