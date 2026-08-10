@@ -63,6 +63,13 @@ Ans: `bcdedit.exe /set safeboot network`
 
 # Task 5: Which PowerShell command did the attacker use to disable PowerShell command history logging?
 
+In the Event ID 4104 events following the Safe Mode activity, we identified a PowerShell command used to disable command history logging:
+
+<img width="1276" height="216" alt="image" src="https://github.com/user-attachments/assets/a5d18582-6cde-4e56-99a4-348fab9cd2d6" />
+
+This prevents PowerShell command history from being saved to disk, reducing the forensic traces left by commands executed during the session.
+
+Ans: `Set-PSReadlineOption -HistorySaveStyle SaveNothing`
 
 
 
