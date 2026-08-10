@@ -16,7 +16,7 @@ While reviewing the logs, we identified the following command, which was execute
 
 The command sets the `RunAsPPL` registry value to `0`, effectively disabling LSA Protection.
 
-Answer: `HKLM\SYSTEM\CurrentControlSet\Control\LSA`
+Ans: `HKLM\SYSTEM\CurrentControlSet\Control\LSA`
 
 # Task 2: Which PowerShell command did the attacker first execute to disable Windows Defender?
 
@@ -31,9 +31,20 @@ Among the resulting events, we identified the following command:
 
 This command disables multiple Microsoft Defender security features, including real-time protection, script scanning, behavior monitoring, downloaded-file scanning, and intrusion prevention.
 
-Answer: `Set-MpPreference -DisableIOAVProtection $true -DisableEmailScanning $true -DisableBlockAtFirstSeen $true`
+Ans: `Set-MpPreference -DisableIOAVProtection $true -DisableEmailScanning $true -DisableBlockAtFirstSeen $true`
 
 # Task 3: The attacker loaded an AMSI patch written in PowerShell. Which function in the DLL is being patched by the script to effectively disable AMSI?
 
+> `Antimalware Scan Interface (AMSI)` is a versatile Windows standard that allows applications and services—such as PowerShell, VBScript, and Office macros—to integrate with installed antivirus products and scan dynamic or fileless scripts for malicious content just before execution.
+>
+> An `AMSI patch` is a modification to an AMSI component, typically performed in memory, that interferes with AMSI's normal scanning functionality. Attackers may use AMSI patches as a defense-evasion technique to prevent malicious PowerShell or other script content from being properly inspected by security software.
 
+By analyzing the PowerShell Event ID 4104 and searching for `.dll`, we found that the script uses `GetProcAddress()` to locate a function in `amsi.dll`.
 
+The concatenated string resolves to: AmsiScanBuffer
+
+<img width="1278" height="419" alt="image" src="https://github.com/user-attachments/assets/7010e663-06a8-4941-bdcc-4139344ab8ee" />
+
+This function is then modified in memory to interfere with AMSI scanning.
+
+Ans: `AmsiScanBuffer`
