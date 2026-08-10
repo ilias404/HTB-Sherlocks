@@ -116,7 +116,9 @@ Ans: `6789`
 
 # Task 14: The Sandworm Team has been assisted by another APT group on various operations. Which specific group is known to have collaborated with them?
 
+<img width="922" height="334" alt="image" src="https://github.com/user-attachments/assets/8ba993dc-2512-4204-ae8c-35d7def5633c" />
 
+Ans: `APT28`
 
 
 
