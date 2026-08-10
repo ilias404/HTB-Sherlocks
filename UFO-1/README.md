@@ -48,3 +48,10 @@ Navigating to the [2022 Ukraine Electric Power Attack](https://attack.mitre.org/
 
 Ans: `T1505.003`
 
+# Task 5: What is the name of the malware / tool used in question 4?
+
+Ans: `Neo-REGEORG`
+
+# Task 5: Which SCADA application binary was abused by the group to achieve code execution on SCADA Systems in the same campaign in 2022?
+
+
