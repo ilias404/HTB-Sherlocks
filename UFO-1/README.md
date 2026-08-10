@@ -1,5 +1,8 @@
 # UFO-1
 
+<img width="867" height="246" alt="image" src="https://github.com/user-attachments/assets/db94d097-9b77-44df-aaf8-00213db46dd6" />
+
+
 <img width="1200" height="675" alt="image" src="https://github.com/user-attachments/assets/7abd0633-afb1-41b4-89cd-715a98a187f3" />
 
 # Sherlock Scenario
@@ -116,9 +119,20 @@ Ans: `6789`
 
 # Task 14: The Sandworm Team has been assisted by another APT group on various operations. Which specific group is known to have collaborated with them?
 
+In the Sandworm group description:
+
 <img width="922" height="334" alt="image" src="https://github.com/user-attachments/assets/8ba993dc-2512-4204-ae8c-35d7def5633c" />
 
 Ans: `APT28`
 
+# Conclusion
+
+This Sherlock provided a practical introduction to **Threat Intelligence** using the **MITRE ATT&CK framework** to investigate the activities of Sandworm Team (APT44). By analyzing campaigns, techniques, malware, tools, and supporting sources, we were able to identify how the group conducted operations against critical infrastructure and adapted its techniques across different campaigns.
+
+The investigation covered a range of concepts, including **credential access, execution, persistence, lateral movement, data destruction, malware analysis, ICS/SCADA attacks, and operational security**. It also demonstrated how MITRE ATT&CK can be used to connect adversary behavior with specific techniques, tools, and real-world campaigns.
+
+Overall, UFO-1 reinforced the importance of combining **threat intelligence research, MITRE ATT&CK, and contextual analysis** when investigating advanced threat actors targeting industrial and critical infrastructure environments.
+
+<img width="866" height="453" alt="image" src="https://github.com/user-attachments/assets/3311e59d-58e1-4199-9bec-27018afc6802" />
 
 
