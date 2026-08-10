@@ -82,9 +82,25 @@ Ans: `T1106`
 
 # Task 10: The Sandworm Team is known to use different tools in their campaigns. They are associated with an auto-spreading malware that acted as a ransomware while having worm-like features. What is the name of this malware?
 
+If we read the description of Sandworm group description, we can actually find the answer.
 
+<img width="925" height="332" alt="image" src="https://github.com/user-attachments/assets/3685689d-b1c2-43f9-8422-792d64d935e4" />
 
+<img width="934" height="212" alt="image" src="https://github.com/user-attachments/assets/52eeadc6-285a-4c8b-913f-5a824d38598d" />
 
+Ans: `NotPetya`
+
+# Task 11: What was the Microsoft security bulletin ID for the vulnerability that the malware from question 10 used to spread around the world?
+
+NotPetya is associated with the famous exploits known as **EternalBlue** and **EternalRomance**. By searching for their corresponding **Microsoft Security Bulletin IDs**, we can find the following:
+
+<img width="685" height="695" alt="image" src="https://github.com/user-attachments/assets/6feae89b-e12d-4f23-ad73-1c9d7f95b2fc" />
+
+Ans: `MS17-010`
+
+# Task 12: What is the name of the malware/tool used by the group to target modems?
+
+ 
 
 
 
