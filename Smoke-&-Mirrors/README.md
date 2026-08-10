@@ -22,7 +22,7 @@ Answer: `HKLM\SYSTEM\CurrentControlSet\Control\LSA`
 
 > `Set-MpPreference` is a PowerShell cmdlet used to modify Microsoft Defender Antivirus configuration and security preferences.
 
-It is commonly encountered in security investigations because an attacker can abuse it to weaken or disable Defender's protective features.
+> It is commonly encountered in security investigations because an attacker can abuse it to weaken or disable Defender's protective features.
 
 To identify the first PowerShell command used by the attacker to disable Windows Defender, we filtered the logs by the relevant date and time and focused on Event ID 4104.
 
