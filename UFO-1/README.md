@@ -64,6 +64,14 @@ Ans: `C:\sc\prog\exec\scilc.exe -do pack\scil\s1.txt`
 
 # Task 8: What malware/tool was used to carry out data destruction in a compromised environment during the same campaign?
 
+<img width="1045" height="167" alt="image" src="https://github.com/user-attachments/assets/31cc3326-9218-4595-9f11-0a37ef2c727f" />
+
+
+<img width="909" height="190" alt="image" src="https://github.com/user-attachments/assets/d4bfbb07-1adf-4410-b8c1-6e68c2a5dd8d" />
+
+Ans: `CaddyWiper`
+
+# Task 9: The malware/tool identified in question 8 also had additional capabilities. What is the Mitre Att&ck ID of the specific technique it could perform in Execution tactic?
 
 
 
