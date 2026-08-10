@@ -1,8 +1,5 @@
 # UFO-1
 
-<img width="867" height="246" alt="image" src="https://github.com/user-attachments/assets/db94d097-9b77-44df-aaf8-00213db46dd6" />
-
-
 <img width="1200" height="675" alt="image" src="https://github.com/user-attachments/assets/7abd0633-afb1-41b4-89cd-715a98a187f3" />
 
 # Sherlock Scenario
