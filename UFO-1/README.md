@@ -19,7 +19,8 @@ Ans: `2009`
 
 # Task 2: Mitre notes two credential access techniques used by the BlackEnergy group to access several hosts in the compromised network during a 2016 campaign against the Ukrainian electric power grid. One is LSASS Memory access (T1003.001). What is the Attack ID for the other?
 
-Navigating to the [2016 Ukraine Electric Power Attack](https://attack.mitre.org/campaigns/C0025/) section on the Sandworm MITRE ATT&CK page, we can examine the techniques and tools associated with this campaign.
+Navigating to the [2016 Ukraine Electric Power Attack](https://attack.mitre.org/campaigns/C0025/) section on the Sandworm MITRE ATT&CK page, we can examine the **MITRE ATT&CK Navigator layer** associated with the campaign.
+
 
 <img width="1536" height="638" alt="image" src="https://github.com/user-attachments/assets/552ff033-39e7-45cc-a7bf-c1130399eb4d" />
 
@@ -40,5 +41,10 @@ Ans: `ufn.vbs`
 
 # Task 4: The APT conducted a major campaign in 2022. The server application was abused to maintain persistence. What is the Mitre Att&ck ID for the persistence technique was used by the group to allow them remote access?
 
+Navigating to the [2022 Ukraine Electric Power Attack](https://attack.mitre.org/campaigns/C0034/) section on the Sandworm MITRE ATT&CK page, we can examine the **MITRE ATT&CK Navigator layer** associated with the campaign.
+
+
 <img width="366" height="782" alt="image" src="https://github.com/user-attachments/assets/8567f3fe-afe3-461f-86f6-0e9428dbfc97" />
+
+Ans: `T1505.003`
 
