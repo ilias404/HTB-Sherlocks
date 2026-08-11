@@ -38,13 +38,18 @@ Ans: `S-1-5-21-3239415629-1862073780-2394361899-1601`
 
 # Task 4: It is crucial to identify the compromised user account and the workstation responsible for this attack. Please list the internal IP address of the compromised asset to assist our threat-hunting team.
 
+In the same event: 
+
 <img width="580" height="411" alt="image" src="https://github.com/user-attachments/assets/1fc57ccb-2ea8-4a10-b792-8adf1cb69305" />
 
 Ans: `172.17.79.129`
 
 # Task 5: We do not have any artifacts from the source machine yet. Using the same DC Security logs, can you confirm the user account used to perform the ASREP Roasting attack so we can contain the compromised account/s?
 
+After clearing the filters, we can examine events that occurred after the previously identified timestamp to identify any activity associated with the attack.
+
 <img width="1285" height="473" alt="image" src="https://github.com/user-attachments/assets/3ac676ea-9b07-436f-a88d-c676f2cca90b" />
+
 
 Ans: `happy.grunwald`
 
