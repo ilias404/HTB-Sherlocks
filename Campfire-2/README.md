@@ -24,7 +24,7 @@ Ans: `2024-05-29 06:36:40`
 
 # Task 2: Please confirm the User Account that was targeted by the attacker.
 
-We can find it from the previous task.
+The targeted account was identified from the Event ID 4768 analyzed in the previous task.
 
 Ans: `arthur.kyle`
 
