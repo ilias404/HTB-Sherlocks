@@ -1,5 +1,7 @@
 # Campfire-2
 
+<img width="873" height="253" alt="image" src="https://github.com/user-attachments/assets/31b1616e-96c8-49fa-a71b-738c59ecd479" />
+
 # Sherlock Scenario
 
 > Forela's Network is constantly under attack. The security system raised an alert about an old admin account requesting a ticket from KDC on a domain controller.
@@ -54,3 +56,14 @@ By reviewing the Event ID 4769 that occurs directly after the attack event, we c
 
 Ans: `happy.grunwald`
 
+# Conclusion
+
+The investigation confirmed that an **AS-REP Roasting attack** was performed against the vulnerable account **arthur.kyle**. The attacker requested a Kerberos TGT at **2024-05-29 06:36:40**, targeting an account with Kerberos pre-authentication disabled.
+
+The targeted account was identified by its SID as **S-1-5-21-3239415629-1862073780-2394361899-1601**, and the compromised asset involved in the attack had the internal IP address **172.17.79.129**.
+
+Further analysis of the Domain Controller Security logs, particularly **Event ID 4769**, allowed us to identify **happy.grunwald** as the user account used to perform the attack.
+
+Overall, the investigation demonstrates how Windows Security Event IDs **4768 and 4769** can be correlated to identify the targeted account, source system, attack timeline, and compromised user account during an AS-REP Roasting attack.
+
+<img width="871" height="446" alt="image" src="https://github.com/user-attachments/assets/69b4d34c-6b72-443b-9994-b0bf4f427f36" />
