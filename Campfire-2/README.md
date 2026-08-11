@@ -22,9 +22,15 @@ Ans: `2024-05-29 06:36:40`
 
 # Task 2: Please confirm the User Account that was targeted by the attacker.
 
+We can find it from the previous task.
+
 Ans: `arthur.kyle`
 
 # Task 3: What was the SID of the account?
+
+> The `SID (Security Identifier)` is a unique identifier assigned to a Windows account, user, group, or computer.
+
+In the same event, we can find the SID of the user's account.
 
 <img width="676" height="303" alt="image" src="https://github.com/user-attachments/assets/c32ae6c1-0db9-4cca-abd4-b6b393cdc7c1" />
 
