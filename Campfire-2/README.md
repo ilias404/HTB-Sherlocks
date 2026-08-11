@@ -50,6 +50,7 @@ After clearing the filters, we can examine events that occurred after the previo
 
 <img width="1285" height="473" alt="image" src="https://github.com/user-attachments/assets/3ac676ea-9b07-436f-a88d-c676f2cca90b" />
 
+By reviewing the Event ID 4769 that occurs directly after the attack event, we can identify the user account used to perform the attack, along with other relevant details.
 
 Ans: `happy.grunwald`
 
