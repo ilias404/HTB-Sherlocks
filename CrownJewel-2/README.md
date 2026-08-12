@@ -35,7 +35,7 @@ Ans: `2024-05-15 05:39:56`
 
 # Task 4: When was the newly dumped database considered complete and ready for use?
 
-The database dump is considered complete and ready for use once it is detached by the database engine and marked ready to use.
+The database dump is considered complete and ready for use once it is detached by the database engine.
 
 <img width="1292" height="409" alt="image" src="https://github.com/user-attachments/assets/2a29920e-9da5-4f28-9bb7-e9883d76178b" />
 
