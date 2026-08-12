@@ -42,8 +42,19 @@ Ans: `Administrators, Backup Operators, DC01$`
 
 # Task 3: Identify the Process ID (in Decimal) of the volume shadow copy service process.
 
+Selecting one of the relevant Event ID `4799` events, we can find the Process ID. The PID is displayed in hexadecimal.
 
+<img width="1240" height="427" alt="image" src="https://github.com/user-attachments/assets/198a2f05-e208-475a-bbbd-00783a1ff835" />
 
+After converting the hexadecimal Process ID to decimal, we obtain:
+
+<img width="788" height="153" alt="image" src="https://github.com/user-attachments/assets/59b3415f-2b7a-49d3-8d11-35f8fa6c5e24" />
+
+Ans: `4496`
+
+# Task 4: Find the assigned Volume ID/GUID value to the Shadow copy snapshot when it was mounted.
+
+ 
 
 
 
