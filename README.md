@@ -1,4 +1,8 @@
-## About This Repository
+# What is an HTB Sherlock?
+
+> An HTB (Hack The Box) Sherlock is a gamified, hands-on defensive cybersecurity lab. It immerses you in a fictional corporate narrative or security breach where you act as an investigator to analyze artifacts, hunt for threats, and solve digital forensics and incident response (DFIR) challenges.
+
+# About This Repository
 
 A collection of Hack The Box machines and Sherlocks I've worked through while learning and practicing cybersecurity. I document my approach, findings, and the techniques I use throughout each investigation. This repository serves as both a personal learning log and a resource for anyone interested in exploring similar challenges.
 
