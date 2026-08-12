@@ -2,7 +2,7 @@
 
 <img width="877" height="253" alt="image" src="https://github.com/user-attachments/assets/e1011a0c-ff45-4eea-9275-c1d1ea91f432" />
 
-Sherlock Scenario
+# Sherlock Scenario
 
 > Forela's Domain environment is pure chaos. Just got another alert from the Domain controller of NTDS.dit database being exfiltrated. Just one day prior you responded to an alert on the same domain controller where an attacker dumped NTDS.dit via vssadmin utility. However, you managed to delete the dumped files kick the attacker out of the DC, and restore a clean snapshot. Now they again managed to access DC with a domain admin account with their persistent access in the environment. This time they are abusing ntdsutil to dump the database. Help Forela in these chaotic times!!
 
