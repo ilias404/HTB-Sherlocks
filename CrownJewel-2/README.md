@@ -16,6 +16,16 @@ The XML view of the event was then examined to verify the exact timestamp.
 
 Ans: `2024-05-15 05:39:55`
 
+# Task 2: Identify the full path of the dumped NTDS file.
+
+In `APPLICATION.evtx`, filtering around the previously identified timestamp `2024-05-15 05:39:55` revealed several interesting events related to the NTDS dumping activity. These events provide information that can be used to identify the full path of the dumped NTDS file.
+
+<img width="1169" height="368" alt="image" src="https://github.com/user-attachments/assets/8a3ef335-e858-410f-b485-22aaafbdc2d8" />
+
+
+Ans: `C:\Windows\Temp\dump_tmp\Active Directory\ntds.dit`
+
+# Task 3: When was the database dump created on the disk?
 
 
 
