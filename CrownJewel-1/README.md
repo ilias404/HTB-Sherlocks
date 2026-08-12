@@ -88,4 +88,9 @@ Ans: `2024-05-14 03:44:22`
 
 # Task 7: A registry hive was also dumped alongside the NTDS database. Which registry hive was dumped and what is its file size in bytes?
 
- 
+We can further narrow down the results by filtering for the same path, `\Users\Administrator\Documents\backup_sync_Dc\`, identified in the previous task.
+
+<img width="836" height="129" alt="image" src="https://github.com/user-attachments/assets/0c56e69a-bdd2-42e4-9935-0d9399166c2e" />
+
+Ans: `SYSTEM, 17563648`
+
