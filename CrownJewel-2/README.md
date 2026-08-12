@@ -1,5 +1,7 @@
 # CrownJewel-2
 
+<img width="877" height="253" alt="image" src="https://github.com/user-attachments/assets/e1011a0c-ff45-4eea-9275-c1d1ea91f432" />
+
 Sherlock Scenario
 
 > Forela's Domain environment is pure chaos. Just got another alert from the Domain controller of NTDS.dit database being exfiltrated. Just one day prior you responded to an alert on the same domain controller where an attacker dumped NTDS.dit via vssadmin utility. However, you managed to delete the dumped files kick the attacker out of the DC, and restore a clean snapshot. Now they again managed to access DC with a domain admin account with their persistent access in the environment. This time they are abusing ntdsutil to dump the database. Help Forela in these chaotic times!!
@@ -73,7 +75,11 @@ In `SECURITY.evtx`, Event IDs 4768 and 4769 were filtered to identify the Kerber
 
 Ans: `2024-05-15 05:36:31`
 
+# Conclusion
 
+The investigation revealed that the attacker successfully accessed Forela's Domain Controller and used `ntdsutil.exe` to dump the `NTDS.dit` database. The activity was identified through the Microsoft Shadow Copy Service entering the running state, followed by `ESENT` events documenting the creation and detachment of the database copy. Further analysis of `Security.evtx` showed that `ntdsutil.exe` enumerated the `Administrators` and `Backup Operators` groups, indicating privilege-related activity. Finally, Kerberos authentication events were correlated with the relevant Logon ID to establish the start of the malicious session at `2024-05-15 05:36:31`. Overall, the evidence provides a clear timeline of the attacker's access, privilege validation, and subsequent NTDS database dumping activity.
+
+<img width="873" height="454" alt="image" src="https://github.com/user-attachments/assets/1b3fdd7b-ea4e-49cb-ba6a-f092076123a2" />
 
 
 
