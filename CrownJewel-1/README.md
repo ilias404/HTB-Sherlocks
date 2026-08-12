@@ -1,5 +1,7 @@
 # CrownJewel-1
 
+<img width="869" height="259" alt="image" src="https://github.com/user-attachments/assets/c43df810-eba3-448e-9b8d-49073057f0cb" />
+
 # Sherlock Scenario
 
 > Forela's domain controller is under attack. The Domain Administrator account is believed to be compromised, and it is suspected that the threat actor dumped the NTDS.dit database on the DC. We just received an alert of vssadmin being used on the DC, since this is not part of the routine schedule we have good reason to believe that the attacker abused this LOLBIN utility to get the Domain environment's crown jewel. Perform some analysis on provided artifacts for a quick triage and if possible kick the attacker as early as possible.
@@ -94,3 +96,14 @@ We can further narrow down the results by filtering for the same path, `\Users\A
 
 Ans: `SYSTEM, 17563648`
 
+# Conclusion
+
+The analysis of the provided artifacts allowed us to reconstruct the attacker's use of Volume Shadow Copy functionality to obtain the Domain Controller's `NTDS.dit` database.
+
+The investigation shows that the Volume Shadow Copy Service was started, followed by privilege validation and group enumeration under the `DC01` machine account. A shadow copy was subsequently mounted, providing access to the filesystem snapshot. The `$MFT` analysis then confirmed the presence of a newly created `Ntds.dit` database in an unusual directory under the Administrator profile, along with a dumped `SYSTEM` registry hive.
+
+The combination of the VSS activity, shadow copy mounting, and creation of `Ntds.dit` and the `SYSTEM` hive provides strong evidence that the attacker abused legitimate Windows functionality to obtain sensitive Active Directory credential material.
+
+This investigation highlights the importance of monitoring unexpected `vssadmin` and Volume Shadow Copy activity on Domain Controllers, as well as correlating Windows event logs with filesystem artifacts such as the `$MFT` to identify and confirm credential-dumping activity.
+
+<img width="869" height="446" alt="image" src="https://github.com/user-attachments/assets/bfbd4369-57a7-4764-b0d6-0b5d2ce9611f" />
