@@ -65,9 +65,13 @@ Ans: `Administrators, Backup Operators`
 
 # Task 7: Now you are tasked to find the Login Time for the malicious Session. Using the Logon ID, find the Time when the user logon session started.
 
+In `SECURITY.evtx`, Event IDs 4768 and 4769 were filtered to identify the Kerberos authentication activity associated with the malicious session. The 4768 events were examined to identify a user account rather than a machine or service account ending with $. The corresponding 4769 event was then correlated using the same username. Finally, Event ID 5379 was used to identify the relevant Logon ID. The timestamps of these correlated events matched, indicating when the malicious logon session started.
 
+<img width="1280" height="356" alt="image" src="https://github.com/user-attachments/assets/25e2d9a1-1489-45ca-a5d8-f9aca4336d50" />
 
-Ans: `ESENT`
+<img width="497" height="281" alt="image" src="https://github.com/user-attachments/assets/853ba44d-fd0c-48d4-af5c-2c576a40e31d" />
+
+Ans: `2024-05-15 05:36:31`
 
 
 
