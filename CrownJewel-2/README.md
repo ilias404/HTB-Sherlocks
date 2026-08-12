@@ -35,6 +35,18 @@ Ans: `2024-05-15 05:39:56`
 
 # Task 4: When was the newly dumped database considered complete and ready for use?
 
+The database dump is considered complete and ready for use once it is detached by the database engine and marked ready to use.
+
+<img width="1292" height="409" alt="image" src="https://github.com/user-attachments/assets/2a29920e-9da5-4f28-9bb7-e9883d76178b" />
+
+Looking at the same event, the timestamp corresponding to the detachment can be identified.
+
+<img width="512" height="261" alt="image" src="https://github.com/user-attachments/assets/12148e70-35e8-4129-8d1e-2704e7cb9388" />
+
+Ans: `2024-05-15 05:39:58`
+
+# Task 5: Event logs use event sources to track events coming from different sources. Which event source provides database status data like creation and detachment?
+
 
 
 
