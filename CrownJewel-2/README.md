@@ -27,6 +27,14 @@ Ans: `C:\Windows\Temp\dump_tmp\Active Directory\ntds.dit`
 
 # Task 3: When was the database dump created on the disk?
 
+In the same event, the timestamp indicating when the database dump was created on the disk can be observed.
+
+<img width="490" height="321" alt="image" src="https://github.com/user-attachments/assets/bf960057-f7d0-4c2e-b225-d7882ba281ab" />
+
+Ans: `2024-05-15 05:39:56`
+
+# Task 4: When was the newly dumped database considered complete and ready for use?
+
 
 
 
