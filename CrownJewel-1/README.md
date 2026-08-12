@@ -54,7 +54,29 @@ Ans: `4496`
 
 # Task 4: Find the assigned Volume ID/GUID value to the Shadow copy snapshot when it was mounted.
 
- 
+Reviewing `Microsoft-Windows-NTFS.evtx` and filtering for events occurring after `2024-05-14 03:42:16`, we identify the following:
 
+<img width="1285" height="453" alt="image" src="https://github.com/user-attachments/assets/1bf4fc4e-3a96-44d8-a83d-bcae31f372ce" />
 
+Ans: `{06c4a997-cca8-11ed-a90f-000c295644f9}`
+
+# Task 5: Identify the full path of the dumped NTDS database on disk.
+
+> `NTDS.dit` is the main database file for Microsoft Active Directory. It lives on domain controllers and stores user accounts, group details, and password hashes.
+
+From Task 4, we identified the timestamp at which the NTFS volume was mounted: `2024-05-14 04:44:22`. We can use this timestamp as a reference point when investigating filesystem activity related to the Volume Shadow Copy operation.
+
+For this task, we use the provided `$MFT` artifact to identify `.dit` files present on the filesystem.
+
+Using **MFTECmd**, we parse the `$MFT` file and export the results for further analysis.
+
+```powershell
+.\MFTECmd.exe -f "C:\Users\lenovo\Desktop\CrownJewel1\Artifacts\C\`$MFT" --csv "C:\Users\lenovo\Desktop\CrownJewel1" --csvf CrownJewel1MFT.csv
+```
+
+The resulting output allows us to search for `NTDS.dit` and identify the full path of the dumped database.
+
+<img width="1357" height="228" alt="image" src="https://github.com/user-attachments/assets/4ec7a7da-d2cd-4e78-ab04-809ba4a756a4" />
+
+Ans: `C:\Users\Administrator\Documents\backup_sync_Dc\Ntds.dit`
 
