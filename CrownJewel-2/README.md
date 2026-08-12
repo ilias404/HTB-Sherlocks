@@ -47,9 +47,27 @@ Ans: `2024-05-15 05:39:58`
 
 # Task 5: Event logs use event sources to track events coming from different sources. Which event source provides database status data like creation and detachment?
 
+<img width="882" height="240" alt="image" src="https://github.com/user-attachments/assets/4c1b9a8f-bbb3-47df-ae5d-be2e7840732c" />
+
+Ans: `ESENT`
+
+# Task 6: When ntdsutil.exe is used to dump the database, it enumerates certain user groups to validate the privileges of the account being used. Which two groups are enumerated by the ntdsutil.exe process? Give the groups in alphabetical order joined by comma space.
+
+In Security.evtx, filtering for **Event ID 4799** can help identify events related to security-enabled local group membership enumeration.
+
+<img width="421" height="325" alt="image" src="https://github.com/user-attachments/assets/79b6bf69-f5af-4f5b-868c-c33964f13e4c" />
+<img width="436" height="363" alt="image" src="https://github.com/user-attachments/assets/c7e64d69-b1ab-44b5-b4a5-86bcc26cf92d" />
+
+The two we found are:
+
+Ans: `Administrators, Backup Operators`
+
+
+# Task 7: Now you are tasked to find the Login Time for the malicious Session. Using the Logon ID, find the Time when the user logon session started.
 
 
 
+Ans: `ESENT`
 
 
 
