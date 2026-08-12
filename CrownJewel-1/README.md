@@ -24,9 +24,23 @@ Ans: `2024-05-14 03:42:16`
 
 # Task 2: When a volume shadow snapshot is created, the Volume shadow copy service validates the privileges using the Machine account and enumerates User groups. Find the two user groups the volume shadow copy process queries and the machine account that did it.
 
+In `SECURITY.evtx`, we can investigate events around the timestamp identified in the previous task `2024-05-14 03:42:16`.
 
+<img width="1311" height="549" alt="image" src="https://github.com/user-attachments/assets/c00927fd-0323-484a-bc86-938bb37d2672" />
 
-Ans: ``
+We find several Event ID `4799` entries.
+
+> Windows Event ID 4799 is logged in the Security event log when a process or user checks (enumerates) the members of a security-enabled local group. It details who requested the check, which group was looked at, and the specific application or process used to do it.
+
+Reviewing these events, we identify the following two group enumeration events:
+
+<img width="459" height="282" alt="image" src="https://github.com/user-attachments/assets/bc70bcce-23af-48ae-ba2c-6e386f106798" />
+
+<img width="449" height="278" alt="image" src="https://github.com/user-attachments/assets/5f3af8c9-2f83-4f59-bf98-fa68f4fe968d" />
+
+Ans: `Administrators, Backup Operators, DC01$`
+
+# Task 3: Identify the Process ID (in Decimal) of the volume shadow copy service process.
 
 
 
