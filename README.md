@@ -1,3 +1,8 @@
+## About This Repository
+
+A collection of Hack The Box machines and Sherlocks I've worked through while learning and practicing cybersecurity. I document my approach, findings, and the techniques I use throughout each investigation. This repository serves as both a personal learning log and a resource for anyone interested in exploring similar challenges.
+
+
 | Sherlock  | Skills Learned |
 |:-------------:|:-------------:|
 | [Brutus](https://github.com/ilias404/HTB-Sherlocks/blob/main/BrutusHTB/README.md)       | `DFIR`, `Log Analysis`, `auth.log`, `wtmp`, `btmp`, `utmp`, `utmp.py Parsing`, `SSH Brute Force`, `UTC Correlation`, `Persistence Detection`, `T1136.001`, `grep`                                                                               |
