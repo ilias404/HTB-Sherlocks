@@ -80,3 +80,12 @@ The resulting output allows us to search for `NTDS.dit` and identify the full pa
 
 Ans: `C:\Users\Administrator\Documents\backup_sync_Dc\Ntds.dit`
 
+# Task 6: When was newly dumped ntds.dit created on disk?
+
+The timestamp can be identified in the final screenshot of Task 5.
+
+Ans: `2024-05-14 03:44:22`
+
+# Task 7: A registry hive was also dumped alongside the NTDS database. Which registry hive was dumped and what is its file size in bytes?
+
+ 
