@@ -1,7 +1,9 @@
-# Noxious HTB
-![noxious.jpg](/NoxiousHTB/screenshots/noxious.jpg)
+# Noxious
+
+![noxious.jpg](/Noxious/screenshots/noxious.jpg)
 
 # Sherlock Scenario
+
 > The IDS device alerted us to a possible rogue device in the internal Active Directory network. The Intrusion Detection System also indicated signs of LLMNR traffic, which is unusual. It is suspected that an LLMNR poisoning attack occurred. The LLMNR traffic was directed towards Forela-WKstn002, which has the IP address 172.17.79.136. A limited packet capture from the surrounding time is provided to you, our Network Forensics expert. Since this occurred in the Active Directory VLAN, it is suggested that we perform network threat hunting with the Active Directory attack vector in mind, specifically focusing on LLMNR poisoning.
 
 # Task 1: Its suspected by the security team that there was a rogue device in Forela's internal network running responder tool to perform an LLMNR Poisoning attack. Please find the malicious IP Address of the machine.
@@ -16,13 +18,13 @@ We begin by analyzing the PCAP file in Wireshark and filtering for DNS traffic t
 
 > We can also filter for other protocols like LDAP and Kerberos, since the Domain Controller uses these protocols to provide its services.
 
-![dns.png](/NoxiousHTB/screenshots/dns.png)
+![dns.png](/Noxious/screenshots/dns.png)
 
 The DC IP address is `172.17.79.4`.
 
 Next, we filter for LLMNR traffic to identify abnormal name resolution behavior.
 
-![llmnr.png](/NoxiousHTB/screenshots/llmnr.png)
+![llmnr.png](/Noxious/screenshots/llmnr.png)
 
 In legitimate scenarios, LLMNR responses may come from any host that believes it owns the requested name. However, in this case, a single machine consistently responds to multiple LLMNR queries, which is indicative of a rogue device performing LLMNR poisoning.
 
@@ -32,7 +34,7 @@ Ans: `172.17.79.135`
 
 Now that we have the IP address, we can search for DHCP traffic related to it, which will reveal its hostname.
 
-![kali.png](/NoxiousHTB/screenshots/kali.png)
+![kali.png](/Noxious/screenshots/kali.png)
 
 Ans: `kali`
 
@@ -40,7 +42,7 @@ Ans: `kali`
 
 Filtering for SMB2 or NTLMSSP reveals the following:
 
-![johndeacon.png](/NoxiousHTB/screenshots/johndeacon.png)
+![johndeacon.png](/Noxious/screenshots/johndeacon.png)
 
 Ans: `john.deacon`
 
@@ -48,7 +50,7 @@ Ans: `john.deacon`
 
 Selecting `View > Time Display Format > UTC Date and Time of Day` allows us to find the exact time and date when the hashes were first captured.
 
-![timestamp.png](/NoxiousHTB/screenshots/timestamp.png)
+![timestamp.png](/Noxious/screenshots/timestamp.png)
 
 > NTLMSSP authentication, as seen in network analysis tools like Wireshark, consists of three main messages exchanged between a client and a server. The process starts with the client sending an NTLMSSP_NEGOTIATE message, where it indicates that it wants to authenticate using NTLM and lists its supported security options. The server then responds with an NTLMSSP_CHALLENGE message, which contains a random value known as the server challenge. This value is used to ensure that the authentication process is unique and cannot be reused. Finally, the client sends an NTLMSSP_AUTH message, which includes the username, domain, and an NTLMv2 response computed using the user’s password hash and the server challenge. The server verifies this response, and if it matches the expected value, the authentication is successful; otherwise, it is rejected.
 
@@ -56,8 +58,7 @@ Ans: `2024-06-24 11:18:30`
 
 # Task 5: What was the typo made by the victim when navigating to the file share that caused his credentials to be leaked?
 
-![dcc01.png](/NoxiousHTB/screenshots/dcc01.png)
-
+![dcc01.png](/Noxious/screenshots/dcc01.png)
 
 In the LLMNR traffic, we observed that the victim attempted to access `DCC01` instead of `DC01`, causing the DNS resolution to fail. As a result, the system fell back to LLMNR for name resolution. The attacker exploited this behavior by responding to the LLMNR request, impersonating the requested host (`DCC01`), and successfully capturing the victim’s authentication attempt through an LLMNR poisoning attack.
 
@@ -67,13 +68,13 @@ Ans: `DCC01`
 
 The NTLM server challenge value can be found under `SMB2 (Server Message Block Protocol version 2)` > `Session Setup Response (0x01)` > `Security Blob` -> `GSS-API Generic...` -> `Simple Protected Negotiation` > `negTokenTarg` > `NTLM Secure Service Provider` > `NTLM Server Challenge`.
 
-![ntlmchall.png](/NoxiousHTB/screenshots/ntlmchall.png)
+![ntlmchall.png](/Noxious/screenshots/ntlmchall.png)
 
 Ans: `601019d191f054f1`
 
 # Task 7: Now doing something similar find the NTProofStr value.
 
-![ntproof.png](/NoxiousHTB/screenshots/ntproof.png)
+![ntproof.png](/Noxious/screenshots/ntproof.png)
 
 Ans: `c0cc803a6d9fb5a9082253a04dbd4cd4`
 
@@ -82,7 +83,7 @@ Ans: `c0cc803a6d9fb5a9082253a04dbd4cd4`
 > To crack an NTLMv2 hash, several fields must be extracted because the authentication response is not a simple hash but the result of a computation that depends on multiple inputs. These required fields are the `username`, `domain`, `server challenge`, and the `NTLMv2 response`, which itself is composed of the `NTProofStr` and the `blob`.
 >
 > The `username` and `domain` are important because they are used in the generation of the NTLM hash and influence the final computed response. The `server challenge` is a random value sent by the server to ensure that each authentication attempt is unique. The `NTProofStr` represents the actual proof of knowledge of the password, while the `blob` contains additional data such as a timestamp and client-specific information.
-> 
+>
 > During the cracking process, a tool like `Hashcat` takes a password guess and uses all these fields to recompute the NTLMv2 response. If the recomputed `NTProofStr` matches the captured one, the password is correct. Without any of these fields, the computation cannot be reproduced, making it impossible to verify password guesses.
 
 The fields are combined into the following format:
@@ -100,11 +101,12 @@ echo "john.deacon::FORELA:601019d191f054f1:c0cc803a6d9fb5a9082253a04dbd4cd4:0101
 ```
 
 Let's try cracking it now using Hashcat:
+
 ```bash
 hashcat -a 0 -m 5600 hash /home/worldline/Desktop/rockyou.txt
 ```
 
-![cracked.png](/NoxiousHTB/screenshots/cracked.png)
+![cracked.png](/Noxious/screenshots/cracked.png)
 
 Ans: `NotMyPassword0K?`
 
@@ -116,7 +118,7 @@ By filtering for `smb2` and scrolling down a bit, we can find some `Tree Connect
 
 > In SMB2 (Server Message Block v2), a `Tree Connect` refers to the process where a client connects to a specific shared resource on a server, such as a shared folder or printer. A `Tree Disconnect` is the opposite operation, where the client terminates that connection.
 
-![confidential.png](/NoxiousHTB/screenshots/confidential.png)
+![confidential.png](/Noxious/screenshots/confidential.png)
 
 Ans: `\\DC01\DC-Confidential`
 
@@ -128,4 +130,4 @@ The captured credentials were successfully reconstructed and cracked, revealing 
 
 To mitigate such attacks, it is recommended to disable LLMNR in the network, enforce strong password policies, and implement network monitoring to detect abnormal authentication patterns.
 
-![noxioussolved.png](/NoxiousHTB/screenshots/noxioussolved.png)
+![noxioussolved.png](/Noxious/screenshots/noxioussolved.png)
