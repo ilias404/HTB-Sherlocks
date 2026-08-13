@@ -1,18 +1,19 @@
-# Unit42 HTB
+# Unit42
 
-![unit42.jpg](/Unit42HTB/screenshots/unit42.jpg)
+![unit42.jpg](/Unit42/screenshots/unit42.jpg)
 
 # Sherlock Scenario
+
 > In this Sherlock, you will familiarize yourself with Sysmon logs and various useful EventIDs for identifying and analyzing malicious activities on a Windows system. Palo Alto's Unit42 recently conducted research on an UltraVNC campaign, wherein attackers utilized a backdoored version of UltraVNC to maintain access to systems. This lab is inspired by that campaign and guides participants through the initial access stage of the campaign.
 
 # Task 1: How many Event logs are there with Event ID 11?
 
 Filtering for event ID 11 reveals:
 
-![eventid11.png](/Unit42HTB/screenshots/eventid11.png)
+![eventid11.png](/Unit42/screenshots/eventid11.png)
 
 > Sysmon Event ID 11: File Create
-> 
+>
 > This event is generated when a file is created or overwritten on the system. It records details such as the process responsible for the action and the full path of the created file. Event ID 11 is especially useful for detecting malware drops, as attackers often write payloads into directories like AppData, Temp, or Downloads. By analyzing this event, analysts can identify suspicious file creation activity and understand what artifacts a process has introduced onto the system.
 
 Ans: `56`
@@ -21,10 +22,10 @@ Ans: `56`
 
 Filtering for event ID 1 reveals the following:
 
-![preventivo.png](/Unit42HTB/screenshots/preventivo.png)
+![preventivo.png](/Unit42/screenshots/preventivo.png)
 
 > Sysmon Event ID 1: Process Creation
-> 
+>
 > This event is generated whenever a new process is started on the system. It provides detailed information such as the process name, full executable path, command line arguments, parent process, user context, and process hash values. Event ID 1 is one of the most important logs for detecting malicious activity, as it allows analysts to identify suspicious executions, unusual parent-child process relationships, and the use of scripts or tools commonly associated with attacks.
 
 Ans: `C:\Users\CyberJunkie\Downloads\Preventivo24.02.14.exe.exe`
@@ -33,13 +34,12 @@ Ans: `C:\Users\CyberJunkie\Downloads\Preventivo24.02.14.exe.exe`
 
 Since the malware is distributed via a cloud drive, analyzing DNS activity is important. **Sysmon Event ID 22 (DNS Query)** logs all domain requests made by processes, helping identify suspicious or malicious domains used to download the malware.
 
-![dropbox2.png](/Unit42HTB/screenshots/dropbox2.png)
-![dropbox3.png](/Unit42HTB/screenshots/dropbox3.png)
-![dropbox1.png](/Unit42HTB/screenshots/dropbox1.png)
-
+![dropbox2.png](/Unit42/screenshots/dropbox2.png)
+![dropbox3.png](/Unit42/screenshots/dropbox3.png)
+![dropbox1.png](/Unit42/screenshots/dropbox1.png)
 
 > Sysmon Event ID 22: DNS Query
-> 
+>
 > This event logs all DNS requests made by processes on the system, including information about the querying process and the requested domain. This information is useful for identifying suspicious or malicious domains that malware may contact to download additional payloads or communicate with command-and-control servers. It can help to trace network activity relating to an attack.
 
 After the first Dropbox-related DNS query, the following three logs show file creation events with the `.part` extension. This indicates that the malware was being downloaded or installed, as `.part` files are typically temporary files used during downloads or installations. This strongly suggests that Dropbox was the mechanism used to distribute the malware.
@@ -50,7 +50,7 @@ Ans: `dropbox`
 
 Let's filter for Event ID 2, which records changes to file creation timestamps.
 
-![timestomp.png](/Unit42HTB/screenshots/timestomp.png)
+![timestomp.png](/Unit42/screenshots/timestomp.png)
 
 > Sysmon Event ID 2: File Creation Time Changed
 >
@@ -62,7 +62,7 @@ Ans: `2024-01-14 08:10:06`
 
 Filtering for Event ID 11 and searching for once.cmd, we identify the file path:
 
-![and.png](/Unit42HTB/screenshots/and.png)
+![and.png](/Unit42/screenshots/and.png)
 
 Ans: `C:\Users\CyberJunkie\AppData\Roaming\Photo and Fax Vn\Photo and vn 1.1.2\install\F97891C\WindowsVolume\Games\once.cmd`
 
@@ -70,7 +70,7 @@ Ans: `C:\Users\CyberJunkie\AppData\Roaming\Photo and Fax Vn\Photo and vn 1.1.2\i
 
 Filtering for Event ID 22 (DNS Query):
 
-![www.png](/Unit42HTB/screenshots/www.png)
+![www.png](/Unit42/screenshots/www.png)
 
 Ans: `www.example.com`
 
@@ -78,7 +78,7 @@ Ans: `www.example.com`
 
 Filtering for Event ID 3 (Network Connection):
 
-![dest.png](/Unit42HTB/screenshots/dest.png)
+![dest.png](/Unit42/screenshots/dest.png)
 
 > Sysmon Event ID 3: Network Connection
 >
@@ -90,7 +90,7 @@ Ans: `93.184.216.34`
 
 Filtering for Event ID 5 (Process Terminated):
 
-![time.png](/Unit42HTB/screenshots/time.png)
+![time.png](/Unit42/screenshots/time.png)
 
 > Sysmon Event ID 5: Process Terminated
 >
@@ -102,4 +102,4 @@ Ans: `2024-02-14 03:41:58`
 
 This investigation demonstrates how Sysmon logs can be leveraged to trace the full attack chain of a malware infection. By analyzing key events, we identified the initial execution of a malicious file, its retrieval via Dropbox, and the subsequent file creation activity indicating payload installation. The use of timestomping `(Event ID 2)` highlights an attempt at defense evasion by altering file timestamps to blend in with legitimate files. Further analysis of network connections `(Event ID 3)` and DNS queries `(Event ID 22)` revealed external communication, while process termination logs `(Event ID 5)` confirmed the end of the malicious activity. Overall, correlating multiple Sysmon Event IDs allowed for a clear reconstruction of the attack lifecycle, from initial access to persistence and cleanup.
 
-![unit42solved.png](/Unit42HTB/screenshots/unit42solved.png)
+![unit42solved.png](/Unit42/screenshots/unit42solved.png)
