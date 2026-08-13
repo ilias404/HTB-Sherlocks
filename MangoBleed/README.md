@@ -1,5 +1,5 @@
 # MangoBleed
-![mb.png](/MangoBleedHTB/screenshots/mb.png)
+![mb.png](/MangoBleed/screenshots/mb.png)
 
 # Sherlock Scenario
 > You were contacted early this morning to handle a high‑priority incident involving a suspected compromised server. The host, mongodbsync, is a secondary MongoDB server. According to the administrator, it's maintained once a month, and they recently became aware of a vulnerability referred to as MongoBleed. As a precaution, the administrator has provided you with root-level access to facilitate your investigation.
@@ -15,7 +15,7 @@ Ans: `CVE-2025-14847`
 
 After extracting the provided artifacts, we navigated to `\[root]\var\log\mongodb` and examined the `mongod.log` file to identify the installed MongoDB version.
 
-![mongover.png](/MangoBleedHTB/screenshots/mongover.png)
+![mongover.png](/MangoBleed/screenshots/mongover.png)
 
 Ans: `8.0.16`
 
@@ -23,7 +23,7 @@ Ans: `8.0.16`
 
 Upon a preliminary review of the mongod.log file, a suspicious IP address was identified in the logs.
 
-![mongoattip.png](/MangoBleedHTB/screenshots/mongoattip.png)
+![mongoattip.png](/MangoBleed/screenshots/mongoattip.png)
 
 Ans: `65.0.76.43`
 
@@ -31,7 +31,7 @@ Ans: `65.0.76.43`
 
 A manual review of the log entries was conducted to identify the first occurrence of the suspicious IP address. This event represents the earliest confirmed malicious activity associated with the attacker.
 
-![date.png](/MangoBleedHTB/screenshots/date.png)
+![date.png](/MangoBleed/screenshots/date.png)
 
 Ans: `2025-12-29 05:25:52`
 
@@ -39,7 +39,7 @@ Ans: `2025-12-29 05:25:52`
 
 By reviewing the end of the logs, we identified a total of 37,630 connections initiated by the attacker. Since each connection generates both a connection and a disconnection event, the total number of related log entries is calculated by multiplying this value by two, resulting in 75,260 events.
 
-![conn.png](/MangoBleedHTB/screenshots/conn.png)
+![conn.png](/MangoBleed/screenshots/conn.png)
 
 Ans: `75260`
 
@@ -47,7 +47,7 @@ Ans: `75260`
 
 Reviewing the `auth.log` file located under `/var/log/`, we identified authentication events indicating that the attacker successfully established interactive remote access.
 
-![brutefdate.png](/MangoBleedHTB/screenshots/brutefdate.png)
+![brutefdate.png](/MangoBleed/screenshots/brutefdate.png)
 
 Ans: `2025-12-29 05:40:03`
 
@@ -55,7 +55,7 @@ Ans: `2025-12-29 05:40:03`
 
 Reviewing the `.bash_history` file of the `mongoadmin` user, located under `/home/mongoadmin`, we identified the following command executed by the attacker as part of the privilege-escalation attempt:
 
-![bashhist.png](/MangoBleedHTB/screenshots/bashhist.png)
+![bashhist.png](/MangoBleed/screenshots/bashhist.png)
 
 The command downloads `linpeas.sh` directly from GitHub and pipes it to `sh`, allowing the script to be executed directly without being written to disk first.
 
@@ -77,4 +77,4 @@ The attacker also accessed the `/var/lib/mongodb` directory and attempted to sta
 
 Overall, the evidence indicates a successful compromise involving **initial exploitation, remote access, post-compromise reconnaissance, and potential data-access/exfiltration activity**. The affected server should be treated as compromised, isolated from the network, and subjected to a full forensic investigation. MongoDB should also be upgraded to a patched version, exposed services and credentials should be reviewed and rotated where necessary, and additional monitoring should be implemented to identify any related attacker activity on other systems.
 
-![mbpwned.png](/MangoBleedHTB/screenshots/mbpwned.png)
+![mbpwned.png](/MangoBleed/screenshots/mbpwned.png)
