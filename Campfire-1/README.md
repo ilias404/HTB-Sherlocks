@@ -1,4 +1,4 @@
-# Campfire-1 HTB
+# Campfire-1
 
 ![campfire1.jpg](/Campfire-1/screenshots/campfire1.jpg)
 
