@@ -1,4 +1,4 @@
-# Telly HTB
+# Telly
 
 ![telly.png](/Telly/screenshots/telly.png)
 
