@@ -1,4 +1,4 @@
-# Meerkat HTB
+# Meerkat
 
 ![meerkat.png](/Meerkat/screenshots/meerkat1.png)
 
