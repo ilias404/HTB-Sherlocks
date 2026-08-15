@@ -22,6 +22,7 @@
 
 # Task 1: Simon Stark was targeted by attackers on February 13. He downloaded a ZIP file from a link received in an email. What was the name of the ZIP file he downloaded from the link?
 
+<img width="1103" height="370" alt="image" src="https://github.com/user-attachments/assets/2a1f877e-fcee-45ec-8e91-c8c23f22ac2a" />
 
 
 
