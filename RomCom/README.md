@@ -1,6 +1,6 @@
 # RomCom HTB
 
-![romcom.png](/RomComHTB/screenshots/romcom.png)
+![romcom.png](/RomCom/screenshots/romcom.png)
 
 # Sherlock Scenario
 > Susan works at the Research Lab in Forela International Hospital. A Microsoft Defender alert was received from her computer, and she also mentioned that while extracting a document from the received file, she received tons of errors, but the document opened just fine. According to the latest threat intel feeds, WinRAR is being exploited in the wild to gain initial access into networks, and WinRAR is one of the Software programs the staff uses. You are a threat intelligence analyst with some background in DFIR. You have been provided a lightweight triage image to kick off the investigation while the SOC team sweeps the environment to find other attack indicators.
@@ -9,7 +9,7 @@
 
 A Google search leads us to the following: 
 
-![cve.png](/RomComHTB/screenshots/cve.png)
+![cve.png](/RomCom/screenshots/cve.png)
 
 Answer: ```CVE-2025-8088```
 
@@ -29,7 +29,7 @@ After extraction, we end up with a ```.vhdx``` file.
 
 On our Windows machine, let's ```Right-click > Mount``` to see what's inside.
 
-![mount.png](/RomComHTB/screenshots/mount.png)
+![mount.png](/RomCom/screenshots/mount.png)
 
 We end up with two important files: ```$MFT``` and ```$J```.
 > ```$MFT (Master File Table)```: The main database of an NTFS disk. It stores metadata for every file and folder, like names, sizes, and timestamps, letting us see what exists or existed on the system.
@@ -45,24 +45,24 @@ To read these two files, we will use ```MFTECmd``` and ```Timeline Explorer```, 
 Now, let's open a terminal in the directory of our ```MFTECmd``` tool and run the following command to parse our ```$MFT``` file:
 
 ```bash
-.\MFTECmd.exe -f "C:\Users\lenovo\Desktop\RomComHTB\C\`$MFT" --csv "C:\Users\lenovo\Desktop\RomComHTB" --csvf MFToutput.csv
+.\MFTECmd.exe -f "C:\Users\lenovo\Desktop\RomCom\C\`$MFT" --csv "C:\Users\lenovo\Desktop\RomCom" --csvf MFToutput.csv
 ```
-![mftecmd.png](/RomComHTB/screenshots/mftecmd.png)
+![mftecmd.png](/RomCom/screenshots/mftecmd.png)
 
 Let's use the same tool to parse the ```$J``` file:
 
 ```bash
-.\MFTECmd.exe -f "C:\Users\lenovo\Desktop\RomComHTB\C\`$Extend\`$J" -m "C:\Users\lenovo\Desktop\RomComHTB\C\`$MFT" --csv "C:\Users\lenovo\Desktop\RomComHTB"
+.\MFTECmd.exe -f "C:\Users\lenovo\Desktop\RomCom\C\`$Extend\`$J" -m "C:\Users\lenovo\Desktop\RomCom\C\`$MFT" --csv "C:\Users\lenovo\Desktop\RomCom"
 ```
-![mftecmdJ.png](/RomComHTB/screenshots/mftecmdJ.png)
+![mftecmdJ.png](/RomCom/screenshots/mftecmdJ.png)
 
 Now, we will read the two output files using the second tool, ```Timeline Explorer```.
 
-![timelineexplorer.png](/RomComHTB/screenshots/timelineexplorer.png)
+![timelineexplorer.png](/RomCom/screenshots/timelineexplorer.png)
 
 Since the scenario tells us that Susan received an error while extracting a document, it's probably a ```.rar``` file. Let's try some filtering.
 
-![archivename.png](/RomComHTB/screenshots/archivename.png)
+![archivename.png](/RomCom/screenshots/archivename.png)
 
 Answer: ```Pathology-Department-Research-Records.rar```
 
@@ -72,7 +72,7 @@ We will start by analyzing the ```$J``` file, as it records detailed file activi
 
 Let's filter the ```Update Reasons``` to ```FileCreate```, since it's the event we are searching for.
 
-![filecreatetimestamp.png](/RomComHTB/screenshots/filecreatetimestamp.png)
+![filecreatetimestamp.png](/RomCom/screenshots/filecreatetimestamp.png)
 
 Answer: ```2025-09-02 08:13:50```
  
@@ -80,7 +80,7 @@ Answer: ```2025-09-02 08:13:50```
 
 Since the archive file was created at ```08:13:50``` we can logically search for events that occurred after that time or filter the ```Update reasons``` field using ```ObjectIdChange```.
 
-![objectidchange.png](/RomComHTB/screenshots/objectidchange.png)
+![objectidchange.png](/RomCom/screenshots/objectidchange.png)
 
 Answer: ```2025-09-02 08:14:04```
 
@@ -88,7 +88,7 @@ Answer: ```2025-09-02 08:14:04```
 
 Let's search the ```$J``` file for other files that might have been extracted along with the document.
 
-![genotyping.png](/RomComHTB/screenshots/genotyping.png)
+![genotyping.png](/RomCom/screenshots/genotyping.png)
 
 Answer: ```Genotyping_Results_B57_Positive.pdf```
 
@@ -96,7 +96,7 @@ Answer: ```Genotyping_Results_B57_Positive.pdf```
 
 For this task, let's search for potential executable files created or modified around the same timestamp.
 
-![backdoor.png](/RomComHTB/screenshots/backdoor.png)
+![backdoor.png](/RomCom/screenshots/backdoor.png)
 
 Answer: ```C:\Users\Susan\Appdata\Local\ApbxHelper.exe```
 
@@ -104,7 +104,7 @@ Answer: ```C:\Users\Susan\Appdata\Local\ApbxHelper.exe```
 
 Alongside the suspicious files, we identified another file created around the same timestamp.
 
-![lnk.png](/RomComHTB/screenshots/lnk.png)
+![lnk.png](/RomCom/screenshots/lnk.png)
 
 > A .lnk file is a Windows shortcut that points to another file or program and runs it when clicked. It does not contain the actual program, only the path to it.
 Attackers can exploit .lnk files by making them point to malicious programs instead of legitimate ones. If the shortcut is placed in a Startup folder, it will automatically run the malicious program every time the user logs in, allowing the attacker to maintain access to the system.
@@ -115,7 +115,7 @@ Answer: ```C:\Users\Susan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
 
 A Google search leads us to the following:
 
-![techniquesearch.png](/RomComHTB/screenshots/techniquesearch.png)
+![techniquesearch.png](/RomCom/screenshots/techniquesearch.png)
 
 Answer: ```T1547.009```
 
@@ -123,7 +123,7 @@ Answer: ```T1547.009```
 
 The decoy document is ```Genotyping_Results_B57_Positive.pdf```. We can filter using the ```ObjectIdChange``` field, just as we did in Task #5.
 
-![genotypingtimestamp.png](/RomComHTB/screenshots/genotypingtimestamp.png)
+![genotypingtimestamp.png](/RomCom/screenshots/genotypingtimestamp.png)
 
 Answer: ```2025-09-02 08:15:05```
 
@@ -131,4 +131,4 @@ Answer: ```2025-09-02 08:15:05```
 
 In this investigation, we worked with a virtual hard disk ```(.vhdx)``` to dig into the system and see what happened. By looking at ```NTFS``` artifacts like the ```$MFT``` and the ```$J (USN Journal)``` using ```MFTECmd``` and ```Timeline Explorer```, we were able to trace when files were created, modified, or accessed. We also saw how ```.lnk``` shortcuts in the Startup folder can be used to make programs run automatically and how decoy files can distract the user. Overall, this sherlock shows how important timeline reconstruction and system file analysis are in understanding what happened on a computer.
 
-![romcompwned.png](/RomComHTB/screenshots/romcompwned.png)
+![romcompwned.png](/RomCom/screenshots/romcompwned.png)
