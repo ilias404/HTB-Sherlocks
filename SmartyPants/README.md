@@ -1,6 +1,6 @@
 # SmartyPants HTB
 
-![smartypants.png](/SmartyPantsHTB/screenshots/smartypants.png)
+![smartypants.png](/SmartyPants/screenshots/smartypants.png)
 
 # Sherlock Scenario
 > Forela's CTO, Dutch, stores important files on a separate Windows system because the domain environment at Forela is frequently breached due to its exposure across various industries. On 24 January 2025, our worst fears were realised when an intruder accessed the fileserver, installed utilities to aid their actions, stole critical files, and then deleted them, rendering them unrecoverable. The team was immediately informed of the extortion attempt by the intruders, who are now demanding money. While our legal team addresses the situation, we must quickly perform triage to assess the incident's extent. Note from the manager: We enabled SmartScreen Debug Logs across all our machines for enhanced visibility a few days ago, following a security research recommendation. These logs can provide quick insights, so ensure they are utilised.
@@ -17,14 +17,14 @@ We navigate to the directory where ```EvtxECmd``` is installed and run the follo
 ```bash
 .\EvtxECmd.exe -d "C:\Users\lenovo\Downloads\SmartyPants\Logs" --csv output.csv
 ```
-![evtxecmd.png](/SmartyPantsHTB/screenshots/evtxecmd.png)
+![evtxecmd.png](/SmartyPants/screenshots/evtxecmd.png)
 
 Open the output in ```Timeline Explorer```.
 
 When we filter for event log number 1149, we find the following:
 > Event ID 1149 logs RDP authentication attempts in Windows. It shows which user and IP tried to connect, but does not confirm a successful login. Analysts use it to detect RDP access attempts or brute-force activity, often correlating it with Event ID 4624 for actual logins.
 
-![1149.png](/SmartyPantsHTB/screenshots/1149.png)
+![1149.png](/SmartyPants/screenshots/1149.png)
 
 Answer: ```2025-01-24 10:22:19```
 
@@ -32,7 +32,7 @@ Answer: ```2025-01-24 10:22:19```
 
 Filtering for Smartscreen debug logs:
 
-![exes.png](/SmartyPantsHTB/screenshots/exes.png)
+![exes.png](/SmartyPants/screenshots/exes.png)
 
 Answer: ```WinRAR```
 
@@ -44,7 +44,7 @@ Answer: ```C:\Users\Dutch\Downloads\Everything.exe```
 
 # Task 4: What is the execution time of the tool from task 3?
 
-![everything.png](/SmartyPantsHTB/screenshots/everything.png)
+![everything.png](/SmartyPants/screenshots/everything.png)
 
 
 Answer: ```2025-01-24 10:17:33```
@@ -63,7 +63,7 @@ Answer: ```C:\Users\Dutch\Documents\2025- Board of directors Documents\2025-BUDG
 
 # Task 7: The attacker installed a Cloud utility as well to steal and exfiltrate the documents. What is name of the cloud utility?
 
-![second1.png](/SmartyPantsHTB/screenshots/second1.png)
+![second1.png](/SmartyPants/screenshots/second1.png)
 
 Answer: ```MEGAsync```
 
@@ -85,7 +85,7 @@ Since **Event ID 1102** indicates a cleared security log, we can filter for it i
 
 > Windows Event ID 1102 indicates that the Security Audit Log was cleared. This is a critical, high-severity event usually requiring investigation, as it often suggests an attempt to hide malicious activity or cover tracks following a security breach. It shows who cleared the log and when.
 
-![log.png](/SmartyPantsHTB/screenshots/log.png)
+![log.png](/SmartyPants/screenshots/log.png)
 
 Answer: ```2025-01-24 10:28:41```
 
@@ -93,4 +93,4 @@ Answer: ```2025-01-24 10:28:41```
 
 In this scenario, the attacker gained access via RDP, downloaded and executed multiple tools to locate and exfiltrate sensitive documents, and then destroyed evidence and cleared security logs. By analyzing the ```.evtx``` files with ```EvtxECmd``` and ```Timeline Explorer```, along with SmartScreen Debug Logs, we were able to reconstruct the attack timeline, identify the stolen files, and determine the utilities used. This exercise highlights the importance of event log monitoring, endpoint logging, and proactive visibility controls in detecting and investigating breaches.
 
-![smartypantspwned.png](/SmartyPantsHTB/screenshots/smartypantspwned.png)
+![smartypantspwned.png](/SmartyPants/screenshots/smartypantspwned.png)
