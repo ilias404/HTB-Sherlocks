@@ -24,6 +24,11 @@
 
 <img width="1103" height="370" alt="image" src="https://github.com/user-attachments/assets/2a1f877e-fcee-45ec-8e91-c8c23f22ac2a" />
 
+After applying some filters:
+
+<img width="582" height="311" alt="image" src="https://github.com/user-attachments/assets/4794cbf1-9e56-498b-a38f-2099d5b86781" />
+
+<img width="1641" height="152" alt="image" src="https://github.com/user-attachments/assets/3f8a2a26-cd79-4f8d-a826-d8bafc2207dd" />
 
 
 
@@ -31,5 +36,4 @@
 
 
 
-
-Ans: ``
+Ans: `Stage-20240213T093324Z-001.zip`
