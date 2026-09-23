@@ -1,5 +1,7 @@
 # BFT
 
+<img width="571" height="314" alt="image" src="https://github.com/user-attachments/assets/3de60a79-1de3-4f84-8ce2-fc228cbeadd0" />
+
 
 # Sherlock Scenario
 
@@ -66,12 +68,16 @@ We convert this number to hex and get:
 
 Ans: `16E3000`
 
+# Task 6: Each MFT record is 1024 bytes in size. If a file on disk has smaller size than 1024 bytes, they can be stored directly on MFT File itself. These are called MFT Resident files. During Windows File system Investigation, its crucial to look for any malicious/suspicious files that may be resident in MFT. This way we can find contents of malicious files/scripts. Find the contents of The malicious stager identified in Question3 and answer with the C2 IP and port.
 
+> HxD is a free, fast hexadecimal editor, disk editor, and memory editor developed by Maël Hörz for Windows
 
+In HxD, go to **Search > Go to** (or CTRL + G) and enter the hexadecimal offset of the MFT entry we identified earlier. Since the file is small, its `$DATA` attribute may be resident within the MFT record. In this case, the file is resident, allowing us to recover and inspect its contents directly from the `$MFT`.
 
+<img width="246" height="252" alt="image" src="https://github.com/user-attachments/assets/deee6db1-f3fd-4306-baf1-6e7f745e6dc1" />
 
+<img width="629" height="795" alt="image" src="https://github.com/user-attachments/assets/18666aef-83b0-492d-9ce3-4b65097c5687" />
 
-
-
+Ans: `43.204.110.203:6666`
 
 
