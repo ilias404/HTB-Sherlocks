@@ -32,7 +32,7 @@ After applying some filters:
 
 <img width="904" height="147" alt="image" src="https://github.com/user-attachments/assets/561686e4-7826-4752-82a1-db540702b9b4" />
 
-The first zip file we get, in terms of time, is the one that the victim downloaded.
+Based on the timestamps and the surrounding MFT artifacts, Stage-20240213T093324Z-001.zip is identified as the ZIP file downloaded by the victim.
 
 Ans: `Stage-20240213T093324Z-001.zip`
 
@@ -53,6 +53,8 @@ Ans: `C:\Users\simon.stark\Downloads\Stage-20240213T093324Z-001\Stage\invoice\in
 
 # Task 4: Analyze the $Created0x30 timestamp for the previously identified file. When was this file created on disk?
 
+> The $Created0x30 column represents the creation timestamp stored in the $FILE_NAME (0x30) attribute.
+
 From the $Created0x30 column, we can find the exact timestamp. (Previous screenshot)
 
 Ans: `2024-02-13 16:38:39`
@@ -62,6 +64,7 @@ Ans: `2024-02-13 16:38:39`
 > Hex Offset = MFT Entry Number × 1024
 
 The entry number of the `invoice.bat` file is `23436`, so `23436 × 1024 = 23,998,464`.
+
 We convert this number to hex and get: 
 
 <img width="496" height="436" alt="image" src="https://github.com/user-attachments/assets/05f380e1-6189-411f-9a78-ab14dc5857d7" />
@@ -78,6 +81,17 @@ In HxD, go to **Search > Go to** (or CTRL + G) and enter the hexadecimal offset 
 
 <img width="629" height="795" alt="image" src="https://github.com/user-attachments/assets/18666aef-83b0-492d-9ce3-4b65097c5687" />
 
+At this offset, the MFT record begins with the FILE signature. By examining the resident $DATA attribute within the record, we can recover the contents of invoice.bat. The script reveals a connection to the C2 server at 43.204.110.203 over port 6666.
+
 Ans: `43.204.110.203:6666`
 
+# Conclusion
+
+The BFT Sherlock provided hands-on experience with NTFS Master File Table (MFT) forensics and demonstrated how valuable filesystem metadata can be during an incident investigation. Using MFTECmd and Timeline Explorer, we identified the malicious files, analyzed timestamps, examined Zone.Identifier metadata, and traced the origin of the downloaded ZIP file.
+
+We then used the MFT entry number to calculate the raw offset of the malicious invoice.bat file and inspected its record using HxD. Since its $DATA attribute was resident, we were able to recover the script directly from the $MFT and identify the C2 address 43.204.110.203:6666.
+
+This investigation highlights how the $MFT can provide both important filesystem metadata and, in the case of resident files, actual file contents that can reveal valuable Indicators of Compromise (IOCs).
+
+<img width="568" height="282" alt="image" src="https://github.com/user-attachments/assets/cbe631e8-cde2-496f-9c45-7f9727898b35" />
 
