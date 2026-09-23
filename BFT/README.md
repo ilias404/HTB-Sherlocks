@@ -89,7 +89,7 @@ Ans: `43.204.110.203:6666`
 
 The BFT Sherlock provided hands-on experience with NTFS Master File Table (MFT) forensics and demonstrated how valuable filesystem metadata can be during an incident investigation. Using MFTECmd and Timeline Explorer, we identified the malicious files, analyzed timestamps, examined Zone.Identifier metadata, and traced the origin of the downloaded ZIP file.
 
-We then used the MFT entry number to calculate the raw offset of the malicious invoice.bat file and inspected its record using HxD. Since its $DATA attribute was resident, we were able to recover the script directly from the $MFT and identify the C2 address 43.204.110.203:6666.
+We then used the MFT entry number to calculate the raw offset of the malicious invoice.bat file and inspected its record using HxD. Since its $DATA attribute was resident, we were able to recover the script directly from the `$MFT` and identify the C2 address `43.204.110.203:6666`.
 
 This investigation highlights how the $MFT can provide both important filesystem metadata and, in the case of resident files, actual file contents that can reveal valuable Indicators of Compromise (IOCs).
 
