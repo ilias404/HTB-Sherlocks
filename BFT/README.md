@@ -28,7 +28,7 @@ After applying some filters:
 
 <img width="582" height="311" alt="image" src="https://github.com/user-attachments/assets/4794cbf1-9e56-498b-a38f-2099d5b86781" />
 
-<img width="1641" height="152" alt="image" src="https://github.com/user-attachments/assets/3f8a2a26-cd79-4f8d-a826-d8bafc2207dd" />
+<img width="904" height="147" alt="image" src="https://github.com/user-attachments/assets/561686e4-7826-4752-82a1-db540702b9b4" />
 
 
 
