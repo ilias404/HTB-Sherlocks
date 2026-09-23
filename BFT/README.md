@@ -30,6 +30,8 @@ After applying some filters:
 
 <img width="904" height="147" alt="image" src="https://github.com/user-attachments/assets/561686e4-7826-4752-82a1-db540702b9b4" />
 
+The first zip file we get, in terms of time, is the one that the victim downloaded.
+
 Ans: `Stage-20240213T093324Z-001.zip`
 
 # Task 2: Examine the Zone Identifier contents for the initially downloaded ZIP file. This field reveals the HostUrl from where the file was downloaded, serving as a valuable Indicator of Compromise (IOC) in our investigation/analysis. What is the full Host URL from where this ZIP file was downloaded?
