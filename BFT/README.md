@@ -35,3 +35,43 @@ The first zip file we get, in terms of time, is the one that the victim download
 Ans: `Stage-20240213T093324Z-001.zip`
 
 # Task 2: Examine the Zone Identifier contents for the initially downloaded ZIP file. This field reveals the HostUrl from where the file was downloaded, serving as a valuable Indicator of Compromise (IOC) in our investigation/analysis. What is the full Host URL from where this ZIP file was downloaded?
+
+> A Zone.Identifier is a hidden piece of metadata that Windows can attach to files downloaded from the Internet
+
+<img width="631" height="679" alt="image" src="https://github.com/user-attachments/assets/a21ecd0f-c1d6-475e-9e3d-4ebd817debba" />
+
+Ans: `https://storage.googleapis.com/drive-bulk-export-anonymous/20240213T093324.039Z/4133399871716478688/a40aecd0-1cf3-4f88-b55a-e188d5c1c04f/1/c277a8b4-afa9-4d34-b8ca-e1eb5e5f983c?authuser`
+
+# Task 3: What is the full path and name of the malicious file that executed malicious code and connected to a C2 server?
+
+<img width="1274" height="29" alt="image" src="https://github.com/user-attachments/assets/2634bb1b-1df2-49bf-853e-a176e1b70d13" />
+
+
+Ans: `C:\Users\simon.stark\Downloads\Stage-20240213T093324Z-001\Stage\invoice\invoices\invoice.bat`
+
+# Task 4: Analyze the $Created0x30 timestamp for the previously identified file. When was this file created on disk?
+
+From the $Created0x30 column, we can find the exact timestamp. (Previous screenshot)
+
+Ans: `2024-02-13 16:38:39`
+
+# Task 5: Finding the hex offset of an MFT record is beneficial in many investigative scenarios. Find the hex offset of the stager file from Question 3.
+
+> Hex Offset = MFT Entry Number × 1024
+
+The entry number of the `invoice.bat` file is `23436`, so `23436 × 1024 = 23,998,464`.
+We convert this number to hex and get: 
+
+<img width="496" height="436" alt="image" src="https://github.com/user-attachments/assets/05f380e1-6189-411f-9a78-ab14dc5857d7" />
+
+Ans: `16E3000`
+
+
+
+
+
+
+
+
+
+
