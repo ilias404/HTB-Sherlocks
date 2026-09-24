@@ -9,3 +9,7 @@ and navigation of archive file contents. This information can be leveraged durin
 
 # Task 1: What was the name of the archive file downloaded by the compromised account?
 
+
+
+
+Ans: ``
